@@ -1,0 +1,120 @@
+{
+  "Chushihua": [
+    {
+      "Guilei": "Chushihua",
+      "Bianma": "Jsonmojiming",
+      "Mingcheng": "Jsonmoji结构体名称",
+      "Zhi": "Tongyong"
+    }
+  ],
+  "Mokuaiming": [
+    {
+      "Guilei": "Mokuaiming",
+      "Bianma": "Hfxyonghu",
+      "Mingcheng": "模块名称",
+      "Zhi": "hfxyonghu"
+    }
+  ],
+  "Jsonmoji": [
+    {
+      "Guilei": "Jsonmoji",
+      "Bianma": "Guilei",
+      "Mingcheng": "归类",
+      "Zhi": "guilei"
+    },
+    {
+      "Guilei": "Jsonmoji",
+      "Bianma": "Bianma",
+      "Mingcheng": "编码",
+      "Zhi": "bianma"
+    },
+    {
+      "Guilei": "Jsonmoji",
+      "Bianma": "Mingcheng",
+      "Mingcheng": "名称",
+      "Zhi": "mingcheng"
+    },
+    {
+      "Guilei": "Jsonmoji",
+      "Bianma": "Zhi",
+      "Mingcheng": "值",
+      "Zhi": "zhi"
+    }
+  ],
+  "Jsonlie": [
+    {
+      "Guilei": "Jsonlie",
+      "Bianma": "Guojihua",
+      "Mingcheng": "xxx/peizhi/Shezhi.json中有个Guojihua的结构",
+      "Zhi": "guojihua"
+    },
+    {
+      "Guilei": "Jsonlie",
+      "Bianma": "Shezhi",
+      "Mingcheng": "xxx/peizhi/Shezhi.json中有个Shezhi的结构",
+      "Zhi": "shezhi"
+    }
+  ],
+  "Mulu": [
+    {
+      "Guilei": "Mulu",
+      "Bianma": "Chushihua",
+      "Mingcheng": "初始化目录",
+      "Zhi": "chushihua"
+    },
+    {
+      "Guilei": "Mulu",
+      "Bianma": "Cuowus",
+      "Mingcheng": "错误目录",
+      "Zhi": "cuowu"
+    },
+    {
+      "Guilei": "Mulu",
+      "Bianma": "Moxings",
+      "Mingcheng": "模型目录",
+      "Zhi": "moxing"
+    },
+    {
+      "Guilei": "Mulu",
+      "Bianma": "Gongjus",
+      "Mingcheng": "工具目录",
+      "Zhi": "gongju"
+    },
+    {
+      "Guilei": "Mulu",
+      "Bianma": "Yingwen",
+      "Mingcheng": "英文目录",
+      "Zhi": "yingwen"
+    },
+    {
+      "Guilei": "Mulu",
+      "Bianma": "Zhongwen",
+      "Mingcheng": "初始化目录",
+      "Zhi": "zhongwen"
+    },
+    {
+      "Guilei": "Mulu",
+      "Bianma": "Kus",
+      "Mingcheng": "数据库操作目录",
+      "Zhi": "kus"
+    },
+    {
+      "Guilei": "Mulu",
+      "Bianma": "Yewus",
+      "Mingcheng": "业务目录",
+      "Zhi": "yewus"
+    },
+    {
+      "Guilei": "Mulu",
+      "Bianma": "Kongzhiqis",
+      "Mingcheng": "控制器目录",
+      "Zhi": "kongzhiqis"
+    },
+    {
+      "Guilei": "Mulu",
+      "Bianma": "Luyous",
+      "Mingcheng": "路由目录",
+      "Zhi": "luyous"
+    }
+  ]
+}
