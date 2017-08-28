@@ -6,5 +6,5 @@ import (
 )
 
 func TestShengchengcontrollertest(t *testing.T) {
-	sckongzhiqis.Shengchengcontrollertest()
+	sckongzhiqis.Shengchengkongzhiqi()
 }

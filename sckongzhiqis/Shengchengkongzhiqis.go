@@ -11,7 +11,7 @@ import (
 	"gongju"
 )
 
-func controllerimports(bianma string, buffer *bytes.Buffer) {
+func kongzhiqiimports(bianma string, buffer *bytes.Buffer) {
 
 	bmx := strings.ToLower(bianma)
 
@@ -62,9 +62,9 @@ func controllerimports(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
 
 }
-func controllertype(bianma string, buffer *bytes.Buffer) {
+func kongzhiqitype(bianma string, buffer *bytes.Buffer) {
 
-	typestr := zf.Zfs.Type(true) + zfzhi.Zhi.Kgf() + bianma + zf.Zfs.Controller(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Struct(true)
+	typestr := zf.Zfs.Type(true) + zfzhi.Zhi.Kgf() + bianma + zf.Zfs.Kongzhiqi(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Struct(true)
 	buffer.WriteString(typestr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 
@@ -73,11 +73,11 @@ func controllertype(bianma string, buffer *bytes.Buffer) {
 
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
-func controllerget(bianma string, buffer *bytes.Buffer) {
+func kongzhiqiget(bianma string, buffer *bytes.Buffer) {
 	bmx := strings.ToLower(bianma)
 
-	//func (c *Xxxcontroller) Get()
-	funcstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xkhz() + zf.Zfs.C(true) + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xh() + bianma + zf.Zfs.Controller(true) + zfzhi.Zhi.Xkhy() + zf.Zfs.Get(false) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy()
+	//func (c *Xxxkongzhiqi) Get()
+	funcstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xkhz() + zf.Zfs.C(true) + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xh() + bianma + zf.Zfs.Kongzhiqi(true) + zfzhi.Zhi.Xkhy() + zf.Zfs.Get(false) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(funcstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 
@@ -159,8 +159,8 @@ func controllerget(bianma string, buffer *bytes.Buffer) {
 func patchpost(fangfaming string, bianma string, buffer *bytes.Buffer) {
 
 	bmx := strings.ToLower(bianma)
-	// func (c *Xxxcontroller) fangfaming()
-	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xkhz() + zf.Zfs.C(true) + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xh() + bianma + zf.Zfs.Controller(true) + zfzhi.Zhi.Xkhy() + fangfaming + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy()
+	// func (c *Xxxkongzhiqi) fangfaming()
+	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xkhz() + zf.Zfs.C(true) + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xh() + bianma + zf.Zfs.Kongzhiqi(true) + zfzhi.Zhi.Xkhy() + fangfaming + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(funstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 
@@ -255,18 +255,18 @@ func patchpost(fangfaming string, bianma string, buffer *bytes.Buffer) {
 
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
-func controllerpost(bianma string, buffer *bytes.Buffer) {
+func kongzhiqipost(bianma string, buffer *bytes.Buffer) {
 	patchpost(zf.Zfs.Post(false), bianma, buffer)
 }
-func controllerpatch(bianma string, buffer *bytes.Buffer) {
+func kongzhiqipatch(bianma string, buffer *bytes.Buffer) {
 	patchpost(zf.Zfs.Patch(false), bianma, buffer)
 }
-func controllerdelete(bianma string, buffer *bytes.Buffer) {
+func kongzhiqidelete(bianma string, buffer *bytes.Buffer) {
 	bmx := strings.ToLower(bianma)
 
-	// func (c *Xxxcontroller) Delete()
+	// func (c *Xxxkongzhiqi) Delete()
 	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xkhz() + zf.Zfs.C(true) + zfzhi.Zhi.Kgf() +
-		zfzhi.Zhi.Xh() + bianma + zf.Zfs.Controller(true) + zfzhi.Zhi.Xkhy() + zf.Zfs.Delete(false) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy()
+		zfzhi.Zhi.Xh() + bianma + zf.Zfs.Kongzhiqi(true) + zfzhi.Zhi.Xkhy() + zf.Zfs.Delete(false) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(funstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 
@@ -386,12 +386,12 @@ func Shengchengkongzhiqis() {
 	for bk, _ := range biaos {
 		buffer := bytes.Buffer{}
 		buffer.WriteString(zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true) + zfzhi.Zhi.Hhf())
-		controllerimports(bk, &buffer)
-		controllertype(bk, &buffer)
-		controllerget(bk, &buffer)
-		controllerpost(bk, &buffer)
-		controllerpatch(bk, &buffer)
-		controllerdelete(bk, &buffer)
+		kongzhiqiimports(bk, &buffer)
+		kongzhiqitype(bk, &buffer)
+		kongzhiqiget(bk, &buffer)
+		kongzhiqipost(bk, &buffer)
+		kongzhiqipatch(bk, &buffer)
+		kongzhiqidelete(bk, &buffer)
 		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() +
 			gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi +
 			zfzhi.Zhi.Xx() + zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true)
