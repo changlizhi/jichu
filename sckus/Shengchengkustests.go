@@ -54,7 +54,6 @@ func testsimports(bianma string, buffer *bytes.Buffer) {
 }
 
 func testchaxunyige(bianma string, buffer *bytes.Buffer) {
-	sz1 := strconv.Itoa(zfzhi.Zhi.Shuzi1())
 
 	// func TestChaxunyigeXXX
 	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Test(false) + zf.Zfs.Chaxunyige(false) + bianma
@@ -67,10 +66,10 @@ func testchaxunyige(bianma string, buffer *bytes.Buffer) {
 	//juese:=
 	//zdjuesedaos.Chaxunyige(1)
 	fhstr := strings.ToLower(bianma) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
-		zf.Zfs.Zd(true) + strings.ToLower(bianma) + zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Chaxunyige(false) + zfzhi.Zhi.Xkhz() + sz1 + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+		zf.Zfs.Zd(true) + strings.ToLower(bianma) + zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Chaxunyige(false) + zfzhi.Zhi.Xkhz() + zh.Zhs.Zhiszh(zf.Zfs.Shuzi1(false)) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(fhstr)
 
-	//log.Println(juese+
+	//log.Println(juese)
 	dayin := zf.Zfs.Log(true) + zfzhi.Zhi.Dh() + zf.Zfs.Println(false) + zfzhi.Zhi.Xkhz() + strings.ToLower(bianma) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(dayin)
 
@@ -146,7 +145,6 @@ func shengchengzhi(lieming string, leixing string, fangfa string, houzhui string
 }
 
 func testshanchuyige(bianma string, buffer *bytes.Buffer) {
-	sz1 := strconv.Itoa(zfzhi.Zhi.Shuzi1())
 
 	// func TestShanchuyige
 	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Test(false) + zf.Zfs.Shanchuyige(false) + bianma
@@ -157,7 +155,7 @@ func testshanchuyige(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(csstr)
 
 	// zdjuesedaos.Shanchuyige(1)
-	baoming := zf.Zfs.Zd(true) + strings.ToLower(bianma) + zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Shanchuyige(false) + zfzhi.Zhi.Xkhz() + sz1 + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	baoming := zf.Zfs.Zd(true) + strings.ToLower(bianma) + zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Shanchuyige(false) + zfzhi.Zhi.Xkhz() + zh.Zhs.Zhiszh(zf.Zfs.Shuzi1(false)) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(baoming)
 	// \n } \n
 	buffer.WriteString(zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
