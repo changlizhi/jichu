@@ -142,7 +142,7 @@ func postpatchkongzhiqitest(fangfa string, bianma string, buffer *bytes.Buffer) 
 	jsonstr := zf.Zfs.Req(true) + zf.Zfs.Json(true) + zfzhi.Zhi.Mh() +
 		zfzhi.Zhi.Dyh() + zf.Zfs.Zfzhi(true) + zfzhi.Zhi.Dh() +
 		zf.Zfs.Zhi(false) + zfzhi.Zhi.Dh() + fangfa + bmx +
-		zf.Zfs.Zhi(true) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+		zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(jsonstr)
 
 	// c.Ctx.Input.RequestBody = []byte(reqjson)
@@ -233,7 +233,7 @@ func deletekongzhiqitest(bianma string, buffer *bytes.Buffer) {
 func getkongzhiqitest(bianma string, buffer *bytes.Buffer) {
 	deletegetkongzhiqitest(zf.Zfs.Get(false), bianma, buffer)
 }
-func Shengchengkongzhiqi() {
+func Shengchengkongzhiqitest() {
 	_, biaos, _ := gongju.Biaolies()
 	for bk, _ := range biaos {
 		buffer := bytes.Buffer{}

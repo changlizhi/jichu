@@ -18,8 +18,9 @@ func routersimports(bianma string, buffer *bytes.Buffer) {
 	//"github.com/astaxie/beego"
 	buffer.WriteString(zh.Zhs.Beegobao())
 
-	//"hanfuxin/controllers"
-	constr := zfzhi.Zhi.Syh() + zf.Zfs.Hanfuxin(true) + zfzhi.Zhi.Xx() + zf.Zfs.Controllers(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+	//"xxx/kongzhiqis"
+	constr := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() +
+		zf.Zfs.Kongzhiqis(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(constr)
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
 
