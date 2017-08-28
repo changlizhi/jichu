@@ -86,7 +86,7 @@ func controllerget(bianma string, buffer *bytes.Buffer) {
 		zf.Zfs.C(true) + zfzhi.Zhi.Dh() + zf.Zfs.GetString(false) +
 		zfzhi.Zhi.Xkhz() +
 
-		zh.Zhs.Zhistr(zf.Zfs.Mh(false)) +
+		zh.Zhs.Zhiszh(zf.Zfs.Mh(false)) +
 
 		zfzhi.Zhi.Jia() +
 		zf.Zfs.Zf(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zfs(false) + zfzhi.Zhi.Dh() + zf.Zfs.Id(false) +
@@ -203,7 +203,7 @@ func patchpost(fangfaming string, bianma string, buffer *bytes.Buffer) {
 		zf.Zfs.Split(false) + zfzhi.Zhi.Xkhz() + zf.Zfs.Service(true) +
 		zf.Zfs.Ret(true) + zfzhi.Zhi.Dou() +
 
-		zh.Zhs.Zhistr(zf.Zfs.Xhx(false)) +
+		zh.Zhs.Zhiszh(zf.Zfs.Xhx(false)) +
 		zfzhi.Zhi.Xkhy() +
 
 		zfzhi.Zhi.Hhf()
@@ -221,15 +221,15 @@ func patchpost(fangfaming string, bianma string, buffer *bytes.Buffer) {
 		zf.Zfs.Tishis(false) + zfzhi.Zhi.Zkhz() + zf.Zfs.Split(true) + zf.Zfs.Ret(true) +
 		zfzhi.Zhi.Zkhz() +
 
-		zh.Zhs.Zhistr(zf.Zfs.Shuzi0zhi(false)) +
+		zh.Zhs.Zhiszh(zf.Zfs.Shuzi0zhi(false)) +
 
 		zfzhi.Zhi.Zkhy() + zfzhi.Zhi.Zkhy() + zfzhi.Zhi.Dh() + zf.Zfs.Zhi(false) +
 		zfzhi.Zhi.Jia() +
-		zh.Zhs.Zhistr(zf.Zfs.Mh(false)) +
+		zh.Zhs.Zhiszh(zf.Zfs.Mh(false)) +
 		zfzhi.Zhi.Jia() +
 		zf.Zfs.Split(true) + zf.Zfs.Ret(true) + zfzhi.Zhi.Zkhz() +
 
-		zh.Zhs.Zhistr(zf.Zfs.Shuzi1zhi(false)) +
+		zh.Zhs.Zhiszh(zf.Zfs.Shuzi1zhi(false)) +
 
 		zfzhi.Zhi.Zkhy() +
 		zfzhi.Zhi.Hhf()
@@ -273,7 +273,7 @@ func controllerdelete(bianma string, buffer *bytes.Buffer) {
 	// canshu:=c.GetString(zfzhi.Zhi.Mh()+zf.Zfs.Id(false))
 	csstr := zf.Zfs.Canshu(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
 		zf.Zfs.C(true) + zfzhi.Zhi.Dh() + zf.Zfs.GetString(false) + zfzhi.Zhi.Xkhz() +
-		zh.Zhs.Zhistr(zf.Zfs.Mh(false)) +
+		zh.Zhs.Zhiszh(zf.Zfs.Mh(false)) +
 		zfzhi.Zhi.Jia() + zf.Zfs.Zf(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zfs(false) + zfzhi.Zhi.Dh() + zf.Zfs.Id(false) +
 		zfzhi.Zhi.Xkhz() + zf.Zfs.False(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(csstr)
@@ -333,7 +333,7 @@ func controllerdelete(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(tsstr)
 	//if tishi==kzf
 	iftsstr := zf.Zfs.If(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Tishi(true) + zfzhi.Zhi.Dyh() + zfzhi.Zhi.Dyh() +
-		zh.Zhs.Zhistr(zf.Zfs.Kzf(false))
+		zh.Zhs.Zhiszh(zf.Zfs.Kzf(false))
 	buffer.WriteString(iftsstr)
 
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
