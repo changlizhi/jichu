@@ -143,7 +143,7 @@ func testserviceshanchu(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(scstr)
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
-func Shengchengservicetest() {
+func Shengchengyewutest() {
 	_, biaos, _ := gongju.Biaolies()
 	for bk, _ := range biaos {
 		buffer := bytes.Buffer{}

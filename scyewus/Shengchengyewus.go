@@ -195,11 +195,11 @@ func servicexiugai(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(iffind)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 
-	for _,lk := range gongju.Biao(bianma) {
+	for _, lk := range gongju.Biao(bianma) {
 		if gongju.Lieleixing(lk) == zf.Zfs.String(true) {
 			buffer.WriteString(zfzhi.Zhi.Hhf())
 			iflie := zf.Zfs.If(true) + zfzhi.Zhi.Kgf() + bmx + zfzhi.Zhi.Dh() +
-				lk + zfzhi.Zhi.Gth() + zfzhi.Zhi.Dyh() +zf.Zfs.Zfzhi(true) +
+				lk + zfzhi.Zhi.Gth() + zfzhi.Zhi.Dyh() + zf.Zfs.Zfzhi(true) +
 				zfzhi.Zhi.Dh() + zf.Zfs.Zhi(false) + zfzhi.Zhi.Dh() +
 				zf.Zfs.Kzf(false) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy()
 
@@ -304,11 +304,11 @@ func serviceshanchu(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Hhf())
 }
 
-func Shengchengservice() {
-	_,biaos,_:=gongju.Biaolies()
+func Shengchengyewu() {
+	_, biaos, _ := gongju.Biaolies()
 	for bk, bv := range biaos {
 		buffer := bytes.Buffer{}
-		bm := zf.Zfs.Zd(true) + bv + zf.Zfs.Services(true)
+		bm := zf.Zfs.Zd(true) + bv + zf.Zfs.Yewus(true)
 		//package zfzhi.Zhi.Xx()xservices \n
 		pac := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + bm + zfzhi.Zhi.Hhf()
 		buffer.WriteString(pac)
@@ -321,7 +321,7 @@ func Shengchengservice() {
 		servicechaxun(bk, &buffer)
 		dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + bm
 		os.MkdirAll(dir, os.ModePerm)
-		path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Services(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
+		path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Yewus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
 		ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
 	}
 }
