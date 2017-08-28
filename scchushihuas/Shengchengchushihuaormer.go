@@ -5,8 +5,9 @@ import (
 	"changliang/zf"
 	"changliang/zfzhi"
 	"changliang/zh"
-	"log"
 	"gongju"
+	"os"
+	"io/ioutil"
 )
 
 func scinitfun(buffer *bytes.Buffer) {
@@ -14,17 +15,15 @@ func scinitfun(buffer *bytes.Buffer) {
 	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Init(true) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(funstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-	//ormerdebug()
-	buffer.WriteString(zf.Zfs.Ormerdebug(true) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
+	//ormdebug()
+	buffer.WriteString(zf.Zfs.Ormdebug(true) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
 	//ormermoxing()
 	buffer.WriteString(zf.Zfs.Ormermoxing(true) + zfzhi.Zhi.Xkhz() +
 		zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
-	//ormershujuku()
-	buffer.WriteString(zf.Zfs.Ormershujuku(true) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
 
-func scormerdebug(buffer *bytes.Buffer) {
+func scormdebug(buffer *bytes.Buffer) {
 	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Ormdebug(true) +
 		zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(funstr)
@@ -36,7 +35,7 @@ func scormerdebug(buffer *bytes.Buffer) {
 	//Chushihuas[zf.Zfs.Ormdebug(false)].Zhi,
 	//TODO 这里要怎么控制一下读取Chushihuas的数据
 	csh := zf.Zfs.Chushihuas(false) + zfzhi.Zhi.Zkhz() +
-		zh.Zhs.Zfszh(zf.Zfs.Ormdebug(false)) +
+		zh.Zhs.Zfszhtrue(zf.Zfs.Ormdebug(false)) +
 		zfzhi.Zhi.Zkhy() + zfzhi.Zhi.Dh() + zf.Zfs.Zhi(false) + zfzhi.Zhi.Dou()
 	buffer.WriteString(csh)
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
@@ -49,8 +48,8 @@ func scormermoxing(buffer *bytes.Buffer) {
 		zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(funstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-	//ormer.RegisterModel
-	regstr := zf.Zfs.Ormer(true) + zfzhi.Zhi.Dh() + zf.Zfs.RegisterModel(false)
+	//orm.RegisterModel
+	regstr := zf.Zfs.Orm(true) + zfzhi.Zhi.Dh() + zf.Zfs.RegisterModel(false)
 	buffer.WriteString(regstr)
 	buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
 	_, biaos, _ := gongju.Biaolies()
@@ -92,7 +91,7 @@ func scdefaultormer(buffer *bytes.Buffer) {
 
 	//return Ormerbyname(zf.Zfs.Default(true))
 	retstr := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Ormerbyname(false) +
-		zfzhi.Zhi.Xkhz() + zh.Zhs.Zfszh(zf.Zfs.Default(false)) + zfzhi.Zhi.Xkhy()
+		zfzhi.Zhi.Xkhz() + zh.Zhs.Zfszhtrue(zf.Zfs.Default(false)) + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(retstr)
 
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
@@ -107,10 +106,10 @@ func scormerbyname(buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 	//ret:=orm.NewOrm()
 	rstr := zf.Zfs.Ret(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
-		zf.Zfs.Orm(true) + zfzhi.Zhi.Dh() + zf.Zfs.NewOrm(false) + zfzhi.Zhi.Hhf()
+		zf.Zfs.Orm(true) + zfzhi.Zhi.Dh() + zf.Zfs.NewOrm(false) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(rstr)
 	//ret.Using(name)
-	useret := zf.Zfs.Ret(true) + zfzhi.Zhi.Dh() +zf.Zfs.Using(false) + zfzhi.Zhi.Xkhz() +
+	useret := zf.Zfs.Ret(true) + zfzhi.Zhi.Dh() + zf.Zfs.Using(false) + zfzhi.Zhi.Xkhz() +
 		zf.Zfs.Name(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(useret)
 	//return ret
@@ -131,24 +130,26 @@ func Shengchengchushihuaormer() {
 	zfbao := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() +
 		zf.Zfs.Zf(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(zfbao)
-	//"changliang/zfzhi"
-	zfzhibao := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() +
-		zf.Zfs.Zfzhi(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
-	buffer.WriteString(zfzhibao)
 	//"strconv"
 	constr := zfzhi.Zhi.Syh() + zf.Zfs.Strconv(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(constr)
 
+	//"github.com/astaxie/beego/orm"
+	buffer.WriteString(zh.Zhs.Beegoormbao())
 	//"xxx/moxings"
 	mxstr := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() + zf.Zfs.Moxings(true) + zfzhi.Zhi.Syh()
 	buffer.WriteString(mxstr)
 
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
 	scinitfun(buffer)
-	scormerdebug(buffer)
+	scormdebug(buffer)
 	scormermoxing(buffer)
 	scsetormerdebug(buffer)
 	scdefaultormer(buffer)
 	scormerbyname(buffer)
-	log.Println(buffer.String())
+	dir := gongju.Getgopath() + zfzhi.Zhi.Xx() +
+		gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() + zf.Zfs.Chushihuas(true)
+	path := dir + zfzhi.Zhi.Xx() + zf.Zfs.Chushihua(false) + zf.Zfs.Ormer(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
+	os.MkdirAll(dir, os.ModePerm)
+	ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
 }
