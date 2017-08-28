@@ -43,7 +43,7 @@ func testsimports(bianma string, buffer *bytes.Buffer) {
 
 	// "xxx/zdjueseshujukuduqus"
 	daobao := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() +
-		zf.Zfs.Zd(true) + strings.ToLower(bianma) + zf.Zfs.Shujukuduqus(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+		zf.Zfs.Zd(true) + strings.ToLower(bianma) + zf.Zfs.Kus(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(daobao)
 
 	buffer.WriteString(zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
@@ -63,7 +63,7 @@ func testchaxunyige(bianma string, buffer *bytes.Buffer) {
 	//juese:=
 	//zdjuesedaos.Chaxunyige(1)
 	fhstr := strings.ToLower(bianma) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
-		zf.Zfs.Zd(true) + strings.ToLower(bianma) + zf.Zfs.Shujukuduqus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Chaxunyige(false) + zfzhi.Zhi.Xkhz() + sz1 + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+		zf.Zfs.Zd(true) + strings.ToLower(bianma) + zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Chaxunyige(false) + zfzhi.Zhi.Xkhz() + sz1 + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(fhstr)
 
 	//log.Println(juese+
@@ -99,7 +99,7 @@ func tianjiahuoxiugai(bianma string, buffer *bytes.Buffer, fangfa string) {
 	buffer.WriteString(zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 
 	// zdjuesedaos.Testzfzhi.Zhi.Xx()xJuese(juese)
-	baoming := zf.Zfs.Zd(true) + strings.ToLower(bianma) + zf.Zfs.Shujukuduqus(true) + zfzhi.Zhi.Dh() + fangfa + zfzhi.Zhi.Xkhz() + strings.ToLower(bianma) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	baoming := zf.Zfs.Zd(true) + strings.ToLower(bianma) + zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + fangfa + zfzhi.Zhi.Xkhz() + strings.ToLower(bianma) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(baoming)
 
 	// \n } \n
@@ -156,7 +156,7 @@ func testshanchuyige(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(csstr)
 
 	// zdjuesedaos.Shanchuyige(1)
-	baoming := zf.Zfs.Zd(true) + strings.ToLower(bianma) + zf.Zfs.Shujukuduqus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Shanchuyige(false) + zfzhi.Zhi.Xkhz() + sz1 + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	baoming := zf.Zfs.Zd(true) + strings.ToLower(bianma) + zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Shanchuyige(false) + zfzhi.Zhi.Xkhz() + sz1 + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(baoming)
 	// \n } \n
 	buffer.WriteString(zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
@@ -201,7 +201,7 @@ func testtianjiaduoge(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(szs)
 
 	//zdjuesedaos.Tianjiaduoge(jueses)
-	baoming := zf.Zfs.Zd(true) + strings.ToLower(bianma) + zf.Zfs.Shujukuduqus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Tianjiaduoge(false) + zfzhi.Zhi.Xkhz() + strings.ToLower(bianma) + zf.Zfs.S(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	baoming := zf.Zfs.Zd(true) + strings.ToLower(bianma) + zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Tianjiaduoge(false) + zfzhi.Zhi.Xkhz() + strings.ToLower(bianma) + zf.Zfs.S(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(baoming)
 
 	//} \n

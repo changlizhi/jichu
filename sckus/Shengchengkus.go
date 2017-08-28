@@ -10,7 +10,7 @@ import (
 	"io/ioutil"
 )
 
-func imports(bianma string, buffer *bytes.Buffer) {
+func imports(buffer *bytes.Buffer) {
 	// \n import (\n
 	importstr := zfzhi.Zhi.Hhf() + zf.Zfs.Import(true) + zfzhi.Zhi.Kgf() +
 		zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf()
@@ -285,10 +285,10 @@ func Shengchengkus() {
 		buffer := bytes.Buffer{}
 		buffer.WriteString(zf.Zfs.Package(true))    //package
 		buffer.WriteString(zfzhi.Zhi.Konggefu()) // zfzhi.Zhi.Kgf()
-		lujing := zf.Zfs.Zd(true) + strings.ToLower(biao) + zf.Zfs.Shujukuduqus(true)
+		lujing := zf.Zfs.Zd(true) + strings.ToLower(biao) + zf.Zfs.Kus(true)
 		buffer.WriteString(lujing) // zdjuesedaos
 
-		imports(biao, &buffer)      //import all
+		imports(&buffer)      //import all
 		chaxunyige(biao, &buffer)   // Chaxunyige
 		tianjiayige(biao, &buffer)  // Tianjiayige
 		tianjiaduoge(biao, &buffer) // Tianjiaduoge
