@@ -6,8 +6,8 @@ import (
 	"changliang/zfzhi"
 	"changliang/zh"
 	"gongju"
-	"os"
 	"io/ioutil"
+	"os"
 )
 
 func scinitfun(buffer *bytes.Buffer) {

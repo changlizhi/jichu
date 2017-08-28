@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"changliang/zf"
 	"changliang/zfzhi"
-	"strings"
 	"gongju"
-	"os"
 	"io/ioutil"
+	"os"
+	"strings"
 )
 
 func imports(buffer *bytes.Buffer) {
@@ -283,12 +283,12 @@ func Shengchengkus() {
 	_, biaos, _ := gongju.Biaolies()
 	for biao, _ := range biaos {
 		buffer := bytes.Buffer{}
-		buffer.WriteString(zf.Zfs.Package(true))    //package
+		buffer.WriteString(zf.Zfs.Package(true)) //package
 		buffer.WriteString(zfzhi.Zhi.Konggefu()) // zfzhi.Zhi.Kgf()
 		lujing := zf.Zfs.Zd(true) + strings.ToLower(biao) + zf.Zfs.Kus(true)
 		buffer.WriteString(lujing) // zdjuesedaos
 
-		imports(&buffer)      //import all
+		imports(&buffer)            //import all
 		chaxunyige(biao, &buffer)   // Chaxunyige
 		tianjiayige(biao, &buffer)  // Tianjiayige
 		tianjiaduoge(biao, &buffer) // Tianjiaduoge

@@ -1,8 +1,8 @@
 package tests
 
 import (
-	"testing"
 	"jichu/sckus"
+	"testing"
 )
 
 func TestShengchengdaostests(t *testing.T) {

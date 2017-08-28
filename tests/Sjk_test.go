@@ -1,9 +1,9 @@
 package tests
 
 import (
-	"testing"
-	"log"
 	"jichu/sjkhfxyonghu"
+	"log"
+	"testing"
 )
 
 func TestPrintsome(t *testing.T) {

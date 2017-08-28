@@ -1,13 +1,13 @@
 package scchushihuas
 
 import (
+	"bytes"
 	"changliang/zf"
 	"changliang/zfzhi"
-	"bytes"
 	"gongju"
-	"strings"
-	"os"
 	"io/ioutil"
+	"os"
+	"strings"
 )
 
 func bufferwriteinit(jsonlies map[string]gongju.Tongyong, buffer *bytes.Buffer) {
@@ -68,8 +68,8 @@ func Shengchengchushihuajsonlie() {
 	buffer.WriteString(inistr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 
-	bufferwriteinit(gongju.Jsonlies0, buffer)//写入级别为0的json配置
-	bufferwriteinit(gongju.Jsonlies1, buffer)//写入级别为1的json配置
+	bufferwriteinit(gongju.Jsonlies0, buffer) //写入级别为0的json配置
+	bufferwriteinit(gongju.Jsonlies1, buffer) //写入级别为1的json配置
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 
 	bufferfun := &bytes.Buffer{}

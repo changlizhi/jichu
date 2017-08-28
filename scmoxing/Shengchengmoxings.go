@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"changliang/zf"
 	"changliang/zfzhi"
-	"io/ioutil"
-	"os"
 	"gongju"
+	"io/ioutil"
 	"log"
+	"os"
 )
 
 func Shengchengmoxings() {
@@ -30,7 +30,7 @@ func Shengchengmoxings() {
 		}
 		//左大括号在头里有了
 		buffer.WriteString(zfzhi.Zhi.Dkhy()) // }
-		// hanfuxin/appmodels/Juese.go
+		// xxx/moxings/Juese.go
 		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi +
 			zfzhi.Zhi.Xx() + zf.Zfs.Moxings(true)
 		path := dir + zfzhi.Zhi.Xx() + bk + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)

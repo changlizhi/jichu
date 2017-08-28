@@ -1,14 +1,14 @@
 package scchushihuas
 
 import (
-	"gongju"
+	"bytes"
 	"changliang/zf"
 	"changliang/zfzhi"
-	"bytes"
 	"changliang/zh"
-	"strings"
-	"os"
+	"gongju"
 	"io/ioutil"
+	"os"
+	"strings"
 )
 
 func bufferwritepath(buffer *bytes.Buffer, jsonlies map[string]gongju.Tongyong) {
