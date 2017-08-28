@@ -2,9 +2,9 @@ package tests
 
 import (
 	"testing"
-	"jichu/scbeego"
+	"jichu/sckongzhiqis"
 )
 
 func TestShengchengcontrollers(t *testing.T) {
-	scbeego.Shengchengcontrollers()
+	sckongzhiqis.Shengchengcontrollers()
 }

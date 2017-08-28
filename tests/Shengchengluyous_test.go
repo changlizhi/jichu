@@ -2,9 +2,9 @@ package tests
 
 import (
 	"testing"
-	"jichu/scbeego"
+	"jichu/scluyous"
 )
 
 func TestShengchengrouters(t *testing.T) {
-	scbeego.Shengchengrouters()
+	scluyous.Shengchengrouters()
 }

@@ -1,4 +1,4 @@
-package scbeego
+package scluyous
 
 import (
 	"bytes"
@@ -43,7 +43,7 @@ func routersinit(bianma string, buffer *bytes.Buffer) {
 
 }
 func Shengchengrouters() {
-	_,biaos,_:=gongju.Biaolies()
+	_, biaos, _ := gongju.Biaolies()
 	for bk, _ := range biaos {
 		buffer := bytes.Buffer{}
 		pacstr := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Routers(true) + zfzhi.Zhi.Hhf()
