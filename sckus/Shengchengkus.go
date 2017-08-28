@@ -297,7 +297,7 @@ func Shengchengkus() {
 
 		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() +
 			gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() + lujing
-		path := dir + zfzhi.Zhi.Xx() + biao + zf.Zfs.Shujukuduqu(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
+		path := dir + zfzhi.Zhi.Xx() + biao + zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
 		os.MkdirAll(dir, os.ModePerm)
 		ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
 	}
