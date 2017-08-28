@@ -9,6 +9,7 @@ import (
 	"strconv"
 	"strings"
 	"gongju"
+	"changliang/zh"
 )
 
 // tests的import
@@ -40,6 +41,9 @@ func testsimports(bianma string, buffer *bytes.Buffer) {
 	// "log" \n
 	logbao := zfzhi.Zhi.Syh() + zf.Zfs.Log(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(logbao)
+	//"changliang/zfzhi"
+	clstr := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() + zf.Zfs.Zfzhi(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(clstr)
 
 	// "xxx/zdjueseshujukuduqus"
 	daobao := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() +
@@ -115,9 +119,6 @@ func pinjieziduan(bianma string, buffer *bytes.Buffer, fangfa string, houzhui st
 
 }
 func shengchengzhi(lieming string, leixing string, fangfa string, houzhui string) string {
-	sz1 := strconv.Itoa(zfzhi.Zhi.Shuzi1())
-	sz0 := strconv.Itoa(zfzhi.Zhi.Shuzi0())
-
 	if leixing == zf.Zfs.String(true) {
 		// "lieZengjiaTest1"
 		ret := zfzhi.Zhi.Syh() + lieming + fangfa + zf.Zfs.Test(false) + houzhui + zfzhi.Zhi.Syh()
@@ -125,7 +126,7 @@ func shengchengzhi(lieming string, leixing string, fangfa string, houzhui string
 	}
 	// 1
 	if leixing == zf.Zfs.Int(true) {
-		ret := sz1 // 1
+		ret := zh.Zhs.Zhiszh(zf.Zfs.Shuzi1(false)) // 1
 		return ret
 	}
 	// time.Now()
@@ -137,7 +138,7 @@ func shengchengzhi(lieming string, leixing string, fangfa string, houzhui string
 	// 1.0
 	if leixing == zf.Zfs.Float32(true) || leixing == zf.Zfs.Float64(true) {
 		// 1.0
-		ret := sz1 + zfzhi.Zhi.Dh() + sz0
+		ret := zh.Zhs.Zhiszh(zf.Zfs.Shuzi1(false)) + zfzhi.Zhi.Dh() + zh.Zhs.Zhiszh(zf.Zfs.Shuzi0(false))
 		return ret
 	}
 	// Null
