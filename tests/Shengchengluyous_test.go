@@ -6,5 +6,5 @@ import (
 )
 
 func TestShengchengrouters(t *testing.T) {
-	scluyous.Shengchengrouters()
+	scluyous.Shengchengluyous()
 }
