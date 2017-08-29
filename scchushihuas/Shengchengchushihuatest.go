@@ -42,16 +42,6 @@ func Shengchengchushihuatest() {
 	buffer.WriteString(csstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 
-
-	//log.Println("chushihuas.Getapppath()------------", chushihuas.Getapppath())
-	pstr := zh.Zhs.Logszh(zf.Zfs.Chushihuas(true) +
-		zfzhi.Zhi.Dh() +
-		zf.Zfs.Getapppath(false) +
-		zfzhi.Zhi.Xkhz() +
-		zfzhi.Zhi.Xkhy()) +
-		zfzhi.Zhi.Hhf()
-	buffer.WriteString(pstr)
-
 	//log.Println("chushihuas.Defaultormer()------------ ", chushihuas.Defaultormer())
 	dstr := zh.Zhs.Logszh(zf.Zfs.Chushihuas(true) +
 		zfzhi.Zhi.Dh() +

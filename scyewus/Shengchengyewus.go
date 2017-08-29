@@ -13,9 +13,9 @@ import (
 func serviceimports(bianma string, buffer *bytes.Buffer) {
 	importstr := zf.Zfs.Import(true) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(importstr)
-	//"xxx/allerrors" \n
+	//"xxx/suoyoucuowus" \n
 	errorbao := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() +
-		zf.Zfs.Allerrors(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+		zf.Zfs.Suoyoucuowus(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(errorbao)
 	// "bytes"
 	bytesbao := zfzhi.Zhi.Syh() + zf.Zfs.Bytes(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
@@ -123,8 +123,8 @@ func yanzhengchangdu(bianma string, buffer *bytes.Buffer) {
 	// if cuowu {\n
 	cwstr := zf.Zfs.If(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Cuowu(true) + zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(cwstr)
-	// return allerrors.Ziduanerror
-	retstr := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Allerrors(true) + zfzhi.Zhi.Dh() + zf.Zfs.Ziduanerror(false)
+	// return suoyoucuowus.Ziduancuowu
+	retstr := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Suoyoucuowus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Ziduancuowu(false)
 	buffer.WriteString(retstr)
 	//{Shijian:time.Now(),Wenti:buffer.String()}
 	wtsjstr := zfzhi.Zhi.Dkhz() + zf.Zfs.Shijian(false) + zfzhi.Zhi.Mh() +
