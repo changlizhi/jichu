@@ -8,7 +8,6 @@ import (
 	"gongju"
 	"io/ioutil"
 	"os"
-	"strings"
 )
 
 func routersimports(bianma string, buffer *bytes.Buffer) {
@@ -18,6 +17,13 @@ func routersimports(bianma string, buffer *bytes.Buffer) {
 	//"github.com/astaxie/beego"
 	buffer.WriteString(zh.Zhs.Beegobao())
 
+	//"changliang/zf"
+	zfstr := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() + zf.Zfs.Zf(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(zfstr)
+	//"changliang/zfzhi"
+	zfzstr := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() + zf.Zfs.Zfzhi(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(zfzstr)
+
 	//"xxx/zdkongzhiqis"
 	constr := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() +
 		zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
@@ -26,28 +32,30 @@ func routersimports(bianma string, buffer *bytes.Buffer) {
 
 }
 func routersinit(bianma string, buffer *bytes.Buffer) {
-	bmx := strings.ToLower(bianma)
-
 	//func init()
 	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Init(true) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(funstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 
-	//beego.Router("/zfzhi.Zhi.Xx()x",&kongzhiqis.Xxxkongzhiqi{})
+	//beego.Router(zfzhi.Zhi.Xx() + zf.Zfs.Xxx(true),&kongzhiqis.Xxxkongzhiqi{})
 	rstr := zf.Zfs.Beego(true) + zfzhi.Zhi.Dh() + zf.Zfs.Router(false) +
-		zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Syh() + zfzhi.Zhi.Xx() +
-		bmx + zfzhi.Zhi.Syh() + zfzhi.Zhi.Dou() +
+		zfzhi.Zhi.Xkhz() + zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() +
+		zf.Zfs.Zf(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zfs(false) +
+		zfzhi.Zhi.Dh() + bianma + zfzhi.Zhi.Xkhz() +
+		zf.Zfs.True(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Dou() +
 		zfzhi.Zhi.Qh() + zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true) + zfzhi.Zhi.Dh() +
 		bianma + zf.Zfs.Kongzhiqi(true) + zfzhi.Zhi.Dkhz() +
 		zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(rstr)
 
-	//beego.Router("/zfzhi.Zhi.Xx()x/:Id",&kongzhiqis.Xxxkongzhiqi{})
+	//beego.Router("/Xxx/:Id",&kongzhiqis.Xxxkongzhiqi{})
 	ridstr := zf.Zfs.Beego(true) + zfzhi.Zhi.Dh() + zf.Zfs.Router(false) +
-		zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Syh() + zfzhi.Zhi.Xx() +
-		bmx + zfzhi.Zhi.Xx() + zfzhi.Zhi.Mh() +
-		zf.Zfs.Id(false) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Dou() +
-		zfzhi.Zhi.Qh() + zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true) + zfzhi.Zhi.Dh() +
+		zfzhi.Zhi.Xkhz() + zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() +
+		zf.Zfs.Zf(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zfs(false) +
+		zfzhi.Zhi.Dh() + bianma + zfzhi.Zhi.Xkhz() +
+		zf.Zfs.True(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Jia() +
+		zh.Zhs.Zhiszh(zf.Zfs.Xx(false))+zfzhi.Zhi.Jia() + zh.Zhs.Zhiszh(zf.Zfs.Mh(false)) + zfzhi.Zhi.Jia() + zh.Zhs.Zfszhfalse(zf.Zfs.Id(false)) +
+		zfzhi.Zhi.Dou() + zfzhi.Zhi.Qh() + zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true) + zfzhi.Zhi.Dh() +
 		bianma + zf.Zfs.Kongzhiqi(true) + zfzhi.Zhi.Dkhz() +
 		zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(ridstr)
