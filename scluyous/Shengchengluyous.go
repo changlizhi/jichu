@@ -10,7 +10,7 @@ import (
 	"os"
 )
 
-func routersimports(bianma string, buffer *bytes.Buffer) {
+func routersimports(buffer *bytes.Buffer) {
 	buffer.WriteString(zf.Zfs.Import(true))
 	buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
 
@@ -54,7 +54,7 @@ func routersinit(bianma string, buffer *bytes.Buffer) {
 		zf.Zfs.Zf(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zfs(false) +
 		zfzhi.Zhi.Dh() + bianma + zfzhi.Zhi.Xkhz() +
 		zf.Zfs.True(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Jia() +
-		zh.Zhs.Zhiszh(zf.Zfs.Xx(false))+zfzhi.Zhi.Jia() + zh.Zhs.Zhiszh(zf.Zfs.Mh(false)) + zfzhi.Zhi.Jia() + zh.Zhs.Zfszhfalse(zf.Zfs.Id(false)) +
+		zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() + zh.Zhs.Zhiszh(zf.Zfs.Mh(false)) + zfzhi.Zhi.Jia() + zh.Zhs.Zfszhfalse(zf.Zfs.Id(false)) +
 		zfzhi.Zhi.Dou() + zfzhi.Zhi.Qh() + zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true) + zfzhi.Zhi.Dh() +
 		bianma + zf.Zfs.Kongzhiqi(true) + zfzhi.Zhi.Dkhz() +
 		zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
@@ -69,7 +69,7 @@ func Shengchengluyous() {
 		pacstr := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Luyous(true) + zfzhi.Zhi.Hhf()
 		buffer.WriteString(pacstr)
 
-		routersimports(bk, &buffer)
+		routersimports(&buffer)
 		routersinit(bk, &buffer)
 		dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Luyous(true)
 		path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Luyou(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
