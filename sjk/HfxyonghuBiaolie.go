@@ -1,4 +1,4 @@
-package skjhfxyonghu
+package skj
 
 import (
 	"changliang/biaolie"
