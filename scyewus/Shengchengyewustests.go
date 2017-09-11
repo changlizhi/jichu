@@ -12,7 +12,7 @@ import (
 	"strings"
 )
 
-func servicetestimport(bianma string, buffer *bytes.Buffer) {
+func servicetestimport(mokuai string, bianma string, buffer *bytes.Buffer) {
 	bmx := strings.ToLower(bianma)
 	importstr := zf.Zfs.Import(true) + zfzhi.Zhi.Kgf()
 	buffer.WriteString(importstr)
@@ -31,7 +31,7 @@ func servicetestimport(bianma string, buffer *bytes.Buffer) {
 		zf.Zfs.Zd(true) + bmx + zf.Zfs.Yewus(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(serstr)
 
-	for _, lk := range gongju.Biao(bianma) {
+	for _, lk := range gongju.Biao(mokuai, bianma) {
 		if gongju.Lieleixing(lk) == zf.Zfs.Time(true) {
 			// "time" \n
 			timebao := zfzhi.Zhi.Syh() + zf.Zfs.Time(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
@@ -48,7 +48,7 @@ func servicetestimport(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(tstr)
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy())
 }
-func tianjiaxiugai(fangfa string, bianma string, buffer *bytes.Buffer) {
+func tianjiaxiugai(mokuai string, fangfa string, bianma string, buffer *bytes.Buffer) {
 
 	bmx := strings.ToLower(bianma)
 	//func TestJueseserviceTianjia(t *testing.T)
@@ -63,7 +63,7 @@ func tianjiaxiugai(fangfa string, bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(objstr)
 
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-	for _, lk := range gongju.Biao(bianma) {
+	for _, lk := range gongju.Biao(mokuai, bianma) {
 		// Id : 1,
 		if zf.Zfs.Int(true) == gongju.Lieleixing(lk) {
 			intstr := lk + zfzhi.Zhi.Mh() + zh.Zhs.Zhiszh(zf.Zfs.Shuzi1(false)) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
@@ -99,11 +99,11 @@ func tianjiaxiugai(fangfa string, bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(tjstr)
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
-func testservicetianjia(bianma string, buffer *bytes.Buffer) {
-	tianjiaxiugai(zf.Zfs.Tianjia(false), bianma, buffer)
+func testservicetianjia(mokuai string, bianma string, buffer *bytes.Buffer) {
+	tianjiaxiugai(mokuai, zf.Zfs.Tianjia(false), bianma, buffer)
 }
-func testservicexiugai(bianma string, buffer *bytes.Buffer) {
-	tianjiaxiugai(zf.Zfs.Xiugai(false), bianma, buffer)
+func testservicexiugai(mokuai string, bianma string, buffer *bytes.Buffer) {
+	tianjiaxiugai(mokuai, zf.Zfs.Xiugai(false), bianma, buffer)
 }
 func testservicechaxun(bianma string, buffer *bytes.Buffer) {
 	sz1str := strconv.Itoa(zfzhi.Zhi.Shuzi1())
@@ -147,16 +147,16 @@ func testserviceshanchu(bianma string, buffer *bytes.Buffer) {
 }
 func Shengchengyewutest() {
 	mks := gongju.Mokuaimings
-	for _, mkv := range mks {
-
+	for _, mkvo := range mks {
+		mkv := mkvo.Zhi
 		_, biaos, _ := gongju.Biaolies(mkv)
 		for bk, _ := range biaos {
 			buffer := bytes.Buffer{}
 			pacstr := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Tests(true) + zfzhi.Zhi.Hhf()
 			buffer.WriteString(pacstr)
-			servicetestimport(bk, &buffer)
-			testservicetianjia(bk, &buffer)
-			testservicexiugai(bk, &buffer)
+			servicetestimport(mkv, bk, &buffer)
+			testservicetianjia(mkv, bk, &buffer)
+			testservicexiugai(mkv, bk, &buffer)
 			testservicechaxun(bk, &buffer)
 			testserviceshanchu(bk, &buffer)
 			dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)

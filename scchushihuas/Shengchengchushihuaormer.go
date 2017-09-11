@@ -117,8 +117,8 @@ func scormdebug(buffer *bytes.Buffer) {
 
 func scormermoxing(buffer *bytes.Buffer) {
 	mks := gongju.Mokuaimings
-	for _, mkv := range mks {
-
+	for _, mkvo := range mks {
+		mkv := mkvo.Zhi
 		//func ormermoxing()
 		funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Ormermoxing(true) +
 			zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy()

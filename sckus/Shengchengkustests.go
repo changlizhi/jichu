@@ -13,7 +13,7 @@ import (
 )
 
 // tests的import
-func testsimports(bianma string, buffer *bytes.Buffer) {
+func testsimports(mokuai string, bianma string, buffer *bytes.Buffer) {
 	pac := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Tests(true) + zfzhi.Zhi.Hhf()
 	buffer.WriteString(pac)
 
@@ -21,7 +21,7 @@ func testsimports(bianma string, buffer *bytes.Buffer) {
 	impstr := zf.Zfs.Import(true) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(impstr)
 
-	for _, lk := range gongju.Biao(bianma) {
+	for _, lk := range gongju.Biao(mokuai, bianma) {
 		if gongju.Lieleixing(lk) == zf.Zfs.Time(true) {
 			// "time" \n
 			timebao := zfzhi.Zhi.Syh() + zf.Zfs.Time(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
@@ -76,14 +76,14 @@ func testchaxunyige(bianma string, buffer *bytes.Buffer) {
 	// \n } \n
 	buffer.WriteString(zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
-func testtianjiayige(bianma string, buffer *bytes.Buffer) {
-	tianjiahuoxiugai(bianma, buffer, zf.Zfs.Tianjiayige(false))
+func testtianjiayige(mokuai string, bianma string, buffer *bytes.Buffer) {
+	tianjiahuoxiugai(mokuai, bianma, buffer, zf.Zfs.Tianjiayige(false))
 }
-func testxiugaiyige(bianma string, buffer *bytes.Buffer) {
-	tianjiahuoxiugai(bianma, buffer, zf.Zfs.Xiugaiyige(false))
+func testxiugaiyige(mokuai string, bianma string, buffer *bytes.Buffer) {
+	tianjiahuoxiugai(mokuai, bianma, buffer, zf.Zfs.Xiugaiyige(false))
 }
 
-func tianjiahuoxiugai(bianma string, buffer *bytes.Buffer, fangfa string) {
+func tianjiahuoxiugai(mokuai string, bianma string, buffer *bytes.Buffer, fangfa string) {
 	sz1 := strconv.Itoa(zfzhi.Zhi.Shuzi1())
 
 	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Test(false) + fangfa + bianma
@@ -98,7 +98,7 @@ func tianjiahuoxiugai(bianma string, buffer *bytes.Buffer, fangfa string) {
 	buffer.WriteString(dxstr)
 
 	// 生成字段和值
-	pinjieziduan(bianma, buffer, fangfa, sz1)
+	pinjieziduan(mokuai, bianma, buffer, fangfa, sz1)
 	buffer.WriteString(zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 
 	// zdjuesedaos.Testzfzhi.Zhi.Xx()xJuese(juese)
@@ -108,9 +108,9 @@ func tianjiahuoxiugai(bianma string, buffer *bytes.Buffer, fangfa string) {
 	// \n } \n
 	buffer.WriteString(zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
-func pinjieziduan(bianma string, buffer *bytes.Buffer, fangfa string, houzhui string) {
+func pinjieziduan(mokuai string, bianma string, buffer *bytes.Buffer, fangfa string, houzhui string) {
 
-	for _, lk := range gongju.Biao(bianma) {
+	for _, lk := range gongju.Biao(mokuai, bianma) {
 		buffer.WriteString(lk + zfzhi.Zhi.Mh())
 		zhi := shengchengzhi(lk, gongju.Lieleixing(lk), fangfa, houzhui)
 		buffer.WriteString(zhi + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf())
@@ -160,7 +160,7 @@ func testshanchuyige(bianma string, buffer *bytes.Buffer) {
 	// \n } \n
 	buffer.WriteString(zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
-func testtianjiaduoge(bianma string, buffer *bytes.Buffer) {
+func testtianjiaduoge(mokuai string, bianma string, buffer *bytes.Buffer) {
 	//zfzhi.Zhi.Syh() := zfzhi.Shuangyinhaozhi()
 	sz2 := strconv.Itoa(zfzhi.Zhi.Shuzi2())
 	sz3 := strconv.Itoa(zfzhi.Zhi.Shuzi3())
@@ -180,7 +180,7 @@ func testtianjiaduoge(bianma string, buffer *bytes.Buffer) {
 
 	//{ \n zhi... \n }
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-	pinjieziduan(bianma, buffer, zf.Zfs.Tianjiaduoge(false), sz2)
+	pinjieziduan(mokuai, bianma, buffer, zf.Zfs.Tianjiaduoge(false), sz2)
 	buffer.WriteString(zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 
 	// juese3 := moxings.Juese{\n
@@ -188,7 +188,7 @@ func testtianjiaduoge(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(shiti3)
 
 	// \n zhi \n
-	pinjieziduan(bianma, buffer, zf.Zfs.Tianjiaduoge(false), sz3)
+	pinjieziduan(mokuai, bianma, buffer, zf.Zfs.Tianjiaduoge(false), sz3)
 	buffer.WriteString(zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 
 	// jueses :=[]moxings.Juese
@@ -208,15 +208,15 @@ func testtianjiaduoge(bianma string, buffer *bytes.Buffer) {
 }
 func Shengchengdaostests() {
 	mks := gongju.Mokuaimings
-	for _, mkv := range mks {
-
+	for _, mkvo := range mks {
+		mkv := mkvo.Zhi
 		_, biaos, _ := gongju.Biaolies(mkv)
 		for bk, _ := range biaos {
 			buffer := bytes.Buffer{}
-			testsimports(bk, &buffer)
-			testtianjiaduoge(bk, &buffer)
-			testtianjiayige(bk, &buffer)
-			testxiugaiyige(bk, &buffer)
+			testsimports(mkv, bk, &buffer)
+			testtianjiaduoge(mkv, bk, &buffer)
+			testtianjiayige(mkv, bk, &buffer)
+			testxiugaiyige(mkv, bk, &buffer)
 			testchaxunyige(bk, &buffer)
 			testshanchuyige(bk, &buffer)
 

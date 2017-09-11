@@ -12,8 +12,8 @@ import (
 
 func Shengchengmoxings() {
 	mks := gongju.Mokuaimings
-	for _, mkv := range mks {
-
+	for _, mkvo := range mks {
+		mkv := mkvo.Zhi
 		_, biaos, _ := gongju.Biaolies(mkv)
 		for bk, _ := range biaos {
 			buffer := bytes.Buffer{}

@@ -48,7 +48,7 @@ func serviceimports(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(binitbao)
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
 }
-func yanzhengchangdu(bianma string, buffer *bytes.Buffer) {
+func yanzhengchangdu(mokuai string, bianma string, buffer *bytes.Buffer) {
 	bmx := strings.ToLower(bianma)
 
 	funcone := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Yanzhengziduanchangdu(true)
@@ -68,7 +68,7 @@ func yanzhengchangdu(bianma string, buffer *bytes.Buffer) {
 		zf.Zfs.Bytes(true) + zfzhi.Zhi.Dh() + zf.Zfs.Buffer(false) +
 		zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(bf)
-	for _, lk := range gongju.Biao(bianma) {
+	for _, lk := range gongju.Biao(mokuai, bianma) {
 		lv := strings.ToLower(lk)
 		if gongju.Lieleixing(lk) == zf.Zfs.String(true) {
 			buffer.WriteString(zfzhi.Zhi.Hhf())
@@ -143,7 +143,7 @@ func yanzhengchangdu(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Dkhy())
 	buffer.WriteString(zfzhi.Zhi.Hhf())
 }
-func servicexiugai(bianma string, buffer *bytes.Buffer) {
+func servicexiugai(mokuai string, bianma string, buffer *bytes.Buffer) {
 	bmx := strings.ToLower(bianma)
 
 	funcstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Xiugai(false) +
@@ -190,7 +190,7 @@ func servicexiugai(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(iffind)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 
-	for _, lk := range gongju.Biao(bianma) {
+	for _, lk := range gongju.Biao(mokuai, bianma) {
 		if gongju.Lieleixing(lk) == zf.Zfs.String(true) {
 			buffer.WriteString(zfzhi.Zhi.Hhf())
 			iflie := zf.Zfs.If(true) + zfzhi.Zhi.Kgf() + bmx + zfzhi.Zhi.Dh() +
@@ -301,8 +301,8 @@ func serviceshanchu(bianma string, buffer *bytes.Buffer) {
 
 func Shengchengyewu() {
 	mks := gongju.Mokuaimings
-	for _, mkv := range mks {
-
+	for _, mkvo := range mks {
+		mkv := mkvo.Zhi
 		_, biaos, _ := gongju.Biaolies(mkv)
 		for bk, bv := range biaos {
 			buffer := bytes.Buffer{}
@@ -312,9 +312,9 @@ func Shengchengyewu() {
 			buffer.WriteString(pac)
 
 			serviceimports(bk, &buffer)
-			yanzhengchangdu(bk, &buffer)
+			yanzhengchangdu(mkv, bk, &buffer)
 			servicetianjia(bk, &buffer)
-			servicexiugai(bk, &buffer)
+			servicexiugai(mkv, bk, &buffer)
 			serviceshanchu(bk, &buffer)
 			servicechaxun(bk, &buffer)
 			dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + bm
