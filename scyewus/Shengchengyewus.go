@@ -10,11 +10,11 @@ import (
 	"strings"
 )
 
-func serviceimports(bianma string, buffer *bytes.Buffer) {
+func serviceimports(mokuai string, bianma string, buffer *bytes.Buffer) {
 	importstr := zf.Zfs.Import(true) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(importstr)
 	//"xxx/suoyoucuowus" \n
-	errorbao := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() +
+	errorbao := zfzhi.Zhi.Syh() + mokuai + zfzhi.Zhi.Xx() +
 		zf.Zfs.Suoyoucuowus(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(errorbao)
 	// "bytes"
@@ -24,7 +24,7 @@ func serviceimports(bianma string, buffer *bytes.Buffer) {
 	timebao := zfzhi.Zhi.Syh() + zf.Zfs.Time(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(timebao)
 	// "xxx/moxings"
-	apmbao := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() +
+	apmbao := zfzhi.Zhi.Syh() + mokuai + zfzhi.Zhi.Xx() +
 		zf.Zfs.Moxings(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(apmbao)
 	// "gongju"
@@ -39,11 +39,11 @@ func serviceimports(bianma string, buffer *bytes.Buffer) {
 		zf.Zfs.Zfzhi(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(zfzhibao)
 	// "xxx/Xxxkus"
-	daobao := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() +
+	daobao := zfzhi.Zhi.Syh() + mokuai + zfzhi.Zhi.Xx() +
 		zf.Zfs.Zd(true) + strings.ToLower(bianma) + zf.Zfs.Kus(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(daobao)
 	//"xxx/chushihuas"
-	binitbao := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() +
+	binitbao := zfzhi.Zhi.Syh() + mokuai + zfzhi.Zhi.Xx() +
 		zf.Zfs.Chushihuas(true) + zfzhi.Zhi.Syh()
 	buffer.WriteString(binitbao)
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
@@ -311,7 +311,7 @@ func Shengchengyewu() {
 			pac := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + bm + zfzhi.Zhi.Hhf()
 			buffer.WriteString(pac)
 
-			serviceimports(bk, &buffer)
+			serviceimports(mkv, bk, &buffer)
 			yanzhengchangdu(mkv, bk, &buffer)
 			servicetianjia(bk, &buffer)
 			servicexiugai(mkv, bk, &buffer)

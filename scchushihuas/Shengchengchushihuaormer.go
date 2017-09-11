@@ -195,43 +195,47 @@ func scormerbyname(buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
 func Shengchengchushihuaormer() {
-	buffer := &bytes.Buffer{}
-	//package chushihuas
-	pac := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Chushihuas(true) + zfzhi.Zhi.Hhf()
-	buffer.WriteString(pac)
-	buffer.WriteString(zf.Zfs.Import(true))
-	buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
-	//_"github.com/go-sql-driver/mysql"
-	buffer.WriteString(zh.Zhs.Mysqlbao())
-	//"changliang/zf"
-	zfbao := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() +
-		zf.Zfs.Zf(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
-	buffer.WriteString(zfbao)
-	//"changliang/zfzhi"
-	zfzhibao := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() +
-		zf.Zfs.Zfzhi(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
-	buffer.WriteString(zfzhibao)
-	//"strconv"
-	constr := zfzhi.Zhi.Syh() + zf.Zfs.Strconv(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
-	buffer.WriteString(constr)
+	mks := gongju.Mokuaimings
+	for _, mkvo := range mks {
+		mkv := mkvo.Zhi
+		buffer := &bytes.Buffer{}
+		//package chushihuas
+		pac := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Chushihuas(true) + zfzhi.Zhi.Hhf()
+		buffer.WriteString(pac)
+		buffer.WriteString(zf.Zfs.Import(true))
+		buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
+		//_"github.com/go-sql-driver/mysql"
+		buffer.WriteString(zh.Zhs.Mysqlbao())
+		//"changliang/zf"
+		zfbao := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() +
+			zf.Zfs.Zf(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+		buffer.WriteString(zfbao)
+		//"changliang/zfzhi"
+		zfzhibao := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() +
+			zf.Zfs.Zfzhi(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+		buffer.WriteString(zfzhibao)
+		//"strconv"
+		constr := zfzhi.Zhi.Syh() + zf.Zfs.Strconv(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+		buffer.WriteString(constr)
 
-	//"github.com/astaxie/beego/orm"
-	buffer.WriteString(zh.Zhs.Beegoormbao())
-	//"xxx/moxings"
-	mxstr := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() + zf.Zfs.Moxings(true) + zfzhi.Zhi.Syh()
-	buffer.WriteString(mxstr)
+		//"github.com/astaxie/beego/orm"
+		buffer.WriteString(zh.Zhs.Beegoormbao())
+		//"xxx/moxings"
+		mxstr := zfzhi.Zhi.Syh() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Moxings(true) + zfzhi.Zhi.Syh()
+		buffer.WriteString(mxstr)
 
-	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
-	scinitfun(buffer)
-	scormdebug(buffer)
-	scormermoxing(buffer)
-	scsetormerdebug(buffer)
-	scdefaultormer(buffer)
-	scormerbyname(buffer)
-	scormershujuku(buffer)
-	dir := gongju.Getgopath() + zfzhi.Zhi.Xx() +
-		gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() + zf.Zfs.Chushihuas(true)
-	path := dir + zfzhi.Zhi.Xx() + zf.Zfs.Chushihua(false) + zf.Zfs.Ormer(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
-	os.MkdirAll(dir, os.ModePerm)
-	ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
+		buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
+		scinitfun(buffer)
+		scormdebug(buffer)
+		scormermoxing(buffer)
+		scsetormerdebug(buffer)
+		scdefaultormer(buffer)
+		scormerbyname(buffer)
+		scormershujuku(buffer)
+		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() +
+			mkv + zfzhi.Zhi.Xx() + zf.Zfs.Chushihuas(true)
+		path := dir + zfzhi.Zhi.Xx() + zf.Zfs.Chushihua(false) + zf.Zfs.Ormer(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
+		os.MkdirAll(dir, os.ModePerm)
+		ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
+	}
 }

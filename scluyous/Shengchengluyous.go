@@ -10,7 +10,7 @@ import (
 	"os"
 )
 
-func routersimports(buffer *bytes.Buffer) {
+func routersimports(mokuai string, buffer *bytes.Buffer) {
 	buffer.WriteString(zf.Zfs.Import(true))
 	buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
 
@@ -25,7 +25,7 @@ func routersimports(buffer *bytes.Buffer) {
 	buffer.WriteString(zfzstr)
 
 	//"xxx/zdkongzhiqis"
-	constr := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() +
+	constr := zfzhi.Zhi.Syh() + mokuai + zfzhi.Zhi.Xx() +
 		zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(constr)
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
@@ -72,7 +72,7 @@ func Shengchengluyous() {
 			pacstr := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Luyous(true) + zfzhi.Zhi.Hhf()
 			buffer.WriteString(pacstr)
 
-			routersimports(&buffer)
+			routersimports(mkv, &buffer)
 			routersinit(bk, &buffer)
 			dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Luyous(true)
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Luyou(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)

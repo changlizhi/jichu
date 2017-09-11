@@ -19,7 +19,7 @@ func servicetestimport(mokuai string, bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
 
 	// "xxx/moxings"
-	apmstr := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() +
+	apmstr := zfzhi.Zhi.Syh() + mokuai + zfzhi.Zhi.Xx() +
 		zf.Zfs.Moxings(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(apmstr)
 
@@ -27,7 +27,7 @@ func servicetestimport(mokuai string, bianma string, buffer *bytes.Buffer) {
 	zfzstr := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() + zf.Zfs.Zfzhi(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(zfzstr)
 	// "xxx/zdjueseyewus"
-	serstr := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() +
+	serstr := zfzhi.Zhi.Syh() + mokuai + zfzhi.Zhi.Xx() +
 		zf.Zfs.Zd(true) + bmx + zf.Zfs.Yewus(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(serstr)
 

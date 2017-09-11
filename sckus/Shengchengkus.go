@@ -10,19 +10,19 @@ import (
 	"strings"
 )
 
-func imports(buffer *bytes.Buffer) {
+func imports(mokuai string,buffer *bytes.Buffer) {
 	// \n import (\n
 	importstr := zfzhi.Zhi.Hhf() + zf.Zfs.Import(true) + zfzhi.Zhi.Kgf() +
 		zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(importstr)
 
 	// "xxx/moxings" \n
-	apm := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() +
+	apm := zfzhi.Zhi.Syh() + mokuai + zfzhi.Zhi.Xx() +
 		zf.Zfs.Moxings(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(apm)
 
 	// "xxx/chushihuas"
-	bai := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() +
+	bai := zfzhi.Zhi.Syh() + mokuai + zfzhi.Zhi.Xx() +
 		zf.Zfs.Chushihuas(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(bai)
 
@@ -291,7 +291,7 @@ func Shengchengkus() {
 			lujing := zf.Zfs.Zd(true) + strings.ToLower(biao) + zf.Zfs.Kus(true)
 			buffer.WriteString(lujing) // zdjuesedaos
 
-			imports(&buffer)            //import all
+			imports(mkv,&buffer)            //import all
 			chaxunyige(biao, &buffer)   // Chaxunyige
 			tianjiayige(biao, &buffer)  // Tianjiayige
 			tianjiaduoge(biao, &buffer) // Tianjiaduoge
@@ -299,7 +299,7 @@ func Shengchengkus() {
 			shanchuyige(biao, &buffer)  // Shanchuyige
 
 			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() +
-				gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() + lujing
+				mkv + zfzhi.Zhi.Xx() + lujing
 			path := dir + zfzhi.Zhi.Xx() + biao + zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
 			os.MkdirAll(dir, os.ModePerm)
 			ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)

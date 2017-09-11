@@ -36,30 +36,34 @@ func bufferwriteobj(pac string, dir string, jsonlies map[string]gongju.Tongyong)
 }
 
 func Shengchengjsongo() {
-	dir := gongju.Getgopath() + zfzhi.Zhi.Xx() +
-		gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() + zf.Zfs.Chushihuas(true)
-	buffermoji := &bytes.Buffer{}
-	//package chushihuas
-	pac := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Chushihuas(true) + zfzhi.Zhi.Hhf()
-	buffermoji.WriteString(pac)
-	//type Tongyong struct
-	typestr := zf.Zfs.Type(true) + zfzhi.Zhi.Kgf() + gongju.Chushihuas[zf.Zfs.Jsonmojiming(false)].Zhi +
-		zfzhi.Zhi.Kgf() + zf.Zfs.Struct(true)
-	buffermoji.WriteString(typestr)
-	// {\n
-	buffermoji.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-	for jmk, _ := range gongju.Jsonmojis {
-		//Guilei string
-		jm := jmk + zfzhi.Zhi.Kgf() + zf.Zfs.String(true) + zfzhi.Zhi.Hhf()
-		buffermoji.WriteString(jm)
+	mks := gongju.Mokuaimings
+	for _, mkvo := range mks {
+		mkv := mkvo.Zhi
+		buffermoji := &bytes.Buffer{}
+		//package chushihuas
+		pac := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Chushihuas(true) + zfzhi.Zhi.Hhf()
+		buffermoji.WriteString(pac)
+		//type Tongyong struct
+		typestr := zf.Zfs.Type(true) + zfzhi.Zhi.Kgf() + gongju.Chushihuas[zf.Zfs.Jsonmojiming(false)].Zhi +
+			zfzhi.Zhi.Kgf() + zf.Zfs.Struct(true)
+		buffermoji.WriteString(typestr)
+		// {\n
+		buffermoji.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+		for jmk, _ := range gongju.Jsonmojis {
+			//Guilei string
+			jm := jmk + zfzhi.Zhi.Kgf() + zf.Zfs.String(true) + zfzhi.Zhi.Hhf()
+			buffermoji.WriteString(jm)
+		}
+		// \n}
+		buffermoji.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy())
+
+		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() +
+			mkv + zfzhi.Zhi.Xx() + zf.Zfs.Chushihuas(true)
+		bufferwriteobj(pac, dir, gongju.Jsonlies0)
+		bufferwriteobj(pac, dir, gongju.Jsonlies1)
+
+		pathmoji := dir + zfzhi.Zhi.Xx() + gongju.Chushihuas[zf.Zfs.Jsonmojiming(false)].Zhi + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
+		os.MkdirAll(dir, os.ModePerm)
+		ioutil.WriteFile(pathmoji, buffermoji.Bytes(), os.ModePerm)
 	}
-	// \n}
-	buffermoji.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy())
-
-	bufferwriteobj(pac, dir, gongju.Jsonlies0)
-	bufferwriteobj(pac, dir, gongju.Jsonlies1)
-
-	pathmoji := dir + zfzhi.Zhi.Xx() + gongju.Chushihuas[zf.Zfs.Jsonmojiming(false)].Zhi + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
-	os.MkdirAll(dir, os.ModePerm)
-	ioutil.WriteFile(pathmoji, buffermoji.Bytes(), os.ModePerm)
 }

@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-func importskongzhiqitest(buffer *bytes.Buffer) {
+func importskongzhiqitest(mokuai string, buffer *bytes.Buffer) {
 	buffer.WriteString(zf.Zfs.Import(true))
 	buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
 	//"github.com/astaxie/beego/context"
@@ -22,7 +22,7 @@ func importskongzhiqitest(buffer *bytes.Buffer) {
 	buffer.WriteString(gitstr)
 
 	//"xxx/kongzhiqis"
-	constr := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() +
+	constr := zfzhi.Zhi.Syh() + mokuai + zfzhi.Zhi.Xx() +
 		zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(constr)
 
@@ -241,7 +241,7 @@ func Shengchengkongzhiqitest() {
 		for bk, _ := range biaos {
 			buffer := bytes.Buffer{}
 			buffer.WriteString(zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Tests(true) + zfzhi.Zhi.Hhf())
-			importskongzhiqitest(&buffer)
+			importskongzhiqitest(mkv, &buffer)
 			bkkongzhiqitest(bk, &buffer)
 			postkongzhiqitest(bk, &buffer)
 			patchkongzhiqitest(bk, &buffer)

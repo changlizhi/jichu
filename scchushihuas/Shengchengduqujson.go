@@ -78,32 +78,36 @@ func bufferwritepath(buffer *bytes.Buffer, jsonlies map[string]gongju.Tongyong) 
 }
 
 func Shengchengduqujson() {
-	buffer := &bytes.Buffer{}
-	//package chushihuas
-	pac := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Chushihuas(true) + zfzhi.Zhi.Hhf()
-	buffer.WriteString(pac)
+	mks := gongju.Mokuaimings
+	for _, mkvo := range mks {
+		mkv := mkvo.Zhi
+		buffer := &bytes.Buffer{}
+		//package chushihuas
+		pac := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Chushihuas(true) + zfzhi.Zhi.Hhf()
+		buffer.WriteString(pac)
 
-	//import
-	buffer.WriteString(zf.Zfs.Import(true))
-	//(\n
-	buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
-	//"changliang/zf"
-	clstr := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() +
-		zf.Zfs.Zf(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
-	buffer.WriteString(clstr)
-	//"gongju"
-	gjstr := zfzhi.Zhi.Syh() + zf.Zfs.Gongju(true) + zfzhi.Zhi.Syh()
-	buffer.WriteString(gjstr)
+		//import
+		buffer.WriteString(zf.Zfs.Import(true))
+		//(\n
+		buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
+		//"changliang/zf"
+		clstr := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() +
+			zf.Zfs.Zf(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+		buffer.WriteString(clstr)
+		//"gongju"
+		gjstr := zfzhi.Zhi.Syh() + zf.Zfs.Gongju(true) + zfzhi.Zhi.Syh()
+		buffer.WriteString(gjstr)
 
-	//\n)\n
-	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
+		//\n)\n
+		buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
 
-	bufferwritepath(buffer, gongju.Jsonlies0)
-	bufferwritepath(buffer, gongju.Jsonlies1)
+		bufferwritepath(buffer, gongju.Jsonlies0)
+		bufferwritepath(buffer, gongju.Jsonlies1)
 
-	dir := gongju.Getgopath() + zfzhi.Zhi.Xx() +
-		gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() + zf.Zfs.Chushihuas(true)
-	path := dir + zfzhi.Zhi.Xx() + zf.Zfs.Duqujson(false) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
-	os.MkdirAll(dir, os.ModePerm)
-	ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
+		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() +
+			mkv + zfzhi.Zhi.Xx() + zf.Zfs.Chushihuas(true)
+		path := dir + zfzhi.Zhi.Xx() + zf.Zfs.Duqujson(false) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
+		os.MkdirAll(dir, os.ModePerm)
+		ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
+	}
 }

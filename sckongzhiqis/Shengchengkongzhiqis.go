@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-func kongzhiqiimports(bianma string, buffer *bytes.Buffer) {
+func kongzhiqiimports(mokuai string, bianma string, buffer *bytes.Buffer) {
 
 	bmx := strings.ToLower(bianma)
 
@@ -28,15 +28,15 @@ func kongzhiqiimports(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(asstr)
 
 	// 'xxx/moxings" \n
-	apm := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() + zf.Zfs.Moxings(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+	apm := zfzhi.Zhi.Syh() + mokuai + zfzhi.Zhi.Xx() + zf.Zfs.Moxings(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(apm)
 
 	//"xxx/chushihuas"
-	bistr := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() + zf.Zfs.Chushihuas(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+	bistr := zfzhi.Zhi.Syh() + mokuai + zfzhi.Zhi.Xx() + zf.Zfs.Chushihuas(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(bistr)
 
 	//"xxx/Xxxyewus"
-	serstr := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() + zf.Zfs.Zd(true) + bmx + zf.Zfs.Yewus(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+	serstr := zfzhi.Zhi.Syh() + mokuai + zfzhi.Zhi.Xx() + zf.Zfs.Zd(true) + bmx + zf.Zfs.Yewus(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(serstr)
 
 	//"changliang/zf"
@@ -389,14 +389,13 @@ func Shengchengkongzhiqis() {
 		for bk, _ := range biaos {
 			buffer := bytes.Buffer{}
 			buffer.WriteString(zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true) + zfzhi.Zhi.Hhf())
-			kongzhiqiimports(bk, &buffer)
+			kongzhiqiimports(mkv, bk, &buffer)
 			kongzhiqitype(bk, &buffer)
 			kongzhiqiget(bk, &buffer)
 			kongzhiqipost(bk, &buffer)
 			kongzhiqipatch(bk, &buffer)
 			kongzhiqidelete(bk, &buffer)
-			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() +
-				gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi +
+			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv +
 				zfzhi.Zhi.Xx() + zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true)
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Kongzhiqi(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
 			os.MkdirAll(dir, os.ModePerm)

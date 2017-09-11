@@ -34,7 +34,7 @@ func Shengchengmoxings() {
 			//左大括号在头里有了
 			buffer.WriteString(zfzhi.Zhi.Dkhy()) // }
 			// xxx/moxings/Juese.go
-			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi +
+			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv +
 				zfzhi.Zhi.Xx() + zf.Zfs.Moxings(true)
 			path := dir + zfzhi.Zhi.Xx() + bk + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
 			os.MkdirAll(dir, os.ModePerm)

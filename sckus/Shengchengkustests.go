@@ -30,7 +30,7 @@ func testsimports(mokuai string, bianma string, buffer *bytes.Buffer) {
 		}
 	}
 	// "xxx/moxings" \n
-	apm := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() +
+	apm := zfzhi.Zhi.Syh() + mokuai + zfzhi.Zhi.Xx() +
 		zf.Zfs.Moxings(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(apm)
 
@@ -46,7 +46,7 @@ func testsimports(mokuai string, bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(clstr)
 
 	// "xxx/zdjueseshujukuduqus"
-	daobao := zfzhi.Zhi.Syh() + gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() +
+	daobao := zfzhi.Zhi.Syh() + mokuai + zfzhi.Zhi.Xx() +
 		zf.Zfs.Zd(true) + strings.ToLower(bianma) + zf.Zfs.Kus(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(daobao)
 
