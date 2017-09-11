@@ -1,5 +1,5 @@
-package skj
+package sjkhfxyonghu
 
-type Sjk struct{}
+type Sjkhfxyonghu struct{}
 
-var Sjks = &Sjk{}
+var Sjkhfxyonghus = &Sjkhfxyonghu{}

@@ -6,6 +6,6 @@ import (
 	"testing"
 )
 
-func TestPrintsome(t *testing.T) {
-	log.Println(skjhfxyonghu.Sjks.QuanxianBianma(false))
+func TestPrintsome(t *testing.T) {sjkhfxyonghu.Sjkhfxyonghus.JueseBianma(false)
+	log.Println(sjkhfxyonghu.Sjkhfxyonghus.JueseBianma(false))
 }
