@@ -63,17 +63,21 @@ func routersinit(bianma string, buffer *bytes.Buffer) {
 
 }
 func Shengchengluyous() {
-	_, biaos, _ := gongju.Biaolies()
-	for bk, _ := range biaos {
-		buffer := bytes.Buffer{}
-		pacstr := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Luyous(true) + zfzhi.Zhi.Hhf()
-		buffer.WriteString(pacstr)
+	mks := gongju.Mokuaimings
+	for _, mkv := range mks {
 
-		routersimports(&buffer)
-		routersinit(bk, &buffer)
-		dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Luyous(true)
-		path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Luyou(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
-		os.MkdirAll(dir, os.ModePerm)
-		ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
+		_, biaos, _ := gongju.Biaolies(mkv)
+		for bk, _ := range biaos {
+			buffer := bytes.Buffer{}
+			pacstr := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Luyous(true) + zfzhi.Zhi.Hhf()
+			buffer.WriteString(pacstr)
+
+			routersimports(&buffer)
+			routersinit(bk, &buffer)
+			dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Luyous(true)
+			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Luyou(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
+			os.MkdirAll(dir, os.ModePerm)
+			ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
+		}
 	}
 }

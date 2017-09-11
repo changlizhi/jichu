@@ -300,23 +300,27 @@ func serviceshanchu(bianma string, buffer *bytes.Buffer) {
 }
 
 func Shengchengyewu() {
-	_, biaos, _ := gongju.Biaolies()
-	for bk, bv := range biaos {
-		buffer := bytes.Buffer{}
-		bm := zf.Zfs.Zd(true) + bv + zf.Zfs.Yewus(true)
-		//package zfzhi.Zhi.Xx()xservices \n
-		pac := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + bm + zfzhi.Zhi.Hhf()
-		buffer.WriteString(pac)
+	mks := gongju.Mokuaimings
+	for _, mkv := range mks {
 
-		serviceimports(bk, &buffer)
-		yanzhengchangdu(bk, &buffer)
-		servicetianjia(bk, &buffer)
-		servicexiugai(bk, &buffer)
-		serviceshanchu(bk, &buffer)
-		servicechaxun(bk, &buffer)
-		dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + bm
-		os.MkdirAll(dir, os.ModePerm)
-		path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Yewus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
-		ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
+		_, biaos, _ := gongju.Biaolies(mkv)
+		for bk, bv := range biaos {
+			buffer := bytes.Buffer{}
+			bm := zf.Zfs.Zd(true) + bv + zf.Zfs.Yewus(true)
+			//package zfzhi.Zhi.Xx()xservices \n
+			pac := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + bm + zfzhi.Zhi.Hhf()
+			buffer.WriteString(pac)
+
+			serviceimports(bk, &buffer)
+			yanzhengchangdu(bk, &buffer)
+			servicetianjia(bk, &buffer)
+			servicexiugai(bk, &buffer)
+			serviceshanchu(bk, &buffer)
+			servicechaxun(bk, &buffer)
+			dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + bm
+			os.MkdirAll(dir, os.ModePerm)
+			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Yewus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
+			ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
+		}
 	}
 }

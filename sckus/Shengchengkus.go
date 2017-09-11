@@ -280,25 +280,30 @@ func xiugaiyige(bianma string, buffer *bytes.Buffer) {
 
 }
 func Shengchengkus() {
-	_, biaos, _ := gongju.Biaolies()
-	for biao, _ := range biaos {
-		buffer := bytes.Buffer{}
-		buffer.WriteString(zf.Zfs.Package(true)) //package
-		buffer.WriteString(zfzhi.Zhi.Konggefu()) // zfzhi.Zhi.Kgf()
-		lujing := zf.Zfs.Zd(true) + strings.ToLower(biao) + zf.Zfs.Kus(true)
-		buffer.WriteString(lujing) // zdjuesedaos
+	mks := gongju.Mokuaimings
+	for _, mkv := range mks {
 
-		imports(&buffer)            //import all
-		chaxunyige(biao, &buffer)   // Chaxunyige
-		tianjiayige(biao, &buffer)  // Tianjiayige
-		tianjiaduoge(biao, &buffer) // Tianjiaduoge
-		xiugaiyige(biao, &buffer)   // Xiugaiyige
-		shanchuyige(biao, &buffer)  // Shanchuyige
+		_, biaos, _ := gongju.Biaolies(mkv)
+		for biao, _ := range biaos {
+			buffer := bytes.Buffer{}
+			buffer.WriteString(zf.Zfs.Package(true)) //package
+			buffer.WriteString(zfzhi.Zhi.Konggefu()) // zfzhi.Zhi.Kgf()
+			lujing := zf.Zfs.Zd(true) + strings.ToLower(biao) + zf.Zfs.Kus(true)
+			buffer.WriteString(lujing) // zdjuesedaos
 
-		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() +
-			gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() + lujing
-		path := dir + zfzhi.Zhi.Xx() + biao + zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
-		os.MkdirAll(dir, os.ModePerm)
-		ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
+			imports(&buffer)            //import all
+			chaxunyige(biao, &buffer)   // Chaxunyige
+			tianjiayige(biao, &buffer)  // Tianjiayige
+			tianjiaduoge(biao, &buffer) // Tianjiaduoge
+			xiugaiyige(biao, &buffer)   // Xiugaiyige
+			shanchuyige(biao, &buffer)  // Shanchuyige
+
+			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() +
+				gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Zhi + zfzhi.Zhi.Xx() + lujing
+			path := dir + zfzhi.Zhi.Xx() + biao + zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
+			os.MkdirAll(dir, os.ModePerm)
+			ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
+		}
 	}
+
 }

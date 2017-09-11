@@ -116,23 +116,27 @@ func scormdebug(buffer *bytes.Buffer) {
 }
 
 func scormermoxing(buffer *bytes.Buffer) {
-	//func ormermoxing()
-	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Ormermoxing(true) +
-		zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy()
-	buffer.WriteString(funstr)
-	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-	//orm.RegisterModel
-	regstr := zf.Zfs.Orm(true) + zfzhi.Zhi.Dh() + zf.Zfs.RegisterModel(false)
-	buffer.WriteString(regstr)
-	buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
-	_, biaos, _ := gongju.Biaolies()
-	for biao, _ := range biaos {
-		newstr := zf.Zfs.New(true) + zfzhi.Zhi.Xkhz() + zf.Zfs.Moxings(true) +
-			zfzhi.Zhi.Dh() + biao + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
-		buffer.WriteString(newstr)
+	mks := gongju.Mokuaimings
+	for _, mkv := range mks {
+
+		//func ormermoxing()
+		funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Ormermoxing(true) +
+			zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy()
+		buffer.WriteString(funstr)
+		buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+		//orm.RegisterModel
+		regstr := zf.Zfs.Orm(true) + zfzhi.Zhi.Dh() + zf.Zfs.RegisterModel(false)
+		buffer.WriteString(regstr)
+		buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
+		_, biaos, _ := gongju.Biaolies(mkv)
+		for biao, _ := range biaos {
+			newstr := zf.Zfs.New(true) + zfzhi.Zhi.Xkhz() + zf.Zfs.Moxings(true) +
+				zfzhi.Zhi.Dh() + biao + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+			buffer.WriteString(newstr)
+		}
+		buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
+		buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 	}
-	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
-	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
 
 func scsetormerdebug(buffer *bytes.Buffer) {

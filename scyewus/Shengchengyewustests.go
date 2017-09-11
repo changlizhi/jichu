@@ -146,21 +146,24 @@ func testserviceshanchu(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
 func Shengchengyewutest() {
-	_, biaos, _ := gongju.Biaolies()
-	for bk, _ := range biaos {
-		buffer := bytes.Buffer{}
-		pacstr := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Tests(true) + zfzhi.Zhi.Hhf()
-		buffer.WriteString(pacstr)
-		servicetestimport(bk, &buffer)
-		testservicetianjia(bk, &buffer)
-		testservicexiugai(bk, &buffer)
-		testservicechaxun(bk, &buffer)
-		testserviceshanchu(bk, &buffer)
-		dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
-		path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Yewus(true) + zfzhi.Zhi.Xhx() +
-			zf.Zfs.Test(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
-		os.MkdirAll(dir, os.ModePerm)
-		ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
-	}
+	mks := gongju.Mokuaimings
+	for _, mkv := range mks {
 
+		_, biaos, _ := gongju.Biaolies(mkv)
+		for bk, _ := range biaos {
+			buffer := bytes.Buffer{}
+			pacstr := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Tests(true) + zfzhi.Zhi.Hhf()
+			buffer.WriteString(pacstr)
+			servicetestimport(bk, &buffer)
+			testservicetianjia(bk, &buffer)
+			testservicexiugai(bk, &buffer)
+			testservicechaxun(bk, &buffer)
+			testserviceshanchu(bk, &buffer)
+			dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
+			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Yewus(true) + zfzhi.Zhi.Xhx() +
+				zf.Zfs.Test(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
+			os.MkdirAll(dir, os.ModePerm)
+			ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
+		}
+	}
 }

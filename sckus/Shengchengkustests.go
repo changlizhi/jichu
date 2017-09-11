@@ -207,19 +207,23 @@ func testtianjiaduoge(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
 func Shengchengdaostests() {
-	_, biaos, _ := gongju.Biaolies()
-	for bk, _ := range biaos {
-		buffer := bytes.Buffer{}
-		testsimports(bk, &buffer)
-		testtianjiaduoge(bk, &buffer)
-		testtianjiayige(bk, &buffer)
-		testxiugaiyige(bk, &buffer)
-		testchaxunyige(bk, &buffer)
-		testshanchuyige(bk, &buffer)
+	mks := gongju.Mokuaimings
+	for _, mkv := range mks {
 
-		path := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true) +
-			zfzhi.Zhi.Xx() + bk + zf.Zfs.Ku(true) + zfzhi.Zhi.Xhx() +
-			zf.Zfs.Test(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
-		ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
+		_, biaos, _ := gongju.Biaolies(mkv)
+		for bk, _ := range biaos {
+			buffer := bytes.Buffer{}
+			testsimports(bk, &buffer)
+			testtianjiaduoge(bk, &buffer)
+			testtianjiayige(bk, &buffer)
+			testxiugaiyige(bk, &buffer)
+			testchaxunyige(bk, &buffer)
+			testshanchuyige(bk, &buffer)
+
+			path := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true) +
+				zfzhi.Zhi.Xx() + bk + zf.Zfs.Ku(true) + zfzhi.Zhi.Xhx() +
+				zf.Zfs.Test(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
+			ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
+		}
 	}
 }

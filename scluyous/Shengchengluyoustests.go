@@ -131,19 +131,23 @@ func importstr(buffer *bytes.Buffer) {
 }
 
 func Shengchengluyoustests() {
-	_, biaos, _ := gongju.Biaolies()
-	for bk, _ := range biaos {
-		buffer := &bytes.Buffer{}
-		buffer.WriteString(zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Tests(true) + zfzhi.Zhi.Hhf())
-		importstr(buffer)
+	mks := gongju.Mokuaimings
+	for _, mkv := range mks {
 
-		getdelete(zf.Zfs.Get(false), bk, buffer)
-		getdelete(zf.Zfs.Delete(false), bk, buffer)
-		postpatch(zf.Zfs.Post(false), bk, buffer)
-		postpatch(zf.Zfs.Patch(false), bk, buffer)
-		dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
-		path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Luyou(true) + zfzhi.Zhi.Xhx() + zf.Zfs.Test(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
-		os.MkdirAll(dir, os.ModePerm)
-		ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
+		_, biaos, _ := gongju.Biaolies(mkv)
+		for bk, _ := range biaos {
+			buffer := &bytes.Buffer{}
+			buffer.WriteString(zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Tests(true) + zfzhi.Zhi.Hhf())
+			importstr(buffer)
+
+			getdelete(zf.Zfs.Get(false), bk, buffer)
+			getdelete(zf.Zfs.Delete(false), bk, buffer)
+			postpatch(zf.Zfs.Post(false), bk, buffer)
+			postpatch(zf.Zfs.Patch(false), bk, buffer)
+			dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
+			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Luyou(true) + zfzhi.Zhi.Xhx() + zf.Zfs.Test(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
+			os.MkdirAll(dir, os.ModePerm)
+			ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
+		}
 	}
 }

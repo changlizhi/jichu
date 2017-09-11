@@ -118,17 +118,20 @@ func httppostpatch(bk string, m string, buffer *bytes.Buffer) {
 }
 
 func Shengchengluyoushttptests() {
-	_, biaos, _ := gongju.Biaolies()
-	for bk, _ := range biaos {
-		buffer := &bytes.Buffer{}
-		buffer.WriteString(zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Tests(true) + zfzhi.Zhi.Hhf())
-		httptestimport(buffer)
-		httppostpatch(bk, zf.Zfs.Post(false), buffer)
-		httppostpatch(bk, zf.Zfs.Patch(false), buffer)
-		dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
-		path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Luyou(true) + zf.Zfs.Http(true) + zfzhi.Zhi.Xhx() + zf.Zfs.Test(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
-		os.MkdirAll(dir, os.ModePerm)
-		ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
-	}
+	mks := gongju.Mokuaimings
+	for _, mkv := range mks {
 
+		_, biaos, _ := gongju.Biaolies(mkv)
+		for bk, _ := range biaos {
+			buffer := &bytes.Buffer{}
+			buffer.WriteString(zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Tests(true) + zfzhi.Zhi.Hhf())
+			httptestimport(buffer)
+			httppostpatch(bk, zf.Zfs.Post(false), buffer)
+			httppostpatch(bk, zf.Zfs.Patch(false), buffer)
+			dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
+			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Luyou(true) + zf.Zfs.Http(true) + zfzhi.Zhi.Xhx() + zf.Zfs.Test(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
+			os.MkdirAll(dir, os.ModePerm)
+			ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
+		}
+	}
 }
