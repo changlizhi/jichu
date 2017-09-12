@@ -6,7 +6,6 @@ import (
 	"changliang/zfzhi"
 	"gongju"
 	"io/ioutil"
-	"log"
 	"os"
 )
 
@@ -65,6 +64,5 @@ func Shengchengziduancuowu() {
 		path := dir + zfzhi.Zhi.Xx() + zf.Zfs.Ziduancuowu(false) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
 		os.MkdirAll(dir, os.ModePerm)
 		ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
-		log.Println(buffer.String())
 	}
 }
