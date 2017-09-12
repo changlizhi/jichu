@@ -300,9 +300,10 @@ func serviceshanchu(bianma string, buffer *bytes.Buffer) {
 }
 
 func Shengchengyewu() {
+	mkarr := gongju.Mokuaimingsarr
 	mks := gongju.Mokuaimings
-	for _, mkvo := range mks {
-		mkv := mkvo.Zhi
+	for _, mkvo := range mkarr {
+		mkv := mks[mkvo].Zhi
 		_, biaos, _ := gongju.Biaolies(mkv)
 		for bk, bv := range biaos {
 			buffer := bytes.Buffer{}

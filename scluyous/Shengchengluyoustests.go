@@ -131,9 +131,10 @@ func importstr(buffer *bytes.Buffer) {
 }
 
 func Shengchengluyoustests() {
+	mkarr := gongju.Mokuaimingsarr
 	mks := gongju.Mokuaimings
-	for _, mkvo := range mks {
-		mkv := mkvo.Zhi
+	for _, mkvo := range mkarr {
+		mkv := mks[mkvo].Zhi
 		_, biaos, _ := gongju.Biaolies(mkv)
 		for bk, _ := range biaos {
 			buffer := &bytes.Buffer{}

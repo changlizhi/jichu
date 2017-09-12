@@ -10,9 +10,10 @@ import (
 )
 
 func Shengchengconf() {
+	mkarr := gongju.Mokuaimingsarr
 	mks := gongju.Mokuaimings
-	for _, mkvo := range mks {
-		mkv := mkvo.Zhi
+	for _, mkvo := range mkarr {
+		mkv := mks[mkvo].Zhi
 		buffer := &bytes.Buffer{}
 		//appname = hfxyonghu
 		astr := zf.Zfs.Appname(true) + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Dyh() +

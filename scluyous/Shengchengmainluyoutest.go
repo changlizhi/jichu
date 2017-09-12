@@ -11,9 +11,10 @@ import (
 )
 
 func Shengchengmainluyoutest() {
+	mkarr := gongju.Mokuaimingsarr
 	mks := gongju.Mokuaimings
-	for _, mkvo := range mks {
-		mkv := mkvo.Zhi
+	for _, mkvo := range mkarr {
+		mkv := mks[mkvo].Zhi
 		buffer := &bytes.Buffer{}
 		//package tests
 		pac := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Tests(true) + zfzhi.Zhi.Hhf()

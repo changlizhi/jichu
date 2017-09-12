@@ -280,9 +280,10 @@ func xiugaiyige(bianma string, buffer *bytes.Buffer) {
 
 }
 func Shengchengkus() {
+	mkarr := gongju.Mokuaimingsarr
 	mks := gongju.Mokuaimings
-	for _, mkvo := range mks {
-		mkv := mkvo.Zhi
+	for _, mkvo := range mkarr {
+		mkv := mks[mkvo].Zhi
 		_, biaos, _ := gongju.Biaolies(mkv)
 		for biao, _ := range biaos {
 			buffer := bytes.Buffer{}

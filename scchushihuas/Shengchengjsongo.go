@@ -36,9 +36,10 @@ func bufferwriteobj(pac string, dir string, jsonlies map[string]gongju.Tongyong)
 }
 
 func Shengchengjsongo() {
+	mkarr := gongju.Mokuaimingsarr
 	mks := gongju.Mokuaimings
-	for _, mkvo := range mks {
-		mkv := mkvo.Zhi
+	for _, mkvo := range mkarr {
+		mkv := mks[mkvo].Zhi
 		buffermoji := &bytes.Buffer{}
 		//package chushihuas
 		pac := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Chushihuas(true) + zfzhi.Zhi.Hhf()

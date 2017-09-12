@@ -78,9 +78,10 @@ func bufferwritepath(buffer *bytes.Buffer, jsonlies map[string]gongju.Tongyong) 
 }
 
 func Shengchengduqujson() {
+	mkarr := gongju.Mokuaimingsarr
 	mks := gongju.Mokuaimings
-	for _, mkvo := range mks {
-		mkv := mkvo.Zhi
+	for _, mkvo := range mkarr {
+		mkv := mks[mkvo].Zhi
 		buffer := &bytes.Buffer{}
 		//package chushihuas
 		pac := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Chushihuas(true) + zfzhi.Zhi.Hhf()

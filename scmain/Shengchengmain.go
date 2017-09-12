@@ -11,9 +11,10 @@ import (
 )
 
 func Shengchengmain() {
+	mkarr := gongju.Mokuaimingsarr
 	mks := gongju.Mokuaimings
-	for _, mkvo := range mks {
-		mkv := mkvo.Zhi
+	for _, mkvo := range mkarr {
+		mkv := mks[mkvo].Zhi
 		buffer := &bytes.Buffer{}
 		//package main
 		pac := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Main(true) + zfzhi.Zhi.Hhf()
@@ -41,7 +42,7 @@ func Shengchengmain() {
 
 		buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 
-		dir := gongju.Getapppath()
+		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv
 		path := dir + zfzhi.Zhi.Xx() + zf.Zfs.Main(false) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
 		os.MkdirAll(dir, os.ModePerm)
 		ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
