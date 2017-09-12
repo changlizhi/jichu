@@ -84,6 +84,13 @@ func Shengchengchushihuatest() {
 			zf.Zfs.Debug(false)) +
 			zfzhi.Zhi.Hhf()
 		buffer.WriteString(dbstr)
+		//log.Println("chushihuas.Getapppath():====",chushihuas.Getapppath())
+		apppathstr := zh.Zhs.Logszh(zf.Zfs.Chushihuas(true)+
+			zfzhi.Zhi.Dh()+
+			zf.Zfs.Getapppath(false)+zfzhi.Zhi.Xkhz()+zfzhi.Zhi.Xkhy()) +
+			zfzhi.Zhi.Hhf()
+		buffer.WriteString(apppathstr)
+
 
 		buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 
