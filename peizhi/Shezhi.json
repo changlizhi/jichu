@@ -10,15 +10,9 @@
   "Mokuaiming": [
     {
       "Guilei": "Mokuaiming",
-      "Bianma": "Hfxyonghu",
-      "Mingcheng": "汉服心用户",
-      "Zhi": "hfxyonghu"
-    },
-    {
-      "Guilei": "Mokuaiming",
-      "Bianma": "Mhsyyonghu",
-      "Mingcheng": "美华尚医用户",
-      "Zhi": "mhsyyonghu"
+      "Bianma": "Mhsydata",
+      "Mingcheng": "美华尚医数据平台",
+      "Zhi": "mhsydata"
     }
   ],
   "Jsonmoji": [
