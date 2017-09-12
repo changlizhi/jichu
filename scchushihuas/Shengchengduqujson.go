@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-func bufferwritepath(buffer *bytes.Buffer, jsonlies map[string]gongju.Tongyong) {
+func bufferwritepath(mokuai string,buffer *bytes.Buffer, jsonlies map[string]gongju.Tongyong) {
 	for jl, _ := range jsonlies {
 		//func Shezhipath()string
 		funpath := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + jl +
@@ -25,7 +25,7 @@ func bufferwritepath(buffer *bytes.Buffer, jsonlies map[string]gongju.Tongyong) 
 		buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
 
 		//zf.Zfs.Mokuai(true),
-		mkstr := zh.Zhs.Zfszhtrue(gongju.Mokuaimings[zf.Zfs.Hfxyonghu(false)].Bianma) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+		mkstr := zh.Zhs.Zfszhtrue(mokuai) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
 		buffer.WriteString(mkstr)
 		//zf.Zfs.Peizhi(true),
 		pzstr := zh.Zhs.Zfszhtrue(zf.Zfs.Peizhi(false)) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
@@ -82,6 +82,7 @@ func Shengchengduqujson() {
 	mks := gongju.Mokuaimings
 	for _, mkvo := range mkarr {
 		mkv := mks[mkvo].Zhi
+		mkk := mks[mkvo].Bianma
 		buffer := &bytes.Buffer{}
 		//package chushihuas
 		pac := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Chushihuas(true) + zfzhi.Zhi.Hhf()
@@ -102,8 +103,8 @@ func Shengchengduqujson() {
 		//\n)\n
 		buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
 
-		bufferwritepath(buffer, gongju.Jsonlies0)
-		bufferwritepath(buffer, gongju.Jsonlies1)
+		bufferwritepath(mkk,buffer, gongju.Jsonlies0)
+		bufferwritepath(mkk,buffer, gongju.Jsonlies1)
 
 		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() +
 			mkv + zfzhi.Zhi.Xx() + zf.Zfs.Chushihuas(true)
