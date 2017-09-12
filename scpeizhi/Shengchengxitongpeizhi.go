@@ -6,26 +6,29 @@ import (
 	"changliang/zf"
 	"os"
 	"io/ioutil"
-	"bytes"
-	"log"
 )
 
 func Shengchengxitongpeizhi() {
 	mkarr := gongju.Mokuaimingsarr
 	mks := gongju.Mokuaimings
 	for _, mkvo := range mkarr {
-		buffer := &bytes.Buffer{}
 		mkv := mks[mkvo].Zhi
-		buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-		buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+		szpath := gongju.Getjichupath() + zfzhi.Zhi.Xx() + zf.Zfs.Sc(true) + zf.Zfs.Peizhi(true) + zfzhi.Zhi.Xx() + zf.Zfs.Shezhi(false) + zfzhi.Zhi.Dh() + zf.Zfs.Json(true)
+		ywpath := gongju.Getjichupath() + zfzhi.Zhi.Xx() + zf.Zfs.Sc(true) + zf.Zfs.Peizhi(true) + zfzhi.Zhi.Xx() + zf.Zfs.Yingwen(false) + zfzhi.Zhi.Dh() + zf.Zfs.Json(true)
+		zwpath := gongju.Getjichupath() + zfzhi.Zhi.Xx() + zf.Zfs.Sc(true) + zf.Zfs.Peizhi(true) + zfzhi.Zhi.Xx() + zf.Zfs.Zhongwen(false) + zfzhi.Zhi.Dh() + zf.Zfs.Json(true)
+		szbs, _ := ioutil.ReadFile(szpath)
+		ywbs, _ := ioutil.ReadFile(ywpath)
+		zwbs, _ := ioutil.ReadFile(zwpath)
 
 		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv +
 			zfzhi.Zhi.Xx() + zf.Zfs.Peizhi(true)
-		path := dir + zfzhi.Zhi.Xx() + zf.Zfs.Shezhi(false)+zf.Zfs.S(true) + zfzhi.Zhi.Dh() + zf.Zfs.Json(true)
-		log.Println(buffer.String())
-		log.Println("path----------", path)
+		scszpath := dir + zfzhi.Zhi.Xx() + zf.Zfs.Shezhi(false) + zfzhi.Zhi.Dh() + zf.Zfs.Json(true)
+		scywpath := dir + zfzhi.Zhi.Xx() + zf.Zfs.Yingwen(false) + zfzhi.Zhi.Dh() + zf.Zfs.Json(true)
+		sczwpath := dir + zfzhi.Zhi.Xx() + zf.Zfs.Zhongwen(false) + zfzhi.Zhi.Dh() + zf.Zfs.Json(true)
 
 		os.MkdirAll(dir, os.ModePerm)
-		ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
+		ioutil.WriteFile(scszpath, szbs, os.ModePerm)
+		ioutil.WriteFile(scywpath, ywbs, os.ModePerm)
+		ioutil.WriteFile(sczwpath, zwbs, os.ModePerm)
 	}
 }
