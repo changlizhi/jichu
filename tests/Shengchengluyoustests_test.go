@@ -1,12 +1,10 @@
 package tests
 
 import (
-	"testing"
 	"jichu/scluyous"
+	"testing"
 )
 
 func TestShengchengluyoustests(t *testing.T) {
 	scluyous.Shengchengluyoustests()
 }
-
-

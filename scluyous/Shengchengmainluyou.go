@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"changliang/zf"
 	"changliang/zfzhi"
-	"gongju"
 	"changliang/zh"
-	"os"
+	"gongju"
 	"io/ioutil"
+	"os"
 )
 
 func Shengchengmainluyou() {
@@ -103,7 +103,7 @@ func Shengchengmainluyou() {
 
 		buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 
-		dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Luyous(true)
+		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Luyous(true)
 		path := dir + zfzhi.Zhi.Xx() + zf.Zfs.Main(false) + zf.Zfs.Luyou(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
 		os.MkdirAll(dir, os.ModePerm)
 		ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)

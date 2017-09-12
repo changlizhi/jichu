@@ -1,8 +1,8 @@
 package tests
 
 import (
-	"testing"
 	"jichu/scmain"
+	"testing"
 )
 
 func TestShengchengmain(t *testing.T) {

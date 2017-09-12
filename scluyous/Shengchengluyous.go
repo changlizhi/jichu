@@ -75,7 +75,7 @@ func Shengchengluyous() {
 
 			routersimports(mkv, &buffer)
 			routersinit(bk, &buffer)
-			dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Luyous(true)
+			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Luyous(true)
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Luyou(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
 			os.MkdirAll(dir, os.ModePerm)
 			ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)

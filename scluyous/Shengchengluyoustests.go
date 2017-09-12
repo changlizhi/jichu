@@ -1,14 +1,14 @@
 package scluyous
 
 import (
-	"gongju"
 	"bytes"
 	"changliang/zf"
 	"changliang/zfzhi"
 	"changliang/zh"
-	"strings"
-	"os"
+	"gongju"
 	"io/ioutil"
+	"os"
+	"strings"
 )
 
 func getdelete(m string, bk string, buffer *bytes.Buffer) {
@@ -145,7 +145,7 @@ func Shengchengluyoustests() {
 			getdelete(zf.Zfs.Delete(false), bk, buffer)
 			postpatch(zf.Zfs.Post(false), bk, buffer)
 			postpatch(zf.Zfs.Patch(false), bk, buffer)
-			dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
+			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Luyou(true) + zfzhi.Zhi.Xhx() + zf.Zfs.Test(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
 			os.MkdirAll(dir, os.ModePerm)
 			ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)

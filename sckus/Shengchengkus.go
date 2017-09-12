@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-func imports(mokuai string,buffer *bytes.Buffer) {
+func imports(mokuai string, buffer *bytes.Buffer) {
 	// \n import (\n
 	importstr := zfzhi.Zhi.Hhf() + zf.Zfs.Import(true) + zfzhi.Zhi.Kgf() +
 		zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf()
@@ -292,7 +292,7 @@ func Shengchengkus() {
 			lujing := zf.Zfs.Zd(true) + strings.ToLower(biao) + zf.Zfs.Kus(true)
 			buffer.WriteString(lujing) // zdjuesedaos
 
-			imports(mkv,&buffer)            //import all
+			imports(mkv, &buffer)       //import all
 			chaxunyige(biao, &buffer)   // Chaxunyige
 			tianjiayige(biao, &buffer)  // Tianjiayige
 			tianjiaduoge(biao, &buffer) // Tianjiaduoge

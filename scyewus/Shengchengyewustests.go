@@ -160,7 +160,7 @@ func Shengchengyewutest() {
 			testservicexiugai(mkv, bk, &buffer)
 			testservicechaxun(bk, &buffer)
 			testserviceshanchu(bk, &buffer)
-			dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
+			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Yewus(true) + zfzhi.Zhi.Xhx() +
 				zf.Zfs.Test(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
 			os.MkdirAll(dir, os.ModePerm)

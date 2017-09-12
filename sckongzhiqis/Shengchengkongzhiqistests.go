@@ -250,7 +250,7 @@ func Shengchengkongzhiqitest() {
 			getkongzhiqitest(bk, &buffer)
 
 			//hanfuxn/tesets
-			dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
+			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
 			//xxx/tests/Xxx_test.go
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Kongzhiqi(true) +
 				zfzhi.Zhi.Xhx() + zf.Zfs.Test(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)

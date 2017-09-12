@@ -221,7 +221,7 @@ func Shengchengdaostests() {
 			testchaxunyige(bk, &buffer)
 			testshanchuyige(bk, &buffer)
 
-			path := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true) +
+			path := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true) +
 				zfzhi.Zhi.Xx() + bk + zf.Zfs.Ku(true) + zfzhi.Zhi.Xhx() +
 				zf.Zfs.Test(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
 			ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)

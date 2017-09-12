@@ -318,7 +318,7 @@ func Shengchengyewu() {
 			servicexiugai(mkv, bk, &buffer)
 			serviceshanchu(bk, &buffer)
 			servicechaxun(bk, &buffer)
-			dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + bm
+			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + bm
 			os.MkdirAll(dir, os.ModePerm)
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Yewus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
 			ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)

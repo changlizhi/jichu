@@ -1,13 +1,13 @@
 package scchushihuas
 
 import (
+	"bytes"
 	"changliang/zf"
 	"changliang/zfzhi"
-	"bytes"
 	"changliang/zh"
 	"gongju"
-	"os"
 	"io/ioutil"
+	"os"
 )
 
 func Shengchengchushihuatest() {
@@ -47,51 +47,50 @@ func Shengchengchushihuatest() {
 		buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 
 		//log.Println("chushihuas.Defaultormer()------------ ", chushihuas.Defaultormer())
-		dstr := zh.Zhs.Logszh(zf.Zfs.Chushihuas(true) +
-			zfzhi.Zhi.Dh() +
-			zf.Zfs.Defaultormer(false) +
-			zfzhi.Zhi.Xkhz() +
+		dstr := zh.Zhs.Logszh(zf.Zfs.Chushihuas(true)+
+			zfzhi.Zhi.Dh()+
+			zf.Zfs.Defaultormer(false)+
+			zfzhi.Zhi.Xkhz()+
 			zfzhi.Zhi.Xkhy()) +
 			zfzhi.Zhi.Hhf()
 		buffer.WriteString(dstr)
 		//log.Println("chushihuas.Chushihuas------------", chushihuas.Chushihuas)
-		cstr := zh.Zhs.Logszh(zf.Zfs.Chushihuas(true) +
-			zfzhi.Zhi.Dh() +
+		cstr := zh.Zhs.Logszh(zf.Zfs.Chushihuas(true)+
+			zfzhi.Zhi.Dh()+
 			zf.Zfs.Chushihuas(false)) +
 			zfzhi.Zhi.Hhf()
 		buffer.WriteString(cstr)
 		//log.Println("chushihuas.Shujukus------------", chushihuas.Shujukus)
-		sstr := zh.Zhs.Logszh(zf.Zfs.Chushihuas(true) +
-			zfzhi.Zhi.Dh() +
+		sstr := zh.Zhs.Logszh(zf.Zfs.Chushihuas(true)+
+			zfzhi.Zhi.Dh()+
 			zf.Zfs.Shujukus(false)) +
 			zfzhi.Zhi.Hhf()
 		buffer.WriteString(sstr)
 		//log.Println("chushihuas.Tishis------------", chushihuas.Tishis)
-		tsstr := zh.Zhs.Logszh(zf.Zfs.Chushihuas(true) +
-			zfzhi.Zhi.Dh() +
+		tsstr := zh.Zhs.Logszh(zf.Zfs.Chushihuas(true)+
+			zfzhi.Zhi.Dh()+
 			zf.Zfs.Tishis(false)) +
 			zfzhi.Zhi.Hhf()
 		buffer.WriteString(tsstr)
 		//log.Println("chushihuas.Cuowus------------", chushihuas.Cuowus)
-		cwstr := zh.Zhs.Logszh(zf.Zfs.Chushihuas(true) +
-			zfzhi.Zhi.Dh() +
+		cwstr := zh.Zhs.Logszh(zf.Zfs.Chushihuas(true)+
+			zfzhi.Zhi.Dh()+
 			zf.Zfs.Cuowus(false)) +
 			zfzhi.Zhi.Hhf()
 		buffer.WriteString(cwstr)
 		//log.Println("orm.Debug------------", orm.Debug)
-		dbstr := zh.Zhs.Logszh(zf.Zfs.Orm(true) +
-			zfzhi.Zhi.Dh() +
+		dbstr := zh.Zhs.Logszh(zf.Zfs.Orm(true)+
+			zfzhi.Zhi.Dh()+
 			zf.Zfs.Debug(false)) +
 			zfzhi.Zhi.Hhf()
 		buffer.WriteString(dbstr)
 
 		buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 
-		dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
+		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
 		path := dir + zfzhi.Zhi.Xx() + zf.Zfs.Chushihua(false) +
 			zfzhi.Zhi.Xhx() + zf.Zfs.Test(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
 		os.MkdirAll(dir, os.ModePerm)
 		ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
 	}
 }
-

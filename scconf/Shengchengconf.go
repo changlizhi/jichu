@@ -5,8 +5,8 @@ import (
 	"changliang/zf"
 	"changliang/zfzhi"
 	"gongju"
-	"os"
 	"io/ioutil"
+	"os"
 )
 
 func Shengchengconf() {
@@ -34,7 +34,7 @@ func Shengchengconf() {
 		crbtr := zf.Zfs.Copyrequestbody(true) + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Dyh() + zfzhi.Zhi.Kgf() + zf.Zfs.True(true) + zfzhi.Zhi.Hhf()
 		buffer.WriteString(crbtr)
 
-		dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Conf(true)
+		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Conf(true)
 		path := dir + zfzhi.Zhi.Xx() + zf.Zfs.App(true) + zfzhi.Zhi.Dh() + zf.Zfs.Conf(true)
 		os.MkdirAll(dir, os.ModePerm)
 		ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)

@@ -6,9 +6,9 @@ import (
 	"changliang/zfzhi"
 	"changliang/zh"
 	"gongju"
-	"strings"
-	"os"
 	"io/ioutil"
+	"os"
+	"strings"
 )
 
 func httptestimport(buffer *bytes.Buffer) {
@@ -129,7 +129,7 @@ func Shengchengluyoushttptests() {
 			httptestimport(buffer)
 			httppostpatch(bk, zf.Zfs.Post(false), buffer)
 			httppostpatch(bk, zf.Zfs.Patch(false), buffer)
-			dir := gongju.Getapppath() + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
+			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Luyou(true) + zf.Zfs.Http(true) + zfzhi.Zhi.Xhx() + zf.Zfs.Test(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
 			os.MkdirAll(dir, os.ModePerm)
 			ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
