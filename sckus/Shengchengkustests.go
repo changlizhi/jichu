@@ -206,7 +206,7 @@ func testtianjiaduoge(mokuai string, bianma string, buffer *bytes.Buffer) {
 	//} \n
 	buffer.WriteString(zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
-func Shengchengdaostests() {
+func Shengchengkustests() {
 	mkarr := gongju.Mokuaimingsarr
 	mks := gongju.Mokuaimings
 	for _, mkvo := range mkarr {

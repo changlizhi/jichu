@@ -6,5 +6,5 @@ import (
 )
 
 func TestShengchengdaostests(t *testing.T) {
-	sckus.Shengchengdaostests()
+	sckus.Shengchengkustests()
 }
