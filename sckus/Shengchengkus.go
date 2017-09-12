@@ -31,8 +31,8 @@ func imports(mokuai string, buffer *bytes.Buffer) {
 		zf.Zfs.Zf(true) + zfzhi.Zhi.Syh()
 	buffer.WriteString(zfbao)
 
-	// ) \n
-	buffer.WriteString(zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
+	//\n ) \n
+	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
 }
 func chaxunyige(bianma string, buffer *bytes.Buffer) {
 	// func Chaxunyige (id int)
