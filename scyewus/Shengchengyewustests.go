@@ -8,7 +8,6 @@ import (
 	"gongju"
 	"io/ioutil"
 	"os"
-	"strconv"
 	"strings"
 )
 
@@ -105,8 +104,31 @@ func testservicetianjia(mokuai string, bianma string, buffer *bytes.Buffer) {
 func testservicexiugai(mokuai string, bianma string, buffer *bytes.Buffer) {
 	tianjiaxiugai(mokuai, zf.Zfs.Xiugai(false), bianma, buffer)
 }
+func testservicechaxunquanbu(bianma string, buffer *bytes.Buffer) {
+	bmx := strings.ToLower(bianma)
+	// func TestJueseyewusChaxunquanbu
+	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Test(false) + bianma + zf.Zfs.Yewus(true) + zf.Zfs.Chaxunquanbu(false)
+	buffer.WriteString(funstr)
+	// (t *testing.T)
+	tstr := zfzhi.Zhi.Xkhz() + zf.Zfs.T(true) + zfzhi.Zhi.Kgf() +
+		zfzhi.Zhi.Xh() + zf.Zfs.Testing(true) + zfzhi.Zhi.Dh() + zf.Zfs.T(false) + zfzhi.Zhi.Xkhy()
+	buffer.WriteString(tstr)
+	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+	// quanbu := zdjueseyewus.Chaxunquanbujuese()
+	qbstr := zf.Zfs.Quanbu(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() + zf.Zfs.Zd(true) +
+		bmx + zf.Zfs.Yewus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Chaxunquanbu(false) + bmx +
+		zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(qbstr)
+
+	// log.Println(quanbu[zfzhi.Zhi.Shuzi0()])
+	lstr := zh.Zhs.Logszh(zf.Zfs.Quanbu(true) + zfzhi.Zhi.Zkhz() +
+		zh.Zhs.Zhiszh(zf.Zfs.Shuzi0(false)) + zfzhi.Zhi.Zkhy())
+	buffer.WriteString(lstr)
+
+	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+
+}
 func testservicechaxun(bianma string, buffer *bytes.Buffer) {
-	sz1str := strconv.Itoa(zfzhi.Zhi.Shuzi1())
 	bmx := strings.ToLower(bianma)
 	// func TestXzfzhi.Zhi.XxyeuwChaxun
 	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Test(false) +
@@ -117,10 +139,10 @@ func testservicechaxun(bianma string, buffer *bytes.Buffer) {
 		zfzhi.Zhi.Xh() + zf.Zfs.Testing(true) + zfzhi.Zhi.Dh() + zf.Zfs.T(false) + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(tstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-	// zfzhi.Zhi.Xx()x := zdzfzhi.Zhi.Xxxyewus.Chaxunzfzhi.Zhi.Xx()x(1)
+	// xxx := zdzfzhi.Zhi.Xxxyewus.ChaxunXxx(zfzhi.Zhi.Shuzi1())
 	objstr := bmx + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() + zf.Zfs.Zd(true) +
 		bmx + zf.Zfs.Yewus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Chaxun(false) +
-		bmx + zfzhi.Zhi.Xkhz() + sz1str + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+		bmx + zfzhi.Zhi.Xkhz() + zh.Zhs.Zhiszh(zf.Zfs.Shuzi1(false)) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(objstr)
 	logstr := zf.Zfs.Log(true) + zfzhi.Zhi.Dh() + zf.Zfs.Println(false) +
 		zfzhi.Zhi.Xkhz() + bmx + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
@@ -128,7 +150,6 @@ func testservicechaxun(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
 func testserviceshanchu(bianma string, buffer *bytes.Buffer) {
-	sz1str := strconv.Itoa(zfzhi.Zhi.Shuzi1())
 	bmx := strings.ToLower(bianma)
 	// func TestXzfzhi.Zhi.Xx()serviceShanchu
 	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Test(false) +
@@ -139,9 +160,9 @@ func testserviceshanchu(bianma string, buffer *bytes.Buffer) {
 		zfzhi.Zhi.Xh() + zf.Zfs.Testing(true) + zfzhi.Zhi.Dh() + zf.Zfs.T(false) + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(tstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-	//zdzfzhi.Zhi.Xx()xservices.Shanchuzfzhi.Zhi.Xx()x(1)
+	//zdzfzhi.Zhi.Xx()xservices.ShanchuXxx(zfzhi.Zhi.Shuzi1())
 	scstr := zf.Zfs.Zd(true) + bmx + zf.Zfs.Yewus(true) + zfzhi.Zhi.Dh() +
-		zf.Zfs.Shanchu(false) + bmx + zfzhi.Zhi.Xkhz() + sz1str + zfzhi.Zhi.Xkhy()
+		zf.Zfs.Shanchu(false) + bmx + zfzhi.Zhi.Xkhz() + zh.Zhs.Zhiszh(zf.Zfs.Shuzi1(false)) + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(scstr)
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
@@ -160,6 +181,7 @@ func Shengchengyewutest() {
 			testservicexiugai(mkv, bk, &buffer)
 			testservicechaxun(bk, &buffer)
 			testserviceshanchu(bk, &buffer)
+			testservicechaxunquanbu(bk, &buffer)
 			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Yewus(true) + zfzhi.Zhi.Xhx() +
 				zf.Zfs.Test(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
