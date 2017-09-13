@@ -63,15 +63,21 @@ func kongzhiqiimports(mokuai string, bianma string, buffer *bytes.Buffer) {
 
 }
 func kongzhiqitype(bianma string, buffer *bytes.Buffer) {
+	//所有的控制器名称都在这里面定义，常用的后期会提出去到常量里面
+	conarr := []string{
+		zfzhi.Zhi.Kzf(),
+		zf.Zfs.Liebiao(true),
+	}
+	for _, con := range conarr {
+		typestr := zf.Zfs.Type(true) + zfzhi.Zhi.Kgf() + bianma + con + zf.Zfs.Kongzhiqi(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Struct(true)
+		buffer.WriteString(typestr)
+		buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 
-	typestr := zf.Zfs.Type(true) + zfzhi.Zhi.Kgf() + bianma + zf.Zfs.Kongzhiqi(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Struct(true)
-	buffer.WriteString(typestr)
-	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+		bcstr := zf.Zfs.Beego(true) + zfzhi.Zhi.Dh() + zf.Zfs.Controller(false)
+		buffer.WriteString(bcstr)
 
-	bcstr := zf.Zfs.Beego(true) + zfzhi.Zhi.Dh() + zf.Zfs.Controller(false)
-	buffer.WriteString(bcstr)
-
-	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+		buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+	}
 }
 func kongzhiqiget(bianma string, buffer *bytes.Buffer) {
 	bmx := strings.ToLower(bianma)
@@ -381,6 +387,36 @@ func kongzhiqidelete(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 
 }
+
+func kongzhiqiliebiaopost(bianma string, buffer *bytes.Buffer) {
+	bmx := strings.ToLower(bianma)
+	//func (c *Jueseliebiaokongzhiqi) Post()
+	fustr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xkhz() +
+		zf.Zfs.C(true) + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xh() + bianma +
+		zf.Zfs.Liebiao(true) + zf.Zfs.Kongzhiqi(true) + zfzhi.Zhi.Xkhy() +
+		zfzhi.Zhi.Kgf() + zf.Zfs.Post(false) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy()
+	buffer.WriteString(fustr)
+	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+	//ret := zdjueseyewus.Chaxunquanbujuese()
+	restr := zf.Zfs.Ret(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
+		zf.Zfs.Zd(true) + bmx + zf.Zfs.Yewus(true) + zfzhi.Zhi.Dh() +
+		zf.Zfs.Chaxunquanbu(false) + bmx + zfzhi.Zhi.Xkhz() +
+		zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(restr)
+	//c.Data[zf.Zfs.Json(true)] = ret
+	cstr := zf.Zfs.C(true) + zfzhi.Zhi.Dh() + zf.Zfs.Data(false) +
+		zfzhi.Zhi.Zkhz() + zh.Zhs.Zfszhtrue(zf.Zfs.Json(false)) +
+		zfzhi.Zhi.Zkhy() + zfzhi.Zhi.Dyh() + zf.Zfs.Ret(true) + zfzhi.Zhi.Hhf()
+	buffer.WriteString(cstr)
+	//c.ServeJSON()
+	sstr := zf.Zfs.C(true) + zfzhi.Zhi.Dh() + zf.Zfs.ServeJSON(false) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(sstr)
+	//return
+	buffer.WriteString(zf.Zfs.Return(true))
+
+	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+
+}
 func Shengchengkongzhiqis() {
 	mkarr := gongju.Mokuaimingsarr
 	mks := gongju.Mokuaimings
@@ -396,6 +432,7 @@ func Shengchengkongzhiqis() {
 			kongzhiqipost(bk, &buffer)
 			kongzhiqipatch(bk, &buffer)
 			kongzhiqidelete(bk, &buffer)
+			kongzhiqiliebiaopost(bk, &buffer)
 			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv +
 				zfzhi.Zhi.Xx() + zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true)
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Kongzhiqi(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
