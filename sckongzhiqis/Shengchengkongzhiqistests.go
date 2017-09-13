@@ -8,15 +8,23 @@ import (
 	"io/ioutil"
 	"os"
 	"strings"
+	"changliang/zh"
 )
 
-func importskongzhiqitest(mokuai string, buffer *bytes.Buffer) {
+func importskongzhiqitest(main bool, mokuai string, buffer *bytes.Buffer) {
 	buffer.WriteString(zf.Zfs.Import(true))
 	buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
 	//"xxx/kongzhiqis"
 	constr := zfzhi.Zhi.Syh() + mokuai + zfzhi.Zhi.Xx() +
 		zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(constr)
+	if !main {
+		//"xxx/moxings"
+		mxstr := zfzhi.Zhi.Syh() + mokuai + zfzhi.Zhi.Xx() + zf.Zfs.Moxings(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+		buffer.WriteString(mxstr)
+
+	}
+
 	//"gongju"
 	gjstr := zfzhi.Zhi.Syh() + zf.Zfs.Gongju(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(gjstr)
@@ -174,6 +182,63 @@ func deletegetkongzhiqitest(fangfa string, bianma string, buffer *bytes.Buffer) 
 func deletekongzhiqitest(bianma string, buffer *bytes.Buffer) {
 	deletegetkongzhiqitest(zf.Zfs.Delete(false), bianma, buffer)
 }
+func postliebiaokongzhiqitest(bianma string, buffer *bytes.Buffer) {
+	//func TestPostquanbu
+	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Test(false) +
+		zf.Zfs.Post(false) + zf.Zfs.Quanbu(true)
+	buffer.WriteString(funstr)
+	//(t *testing.T)
+	csstr := zfzhi.Zhi.Xkhz() + zf.Zfs.T(true) + zfzhi.Zhi.Kgf() +
+		zfzhi.Zhi.Xh() + zf.Zfs.Testing(true) + zfzhi.Zhi.Dh() +
+		zf.Zfs.T(false) + zfzhi.Zhi.Xkhy()
+	buffer.WriteString(csstr)
+	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+	//c := zdkongzhiqis.Xxxliebiaokongzhiqi{}
+	ckstr := zf.Zfs.C(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
+		zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true) + zfzhi.Zhi.Dh() +
+		bianma + zf.Zfs.Liebiao(true) + zf.Zfs.Kongzhiqi(true) +
+		zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(ckstr)
+	//gongju.Kongzhiqi
+	gkstr := zf.Zfs.Gongju(true) + zfzhi.Zhi.Dh() + zf.Zfs.Kongzhiqi(false)
+	buffer.WriteString(gkstr)
+	//(&c.Controller)
+	gkcs := zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Qh() + zf.Zfs.C(true) +
+		zfzhi.Zhi.Dh() + zf.Zfs.Controller(false) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(gkcs)
+	//c.Post()
+	cp := zf.Zfs.C(true) + zfzhi.Zhi.Dh() + zf.Zfs.Post(false) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(cp)
+	//zhis := c.Data[zf.Zfs.Json(true)]
+	zstr := zf.Zfs.Zhi(true) + zf.Zfs.S(true) + zfzhi.Zhi.Mh() +
+		zfzhi.Zhi.Dyh() + zf.Zfs.C(true) + zfzhi.Zhi.Dh() +
+		zf.Zfs.Data(false) + zfzhi.Zhi.Zkhz() + zh.Zhs.Zfszhtrue(zf.Zfs.Json(false)) +
+		zfzhi.Zhi.Zkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(zstr)
+	//if zhi, ok := zhis.([]*moxings.Juese); ok
+	ifstr := zf.Zfs.If(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Zhi(true) +
+		zfzhi.Zhi.Dou() + zf.Zfs.Ok(true) + zfzhi.Zhi.Mh() +
+		zfzhi.Zhi.Dyh() + zf.Zfs.Zhi(true) + zf.Zfs.S(true) +
+		zfzhi.Zhi.Dh() + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Zkhz() +
+		zfzhi.Zhi.Zkhy() + zfzhi.Zhi.Xh() + zf.Zfs.Moxings(true) +
+		zfzhi.Zhi.Dh() + bianma + zfzhi.Zhi.Xkhy() +
+		zfzhi.Zhi.Fh() + zf.Zfs.Ok(true)
+	buffer.WriteString(ifstr)
+	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+	//for _, z := range zhi
+	forstr := zf.Zfs.For(true) + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xhx() + zfzhi.Zhi.Dou() +
+		zf.Zfs.Z(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
+		zf.Zfs.Range(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Zhi(true)
+	buffer.WriteString(forstr)
+	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+	//log.Println(z)
+	lstr := zh.Zhs.Logszh(zf.Zfs.Z(true))
+	buffer.WriteString(lstr)
+	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+
+}
 func getkongzhiqitest(bianma string, buffer *bytes.Buffer) {
 	deletegetkongzhiqitest(zf.Zfs.Get(false), bianma, buffer)
 }
@@ -186,11 +251,12 @@ func Shengchengkongzhiqitest() {
 		for bk, _ := range biaos {
 			buffer := bytes.Buffer{}
 			buffer.WriteString(zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Tests(true) + zfzhi.Zhi.Hhf())
-			importskongzhiqitest(mkv, &buffer)
+			importskongzhiqitest(false, mkv, &buffer)
 			postkongzhiqitest(bk, &buffer)
 			patchkongzhiqitest(bk, &buffer)
 			deletekongzhiqitest(bk, &buffer)
 			getkongzhiqitest(bk, &buffer)
+			postliebiaokongzhiqitest(bk, &buffer)
 
 			//hanfuxn/tesets
 			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
