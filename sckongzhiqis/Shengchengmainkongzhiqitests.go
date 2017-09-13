@@ -17,7 +17,6 @@ func Shengchengmainkongzhiqitest() {
 		buffer := bytes.Buffer{}
 		buffer.WriteString(zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Tests(true) + zfzhi.Zhi.Hhf())
 		importskongzhiqitest(mkv, &buffer)
-		bkkongzhiqitest(zf.Zfs.Main(false), &buffer)
 		getkongzhiqitest(zf.Zfs.Main(false), &buffer)
 
 		//hanfuxn/tesets
