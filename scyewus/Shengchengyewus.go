@@ -282,6 +282,22 @@ func servicechaxun(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy())
 	buffer.WriteString(zfzhi.Zhi.Hhf())
 }
+func servicequanbu(bianma string, buffer *bytes.Buffer) {
+	bmx := strings.ToLower(bianma)
+	//func Chaxunquanbuxxx() []*moxings.Xxx
+	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Chaxunquanbu(false) + bmx +
+		zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Zkhz() + zfzhi.Zhi.Zkhy() + zfzhi.Zhi.Xh() +
+		zf.Zfs.Moxings(true) + zfzhi.Zhi.Dh() + bianma
+	buffer.WriteString(funstr)
+	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+	//return zdxxxkus.Chaxunquanbu()
+	retstr := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Zd(true) + bmx +
+		zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Chaxunquanbu(false) +
+		zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy()
+	buffer.WriteString(retstr)
+
+	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+}
 func serviceshanchu(bianma string, buffer *bytes.Buffer) {
 	bmx := strings.ToLower(bianma)
 
@@ -318,6 +334,7 @@ func Shengchengyewu() {
 			servicexiugai(mkv, bk, &buffer)
 			serviceshanchu(bk, &buffer)
 			servicechaxun(bk, &buffer)
+			servicequanbu(bk, &buffer)
 			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + bm
 			os.MkdirAll(dir, os.ModePerm)
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Yewus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
