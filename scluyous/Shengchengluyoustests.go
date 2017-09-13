@@ -48,9 +48,9 @@ func getdelete(m string, bk string, buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
 
-func postpatch(m string, bk string, buffer *bytes.Buffer) {
+func postpatch(liebiao string, url string, m string, bk string, buffer *bytes.Buffer) {
 	//func TestBkm
-	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Test(false) + bk + strings.ToLower(m)
+	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Test(false) + bk + liebiao + strings.ToLower(m)
 	buffer.WriteString(funstr)
 	//(t *testing.T)
 	csstr := zfzhi.Zhi.Xkhz() + zf.Zfs.T(true) + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xh() + zf.Zfs.Testing(true) + zfzhi.Zhi.Dh() + zf.Zfs.T(false) + zfzhi.Zhi.Xkhy()
@@ -66,8 +66,8 @@ func postpatch(m string, bk string, buffer *bytes.Buffer) {
 	//zf.Zfs.M(false),
 	mstr := zf.Zfs.Zf(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zfs(false) + zfzhi.Zhi.Dh() + strings.ToUpper(m) + zfzhi.Zhi.Xkhz() + zf.Zfs.False(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(mstr)
-	//zfzhi.Zhi.Xx() + zf.Zfs.Bk(true),
-	lystr := zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() + zf.Zfs.Zf(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zfs(false) + zfzhi.Zhi.Dh() + bk + zfzhi.Zhi.Xkhz() + zf.Zfs.True(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+	//url,\n
+	lystr := url + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(lystr)
 	//bytes.NewBuffer([]byte(canshu)),
 	bfstr := zf.Zfs.Bytes(true) + zfzhi.Zhi.Dh() + zf.Zfs.NewBuffer(false) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Zkhz() + zfzhi.Zhi.Zkhy() + zf.Zfs.Byte(true) + zfzhi.Zhi.Xkhz() + zf.Zfs.Canshu(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
@@ -143,8 +143,17 @@ func Shengchengluyoustests() {
 
 			getdelete(zf.Zfs.Get(false), bk, buffer)
 			getdelete(zf.Zfs.Delete(false), bk, buffer)
-			postpatch(zf.Zfs.Post(false), bk, buffer)
-			postpatch(zf.Zfs.Patch(false), bk, buffer)
+			url := zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() + zh.Zhs.Zfszhtrue(bk)
+
+			postpatch(zfzhi.Zhi.Kzf(), url, zf.Zfs.Post(false), bk, buffer)
+			postpatch(zfzhi.Zhi.Kzf(), url, zf.Zfs.Patch(false), bk, buffer)
+			//列表的post查询
+			urllie := zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() +
+				zh.Zhs.Zfszhtrue(bk) + zfzhi.Zhi.Jia() +
+				zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() +
+				zh.Zhs.Zfszhtrue(zf.Zfs.Quanbu(false))
+			postpatch(zf.Zfs.Liebiao(true), urllie, zf.Zfs.Post(false), bk, buffer)
+
 			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Luyou(true) + zfzhi.Zhi.Xhx() + zf.Zfs.Test(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
 			os.MkdirAll(dir, os.ModePerm)
