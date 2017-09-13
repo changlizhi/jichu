@@ -8,6 +8,7 @@ import (
 	"io/ioutil"
 	"os"
 	"strings"
+	"changliang/zh"
 )
 
 func imports(mokuai string, buffer *bytes.Buffer) {
@@ -279,6 +280,38 @@ func xiugaiyige(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 
 }
+
+func chaxunquanbu(biao string, buffer *bytes.Buffer) {
+	//func Chaxunquanbu() []*moxings.Juese
+	fustr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Chaxunquanbu(false) +
+		zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Zkhz() + zfzhi.Zhi.Zkhy() +
+		zfzhi.Zhi.Xh() + zf.Zfs.Moxings(true) + zfzhi.Zhi.Dh() + biao
+	buffer.WriteString(fustr)
+	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+	//ret := []*moxings.Juese{}
+	restr := zf.Zfs.Ret(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
+		zfzhi.Zhi.Zkhz() + zfzhi.Zhi.Zkhy() + zfzhi.Zhi.Xh() +
+		zf.Zfs.Moxings(true) + zfzhi.Zhi.Dh() +
+		biao + zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(restr)
+	//queryseter := chushihuas.Defaultormer().QueryTable(zf.Zfs.Juese(true))
+	qsstr := zf.Zfs.QuerySeter(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
+		zf.Zfs.Chushihuas(true) + zfzhi.Zhi.Dh() + zf.Zfs.Defaultormer(false) +
+		zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Dh() +
+		zf.Zfs.QueryTable(false) + zfzhi.Zhi.Xkhz() + zh.Zhs.Zfszhtrue(biao) +
+		zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(qsstr)
+	//queryseter.All(&ret)
+	alstr := zf.Zfs.QuerySeter(true) + zfzhi.Zhi.Dh() + zf.Zfs.All(false) +
+		zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Qh() + zf.Zfs.Ret(true) +
+		zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(alstr)
+	//return ret
+	retstr := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Ret(true)
+	buffer.WriteString(retstr)
+	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+}
+
 func Shengchengkus() {
 	mkarr := gongju.Mokuaimingsarr
 	mks := gongju.Mokuaimings
@@ -298,6 +331,7 @@ func Shengchengkus() {
 			tianjiaduoge(biao, &buffer) // Tianjiaduoge
 			xiugaiyige(biao, &buffer)   // Xiugaiyige
 			shanchuyige(biao, &buffer)  // Shanchuyige
+			chaxunquanbu(biao, &buffer)  // Shanchuyige
 
 			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() +
 				mkv + zfzhi.Zhi.Xx() + lujing
