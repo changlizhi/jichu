@@ -59,6 +59,17 @@ func routersinit(bianma string, buffer *bytes.Buffer) {
 		bianma + zf.Zfs.Kongzhiqi(true) + zfzhi.Zhi.Dkhz() +
 		zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(ridstr)
+	//beego.Router(zfzhi.Zhi.Xx()+zf.Zfs.Xxx(true)+zfzhi.Zhi.Xx()+zf.Zfs.Quanbu(true), &zdkongzhiqis.Xxxliebiaokongzhiqi{})
+	qbstr := zf.Zfs.Beego(true) + zfzhi.Zhi.Dh() + zf.Zfs.Router(false) +
+		zfzhi.Zhi.Xkhz() + zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() +
+		zh.Zhs.Zfszhtrue(bianma) + zfzhi.Zhi.Jia() +
+		zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() +
+		zh.Zhs.Zfszhtrue(zf.Zfs.Quanbu(false)) + zfzhi.Zhi.Dou() +
+		zfzhi.Zhi.Qh() + zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true) +
+		zfzhi.Zhi.Dh() + bianma + zf.Zfs.Liebiao(true) +
+		zf.Zfs.Kongzhiqi(true) + zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Dkhy() +
+		zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(qbstr)
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 
 }
