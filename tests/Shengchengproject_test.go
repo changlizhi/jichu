@@ -1,17 +1,17 @@
 package tests
 
 import (
-	"testing"
+	"jichu/scchushihuas"
 	"jichu/scconf"
 	"jichu/sccuowus"
-	"jichu/scchushihuas"
-	"jichu/sckus"
-	"jichu/scyewus"
 	"jichu/sckongzhiqis"
+	"jichu/sckus"
 	"jichu/scluyous"
 	"jichu/scmain"
 	"jichu/scmoxing"
 	"jichu/scpeizhi"
+	"jichu/scyewus"
+	"testing"
 )
 
 func TestShengchengproj(t *testing.T) {
@@ -25,9 +25,8 @@ func TestShengchengproj(t *testing.T) {
 	//})
 
 	//var _ = gauge.Step("生成Peizhi", func() {
-		scpeizhi.Shengchengxitongpeizhi()
+	scpeizhi.Shengchengxitongpeizhi()
 	//})
-
 
 	//var _ = gauge.Step("生成Cuowu", func() {
 	sccuowus.Shengchengziduancuowu()

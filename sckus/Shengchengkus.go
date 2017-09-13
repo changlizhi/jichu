@@ -4,11 +4,11 @@ import (
 	"bytes"
 	"changliang/zf"
 	"changliang/zfzhi"
+	"changliang/zh"
 	"gongju"
 	"io/ioutil"
 	"os"
 	"strings"
-	"changliang/zh"
 )
 
 func imports(mokuai string, buffer *bytes.Buffer) {
@@ -331,7 +331,7 @@ func Shengchengkus() {
 			tianjiaduoge(biao, &buffer) // Tianjiaduoge
 			xiugaiyige(biao, &buffer)   // Xiugaiyige
 			shanchuyige(biao, &buffer)  // Shanchuyige
-			chaxunquanbu(biao, &buffer)  // Shanchuyige
+			chaxunquanbu(biao, &buffer) // Shanchuyige
 
 			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() +
 				mkv + zfzhi.Zhi.Xx() + lujing

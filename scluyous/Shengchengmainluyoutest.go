@@ -34,7 +34,7 @@ func Shengchengmainluyoutest() {
 		tstr := zfzhi.Zhi.Syh() + zf.Zfs.Testing(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 		buffer.WriteString(tstr)
 		//"xxx/chushihuas"
-		gstr := zfzhi.Zhi.Syh() + mkv+zfzhi.Zhi.Xx() + zf.Zfs.Chushihuas(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+		gstr := zfzhi.Zhi.Syh() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Chushihuas(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 		buffer.WriteString(gstr)
 		//"net/http/httptest"
 		buffer.WriteString(zh.Zhs.Httptestbao() + zfzhi.Zhi.Hhf())
@@ -54,7 +54,7 @@ func Shengchengmainluyoutest() {
 		btbstr := zf.Zfs.Beego(true) + zfzhi.Zhi.Dh() + zf.Zfs.TestBeegoInit(false)
 		buffer.WriteString(btbstr)
 		//(chushihuas.Getapppath())
-		xkh := zfzhi.Zhi.Xkhz() +  zf.Zfs.Chushihuas(true) + zfzhi.Zhi.Dh() + zf.Zfs.Getapppath(false) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Xkhy()
+		xkh := zfzhi.Zhi.Xkhz() + zf.Zfs.Chushihuas(true) + zfzhi.Zhi.Dh() + zf.Zfs.Getapppath(false) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Xkhy()
 		buffer.WriteString(xkh)
 
 		buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())

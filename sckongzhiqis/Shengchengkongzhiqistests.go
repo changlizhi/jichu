@@ -4,11 +4,11 @@ import (
 	"bytes"
 	"changliang/zf"
 	"changliang/zfzhi"
+	"changliang/zh"
 	"gongju"
 	"io/ioutil"
 	"os"
 	"strings"
-	"changliang/zh"
 )
 
 func importskongzhiqitest(main bool, mokuai string, buffer *bytes.Buffer) {
@@ -77,7 +77,6 @@ func postpatchkongzhiqitest(fangfa string, bianma string, buffer *bytes.Buffer) 
 		zfzhi.Zhi.Dh() + zf.Zfs.Controller(false) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(gkcs)
 
-
 	// reqjson := zfzhi.Fangfajuesezhi()
 	jsonstr := zf.Zfs.Req(true) + zf.Zfs.Json(true) + zfzhi.Zhi.Mh() +
 		zfzhi.Zhi.Dyh() + zf.Zfs.Zfzhi(true) + zfzhi.Zhi.Dh() +
@@ -131,7 +130,6 @@ func deletegetkongzhiqitest(fangfa string, bianma string, buffer *bytes.Buffer) 
 		zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(parstr)
 
-
 	//c := zdkongzhiqis.Juesekongzhiqi{}
 	costr := zf.Zfs.C(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
 		zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true) + zfzhi.Zhi.Dh() +
@@ -146,7 +144,6 @@ func deletegetkongzhiqitest(fangfa string, bianma string, buffer *bytes.Buffer) 
 	gkcs := zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Qh() + zf.Zfs.C(true) +
 		zfzhi.Zhi.Dh() + zf.Zfs.Controller(false) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(gkcs)
-
 
 	//c.Ctx.Input.SetParam(zfzhi.Zhi.Mh()+zf.Zfs.Id(false),paramid)
 	cinstr := zf.Zfs.C(true) + zfzhi.Zhi.Dh() + zf.Zfs.Ctx(false) +

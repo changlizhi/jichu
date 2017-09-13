@@ -91,7 +91,6 @@ func Shengchengchushihuatest() {
 			zfzhi.Zhi.Hhf()
 		buffer.WriteString(apppathstr)
 
-
 		buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 
 		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)

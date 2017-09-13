@@ -1,8 +1,8 @@
 package tests
 
 import (
-	"testing"
 	"jichu/scpeizhi"
+	"testing"
 )
 
 func TestShengchengxitongpeizhi(t *testing.T) {

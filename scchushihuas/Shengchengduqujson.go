@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-func bufferwritepath(mokuai string,buffer *bytes.Buffer, jsonlies map[string]gongju.Tongyong) {
+func bufferwritepath(mokuai string, buffer *bytes.Buffer, jsonlies map[string]gongju.Tongyong) {
 	for jl, _ := range jsonlies {
 		//func Shezhipath()string
 		funpath := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + jl +
@@ -103,8 +103,8 @@ func Shengchengduqujson() {
 		//\n)\n
 		buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
 
-		bufferwritepath(mkk,buffer, gongju.Jsonlies0)
-		bufferwritepath(mkk,buffer, gongju.Jsonlies1)
+		bufferwritepath(mkk, buffer, gongju.Jsonlies0)
+		bufferwritepath(mkk, buffer, gongju.Jsonlies1)
 
 		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() +
 			mkv + zfzhi.Zhi.Xx() + zf.Zfs.Chushihuas(true)
