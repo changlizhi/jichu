@@ -15,12 +15,30 @@ func Shengchengmoxings() {
 	for _, mkvo := range mkarr {
 		mkv := mks[mkvo].Zhi
 		_, biaos, _ := gongju.Biaolies(mkv)
+		tmf := false
+		for bk, _ := range biaos {
+			for _, lk := range gongju.Biao(mkv, bk) {
+				if gongju.Lieleixing(lk) == zf.Zfs.Time(false) {
+					tmf = true
+					break
+				}
+			}
+		}
 		for bk, _ := range biaos {
 			buffer := bytes.Buffer{}
 			// model生成时大多数都是一样的，所以提供一个公用的package,import之类的
 			// package xxx \n
 			pac := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Moxings(true) + zfzhi.Zhi.Hhf()
 			buffer.WriteString(pac)
+			if tmf {
+				// import
+				buffer.WriteString(zf.Zfs.Import(true))
+				buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+				// "time"
+				ts := zfzhi.Zhi.Syh() + zf.Zfs.Time(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+				buffer.WriteString(ts)
+				buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+			}
 
 			// type Juese struct{\n
 			typestr := zf.Zfs.Type(true) + zfzhi.Zhi.Kgf() + bk + zfzhi.Zhi.Kgf() +
