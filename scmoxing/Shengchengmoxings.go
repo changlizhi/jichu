@@ -18,7 +18,7 @@ func Shengchengmoxings() {
 		tmf := false
 		for bk, _ := range biaos {
 			for _, lk := range gongju.Biao(mkv, bk) {
-				if gongju.Lieleixing(lk) == zf.Zfs.Time(false) {
+				if gongju.Lieleixing(lk) == zf.Zfs.Time(true) {
 					tmf = true
 					break
 				}
@@ -33,11 +33,11 @@ func Shengchengmoxings() {
 			if tmf {
 				// import
 				buffer.WriteString(zf.Zfs.Import(true))
-				buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+				buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
 				// "time"
 				ts := zfzhi.Zhi.Syh() + zf.Zfs.Time(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 				buffer.WriteString(ts)
-				buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+				buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
 			}
 
 			// type Juese struct{\n
@@ -46,7 +46,12 @@ func Shengchengmoxings() {
 			buffer.WriteString(typestr)
 
 			for _, lk := range gongju.Biao(mkv, bk) {
+				leixing := gongju.Lieleixing(lk)
 				field := lk + zfzhi.Zhi.Kgf() + gongju.Lieleixing(lk) + zfzhi.Zhi.Hhf()
+				if leixing == zf.Zfs.Time(true) {
+					//time.Time
+					field = lk + zfzhi.Zhi.Kgf() + zf.Zfs.Time(true) + zfzhi.Zhi.Dh() + zf.Zfs.Time(false) + zfzhi.Zhi.Hhf()
+				}
 				buffer.WriteString(field)
 			}
 			//左大括号在头里有了
