@@ -12,6 +12,7 @@ import (
 	"jichu/scpeizhi"
 	"jichu/scyewus"
 	"testing"
+	"jichu/scfortests"
 )
 
 func TestShengchengproj(t *testing.T) {
@@ -53,6 +54,14 @@ func TestShengchengproj(t *testing.T) {
 
 	//var _ = gauge.Step("生成Chushihuas-test", func() {
 	scchushihuas.Shengchengchushihuatest()
+	//})
+
+
+	//var _ = gauge.Step("生成拼接结构体字段", func() {
+	scfortests.Shengchengfortests()
+	//})
+	//var _ = gauge.Step("生成拼接结构体字段test", func() {
+	scfortests.Shengchengforteststest()
 	//})
 
 	//var _ = gauge.Step("生成数据库操作kus", func() {
