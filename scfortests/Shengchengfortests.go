@@ -145,10 +145,10 @@ func Shengchengfortests() {
 	for _, mkvo := range mkarr {
 		mkv := mks[mkvo].Zhi
 		_, biaos, _ := gongju.Biaolies(mkv)
-		buffer := &bytes.Buffer{}
-		pac := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Fortests(true) + zfzhi.Zhi.Hhf()
-		buffer.WriteString(pac)
 		for bk, _ := range biaos {
+			buffer := &bytes.Buffer{}
+			pac := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Fortests(true) + zfzhi.Zhi.Hhf()
+			buffer.WriteString(pac)
 			importsfortests(mkv, bk, buffer)
 			zuzhuangjiegouti(mkv, bk, buffer)
 			zuzhuangjiegoutistr(bk, buffer)
