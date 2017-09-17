@@ -207,7 +207,7 @@ func servicexiugai(mokuai string, bianma string, buffer *bytes.Buffer) {
 	}
 	xiugaistr := zfzhi.Zhi.Hhf() + zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() +
 		zf.Zfs.Zd(true) + bmx + zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() +
-		zf.Zfs.Xiugaiyige(false) + zfzhi.Zhi.Xkhz() + bmx +
+		zf.Zfs.Xiugaiyige(false) + zf.Zfs.Kus(true) + zfzhi.Zhi.Xkhz() + bmx +
 		zf.Zfs.Find(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 
 	buffer.WriteString(xiugaistr)
@@ -260,7 +260,7 @@ func servicetianjia(bianma string, buffer *bytes.Buffer) {
 
 	//return zdjuesekus.Tianjiayige(juese)
 	tjstr := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Zd(true) + bmx +
-		zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Tianjiayige(false) +
+		zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Tianjiayige(false) + zf.Zfs.Kus(true) +
 		zfzhi.Zhi.Xkhz() + bmx + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(tjstr)
 
@@ -276,7 +276,7 @@ func servicechaxun(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(funstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 	retstr := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Zd(true) + bmx +
-		zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Chaxunyige(false) +
+		zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Chaxunyige(false) + zf.Zfs.Kus(true) +
 		zfzhi.Zhi.Xkhz() + zf.Zfs.Id(true) + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(retstr)
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy())
@@ -292,7 +292,7 @@ func servicequanbu(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 	//return zdxxxkus.Chaxunquanbu()
 	retstr := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Zd(true) + bmx +
-		zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Chaxunquanbu(false) +
+		zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Chaxunquanbu(false) + zf.Zfs.Kus(true) +
 		zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(retstr)
 
@@ -308,7 +308,7 @@ func serviceshanchu(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(funstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 	retstr := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Zd(true) + bmx +
-		zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Shanchuyige(false) +
+		zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Shanchuyige(false) + zf.Zfs.Kus(true) +
 		zfzhi.Zhi.Xkhz() + zf.Zfs.Id(true) + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(retstr)
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy())
