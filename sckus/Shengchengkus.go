@@ -145,8 +145,8 @@ func tianjiaduoge(bianma string, buffer *bytes.Buffer) {
 	canshu := strings.ToLower(bianma) + zf.Zfs.Shuzu(true)
 	buffer.WriteString(canshu)
 
-	//[]moxings.Juese{\n
-	cslx := zfzhi.Zhi.Kgf() + zfzhi.Zhi.Zkhz() + zfzhi.Zhi.Zkhy() +
+	//[]*moxings.Juese{\n
+	cslx := zfzhi.Zhi.Kgf() + zfzhi.Zhi.Zkhz() + zfzhi.Zhi.Zkhy() + zfzhi.Zhi.Xh() +
 		zf.Zfs.Moxings(true) + zfzhi.Zhi.Dh() + bianma + zfzhi.Zhi.Xkhy() +
 		zf.Zfs.String(true) + zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(cslx)
