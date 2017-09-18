@@ -284,16 +284,17 @@ func yewuchaxun(bianma string, buffer *bytes.Buffer) {
 }
 func yewuquanbu(bianma string, buffer *bytes.Buffer) {
 	bmx := strings.ToLower(bianma)
-	//func Chaxunquanbuxxx() []*moxings.Xxx
+	//func Chaxunquanbuyeuws(xxx *moxings.Xxx) []*moxings.Xxx
 	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Chaxunquanbu(false) + zf.Zfs.Yewus(true) +
-		zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Zkhz() + zfzhi.Zhi.Zkhy() + zfzhi.Zhi.Xh() +
+		zfzhi.Zhi.Xkhz() + bmx + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xh() + zf.Zfs.Moxings(true) +
+		zfzhi.Zhi.Dh() + bianma + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Zkhz() + zfzhi.Zhi.Zkhy() + zfzhi.Zhi.Xh() +
 		zf.Zfs.Moxings(true) + zfzhi.Zhi.Dh() + bianma
 	buffer.WriteString(funstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-	//return zdxxxkus.Chaxunquanbu()
+	//return zdxxxkus.Chaxunquanbukus(xxx)
 	retstr := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Zd(true) + bmx +
 		zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Chaxunquanbu(false) + zf.Zfs.Kus(true) +
-		zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy()
+		zfzhi.Zhi.Xkhz() + bmx + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(retstr)
 
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
