@@ -49,6 +49,7 @@ func getdelete(m string, bk string, buffer *bytes.Buffer) {
 }
 
 func postpatch(liebiao string, url string, m string, bk string, buffer *bytes.Buffer) {
+	bmx := strings.ToLower(bk)
 	//func TestBkm
 	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Test(false) + bk + liebiao + strings.ToLower(m)
 	buffer.WriteString(funstr)
@@ -56,9 +57,23 @@ func postpatch(liebiao string, url string, m string, bk string, buffer *bytes.Bu
 	csstr := zfzhi.Zhi.Xkhz() + zf.Zfs.T(true) + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xh() + zf.Zfs.Testing(true) + zfzhi.Zhi.Dh() + zf.Zfs.T(false) + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(csstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-	//canshu := zfzhi.Zhi.Mbk()
-	cssstr := zf.Zfs.Canshu(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() + zf.Zfs.Zfzhi(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zhi(false) + zfzhi.Zhi.Dh() + m + strings.ToLower(bk) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
-	buffer.WriteString(cssstr)
+
+	//canshu := fortests.Zuzhuangdtziyuanyigestring
+	fzstr := zf.Zfs.Canshu(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
+		zf.Zfs.Fortests(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zuzhuang(false) +
+		bmx + zf.Zfs.Yige(true) + zf.Zfs.String(true)
+	buffer.WriteString(fzstr)
+	buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
+	//	zf.Zfs.Test(true),
+	tstr := zh.Zhs.Zfszhtrue(zf.Zfs.Test(false)) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(tstr)
+	//	fanshe.Fangfaming(false),
+	ffstr := zf.Zfs.Fanshe(true) + zfzhi.Zhi.Dh() + zf.Zfs.Fangfaming(false) +
+		zfzhi.Zhi.Xkhz() + zf.Zfs.False(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(ffstr)
+
+	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
+
 	//r, _ := http.NewRequest
 	hnr := zf.Zfs.R(true) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Xhx() + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() + zf.Zfs.Http(true) + zfzhi.Zhi.Dh() + zf.Zfs.NewRequest(false)
 	buffer.WriteString(hnr)
@@ -100,7 +115,7 @@ func postpatch(liebiao string, url string, m string, bk string, buffer *bytes.Bu
 	buffer.WriteString(lstr)
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
-func importstr(buffer *bytes.Buffer) {
+func importstr(mokuai string, buffer *bytes.Buffer) {
 	buffer.WriteString(zf.Zfs.Import(true))
 	buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
 	//
@@ -110,8 +125,11 @@ func importstr(buffer *bytes.Buffer) {
 	zfbao := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() + zf.Zfs.Zf(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(zfbao)
 	//"changliang/zfzhi"
-	zfzhibao := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() + zf.Zfs.Zfzhi(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
-	buffer.WriteString(zfzhibao)
+	zzstr := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() + zf.Zfs.Zfzhi(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(zzstr)
+	//"changliang/fanshe"
+	fsstr := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() + zf.Zfs.Fanshe(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(fsstr)
 	//"net/http/httptest"
 	buffer.WriteString(zh.Zhs.Httptestbao() + zfzhi.Zhi.Hhf())
 	//"github.com/astaxie/beego"
@@ -126,6 +144,10 @@ func importstr(buffer *bytes.Buffer) {
 	lstr := zfzhi.Zhi.Syh() + zf.Zfs.Log(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(lstr)
 
+	//"xxx/fortests"
+	ftstr := zfzhi.Zhi.Syh() + mokuai + zfzhi.Zhi.Xx() + zf.Zfs.Fortests(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(ftstr)
+
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
 
 }
@@ -139,7 +161,7 @@ func Shengchengluyoustests() {
 		for bk, _ := range biaos {
 			buffer := &bytes.Buffer{}
 			buffer.WriteString(zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Tests(true) + zfzhi.Zhi.Hhf())
-			importstr(buffer)
+			importstr(mkv, buffer)
 
 			getdelete(zf.Zfs.Get(false), bk, buffer)
 			getdelete(zf.Zfs.Delete(false), bk, buffer)
