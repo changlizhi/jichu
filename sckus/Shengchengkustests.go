@@ -64,10 +64,29 @@ func testchaxunquanbu(bianma string, buffer *bytes.Buffer) {
 		zf.Zfs.T(false) + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(cs)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-	//all := zdjuesekus.Chaxunquanbu()
+
+	//dtziyuan := fortests.Zuzhuangdtziyuan
+	ostr := bmx + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() + zf.Zfs.Fortests(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zuzhuang(false) + bmx
+	buffer.WriteString(ostr)
+	buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
+	//zf.Zfs.Test(true),
+	kstr := zh.Zhs.Zfszhtrue(zf.Zfs.Test(false)) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(kstr)
+	//zfzhi.Zhi.Shuzi1(),
+	szstr := zh.Zhs.Zhiszh(zf.Zfs.Shuzi1(false)) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(szstr)
+	//fanshe.Fangfaming(false),
+	fsstr := zf.Zfs.Fanshe(true) + zfzhi.Zhi.Dh() + zf.Zfs.Fangfaming(false) + zfzhi.Zhi.Xkhz() +
+		zf.Zfs.False(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(fsstr)
+	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
+
+	//all := zdjuesekus.Chaxunquanbu(dtziyuan[zfzhi.Zhi.Shuzi0()])
 	astr := zf.Zfs.All(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
 		zf.Zfs.Zd(true) + bmx + zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() +
-		zf.Zfs.Chaxunquanbu(false) + zf.Zfs.Kus(true) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+		zf.Zfs.Chaxunquanbu(false) + zf.Zfs.Kus(true) + zfzhi.Zhi.Xkhz() +
+		bmx + zfzhi.Zhi.Zkhz() + zh.Zhs.Zhiszh(zf.Zfs.Shuzi0(false)) +
+		zfzhi.Zhi.Zkhy() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(astr)
 	//log.Println(all[zfzhi.Zhi.Shuzi0()])
 	lstr := zh.Zhs.Logszh(zf.Zfs.All(true) + zfzhi.Zhi.Zkhz() +
