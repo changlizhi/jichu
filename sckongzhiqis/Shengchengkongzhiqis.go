@@ -403,11 +403,25 @@ func kongzhiqiliebiaopost(bianma string, buffer *bytes.Buffer) {
 		zfzhi.Zhi.Kgf() + zf.Zfs.Post(false) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(fustr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-	//ret := zdxxxyewus.Chaxunquanbuyewus()
+
+	//dtziyuan := new(moxings.Dtziyuan)
+	dnstr := bmx + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() + zf.Zfs.New(true) +
+		zfzhi.Zhi.Xkhz() + zf.Zfs.Moxings(true) + zfzhi.Zhi.Dh() +
+		bianma + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(dnstr)
+
+	//json.Unmarshal(c.Ctx.Input.RequestBody, xxx)
+	justr := zf.Zfs.Json(true) + zfzhi.Zhi.Dh() + zf.Zfs.Unmarshal(false) +
+		zfzhi.Zhi.Xkhz() + zf.Zfs.C(true) + zfzhi.Zhi.Dh() + zf.Zfs.Ctx(false) +
+		zfzhi.Zhi.Dh() + zf.Zfs.Input(false) + zfzhi.Zhi.Dh() + zf.Zfs.RequestBody(false) +
+		zfzhi.Zhi.Dou() + bmx + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(justr)
+
+	//ret := zdxxxyewus.Chaxunquanbuyewus(xxx)
 	restr := zf.Zfs.Ret(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
 		zf.Zfs.Zd(true) + bmx + zf.Zfs.Yewus(true) + zfzhi.Zhi.Dh() +
 		zf.Zfs.Chaxunquanbu(false) + zf.Zfs.Yewus(true) + zfzhi.Zhi.Xkhz() +
-		zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+		bmx + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(restr)
 	//c.Data[zf.Zfs.Json(true)] = ret
 	cstr := zf.Zfs.C(true) + zfzhi.Zhi.Dh() + zf.Zfs.Data(false) +
