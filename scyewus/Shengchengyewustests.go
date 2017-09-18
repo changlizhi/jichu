@@ -91,10 +91,29 @@ func testyewuschaxunquanbu(bianma string, buffer *bytes.Buffer) {
 		zfzhi.Zhi.Xh() + zf.Zfs.Testing(true) + zfzhi.Zhi.Dh() + zf.Zfs.T(false) + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(tstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-	// quanbu := zdjueseyewus.Chaxunquanbuyewus()
+
+
+	//dtziyuan := fortests.Zuzhuangdtziyuan
+	ostr := bmx + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() + zf.Zfs.Fortests(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zuzhuang(false) + bmx
+	buffer.WriteString(ostr)
+	buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
+	//zf.Zfs.Test(true),
+	kstr := zh.Zhs.Zfszhtrue(zf.Zfs.Test(false)) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(kstr)
+	//zfzhi.Zhi.Shuzi1(),
+	szstr := zh.Zhs.Zhiszh(zf.Zfs.Shuzi1(false)) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(szstr)
+	//fanshe.Fangfaming(false),
+	fsstr := zf.Zfs.Fanshe(true) + zfzhi.Zhi.Dh() + zf.Zfs.Fangfaming(false) + zfzhi.Zhi.Xkhz() +
+		zf.Zfs.False(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(fsstr)
+	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
+
+	// quanbu := zdjueseyewus.Chaxunquanbuyewus(dtziyuan[zfzhi.Zhi.Shuzi0()])
 	qbstr := zf.Zfs.Quanbu(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() + zf.Zfs.Zd(true) +
 		bmx + zf.Zfs.Yewus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Chaxunquanbu(false) + zf.Zfs.Yewus(true) +
-		zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+		zfzhi.Zhi.Xkhz() + bmx + zfzhi.Zhi.Zkhz() + zh.Zhs.Zhiszh(zf.Zfs.Shuzi0(false)) +
+		zfzhi.Zhi.Zkhy() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(qbstr)
 
 	// log.Println(quanbu[zfzhi.Zhi.Shuzi0()])
