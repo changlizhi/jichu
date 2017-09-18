@@ -11,7 +11,7 @@ import (
 	"strings"
 )
 
-func servicetestimport(mokuai string, bianma string, buffer *bytes.Buffer) {
+func yewustestimport(mokuai string, bianma string, buffer *bytes.Buffer) {
 	bmx := strings.ToLower(bianma)
 	importstr := zf.Zfs.Import(true) + zfzhi.Zhi.Kgf()
 	buffer.WriteString(importstr)
@@ -50,9 +50,9 @@ func servicetestimport(mokuai string, bianma string, buffer *bytes.Buffer) {
 func tianjiaxiugai(mokuai string, fangfa string, bianma string, buffer *bytes.Buffer) {
 
 	bmx := strings.ToLower(bianma)
-	//func TestJueseserviceTianjia(t *testing.T)
+	//func TestXiugaiyigeyewus(t *testing.T)
 	funcstr := zfzhi.Zhi.Hhf() + zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() +
-		zf.Zfs.Test(false) + bianma + zf.Zfs.Yewus(true) + fangfa +
+		zf.Zfs.Test(false) + fangfa + zf.Zfs.Yewus(true) +
 		zfzhi.Zhi.Xkhz() + zf.Zfs.T(true) + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xh() +
 		zf.Zfs.Testing(true) + zfzhi.Zhi.Dh() + zf.Zfs.T(false) + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(funcstr)
@@ -92,31 +92,31 @@ func tianjiaxiugai(mokuai string, fangfa string, bianma string, buffer *bytes.Bu
 		}
 	}
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy())
-	//zdzfzhi.Zhi.Xxxyewus.Tianjiazfzhi.Zhi.Xxx(&zfzhi.Zhi.Xxx)
+	//zdxxxyewus.Tianjiayigeyewus(&zfzhi.Zhi.Xxx)
 	tjstr := zfzhi.Zhi.Hhf() + zf.Zfs.Zd(true) + bmx + zf.Zfs.Yewus(true) +
-		zfzhi.Zhi.Dh() + fangfa + bmx + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Qh() + bmx + zfzhi.Zhi.Xkhy()
+		zfzhi.Zhi.Dh() + fangfa + zf.Zfs.Yewus(true) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Qh() + bmx + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(tjstr)
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
-func testservicetianjia(mokuai string, bianma string, buffer *bytes.Buffer) {
-	tianjiaxiugai(mokuai, zf.Zfs.Tianjia(false), bianma, buffer)
+func testyewustianjia(mokuai string, bianma string, buffer *bytes.Buffer) {
+	tianjiaxiugai(mokuai, zf.Zfs.Tianjiayige(false), bianma, buffer)
 }
-func testservicexiugai(mokuai string, bianma string, buffer *bytes.Buffer) {
-	tianjiaxiugai(mokuai, zf.Zfs.Xiugai(false), bianma, buffer)
+func testyewusxiugai(mokuai string, bianma string, buffer *bytes.Buffer) {
+	tianjiaxiugai(mokuai, zf.Zfs.Xiugaiyige(false), bianma, buffer)
 }
-func testservicechaxunquanbu(bianma string, buffer *bytes.Buffer) {
+func testyewuschaxunquanbu(bianma string, buffer *bytes.Buffer) {
 	bmx := strings.ToLower(bianma)
-	// func TestJueseyewusChaxunquanbu
-	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Test(false) + bianma + zf.Zfs.Yewus(true) + zf.Zfs.Chaxunquanbu(false)
+	// func TestChaxunquanbuyewus
+	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Test(false) + zf.Zfs.Chaxunquanbu(false) + zf.Zfs.Yewus(true)
 	buffer.WriteString(funstr)
 	// (t *testing.T)
 	tstr := zfzhi.Zhi.Xkhz() + zf.Zfs.T(true) + zfzhi.Zhi.Kgf() +
 		zfzhi.Zhi.Xh() + zf.Zfs.Testing(true) + zfzhi.Zhi.Dh() + zf.Zfs.T(false) + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(tstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-	// quanbu := zdjueseyewus.Chaxunquanbujuese()
+	// quanbu := zdjueseyewus.Chaxunquanbuyewus()
 	qbstr := zf.Zfs.Quanbu(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() + zf.Zfs.Zd(true) +
-		bmx + zf.Zfs.Yewus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Chaxunquanbu(false) + bmx +
+		bmx + zf.Zfs.Yewus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Chaxunquanbu(false) + zf.Zfs.Yewus(true) +
 		zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(qbstr)
 
@@ -128,41 +128,43 @@ func testservicechaxunquanbu(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 
 }
-func testservicechaxun(bianma string, buffer *bytes.Buffer) {
+func testyewuschaxun(bianma string, buffer *bytes.Buffer) {
 	bmx := strings.ToLower(bianma)
-	// func TestXzfzhi.Zhi.XxyeuwChaxun
+	// func TestChaxunyigeyewus
 	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Test(false) +
-		bianma + zf.Zfs.Yewus(true) + zf.Zfs.Chaxun(false)
+		zf.Zfs.Chaxunyige(false) + zf.Zfs.Yewus(true)
 	buffer.WriteString(funstr)
 	//(t *testing.T)
 	tstr := zfzhi.Zhi.Xkhz() + zf.Zfs.T(true) + zfzhi.Zhi.Kgf() +
 		zfzhi.Zhi.Xh() + zf.Zfs.Testing(true) + zfzhi.Zhi.Dh() + zf.Zfs.T(false) + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(tstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-	// xxx := zdzfzhi.Zhi.Xxxyewus.ChaxunXxx(zfzhi.Zhi.Shuzi1())
+	// xxx := zdxxxyewus.Chaxunyigeyewus(zfzhi.Zhi.Shuzi1())
 	objstr := bmx + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() + zf.Zfs.Zd(true) +
-		bmx + zf.Zfs.Yewus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Chaxun(false) +
-		bmx + zfzhi.Zhi.Xkhz() + zh.Zhs.Zhiszh(zf.Zfs.Shuzi1(false)) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+		bmx + zf.Zfs.Yewus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Chaxunyige(false) +
+		zf.Zfs.Yewus(true) + zfzhi.Zhi.Xkhz() + zh.Zhs.Zhiszh(zf.Zfs.Shuzi1(false)) +
+		zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(objstr)
 	logstr := zf.Zfs.Log(true) + zfzhi.Zhi.Dh() + zf.Zfs.Println(false) +
 		zfzhi.Zhi.Xkhz() + bmx + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(logstr)
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
-func testserviceshanchu(bianma string, buffer *bytes.Buffer) {
+func testyewusshanchu(bianma string, buffer *bytes.Buffer) {
 	bmx := strings.ToLower(bianma)
-	// func TestXzfzhi.Zhi.Xx()serviceShanchu
+	// func TestShanchuyigeyewus
 	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Test(false) +
-		bianma + zf.Zfs.Yewus(true) + zf.Zfs.Shanchu(false)
+		zf.Zfs.Shanchuyige(false) + zf.Zfs.Yewus(true)
 	buffer.WriteString(funstr)
 	//(t *testing.T)
 	tstr := zfzhi.Zhi.Xkhz() + zf.Zfs.T(true) + zfzhi.Zhi.Kgf() +
 		zfzhi.Zhi.Xh() + zf.Zfs.Testing(true) + zfzhi.Zhi.Dh() + zf.Zfs.T(false) + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(tstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-	//zdzfzhi.Zhi.Xx()xservices.ShanchuXxx(zfzhi.Zhi.Shuzi1())
+	//zdxxxyewuss.Shanchuyigeyewus(zfzhi.Zhi.Shuzi1())
 	scstr := zf.Zfs.Zd(true) + bmx + zf.Zfs.Yewus(true) + zfzhi.Zhi.Dh() +
-		zf.Zfs.Shanchu(false) + bmx + zfzhi.Zhi.Xkhz() + zh.Zhs.Zhiszh(zf.Zfs.Shuzi1(false)) + zfzhi.Zhi.Xkhy()
+		zf.Zfs.Shanchuyige(false) + zf.Zfs.Yewus(true) + zfzhi.Zhi.Xkhz() +
+		zh.Zhs.Zhiszh(zf.Zfs.Shuzi1(false)) + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(scstr)
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
@@ -176,12 +178,12 @@ func Shengchengyewutest() {
 			buffer := bytes.Buffer{}
 			pacstr := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Tests(true) + zfzhi.Zhi.Hhf()
 			buffer.WriteString(pacstr)
-			servicetestimport(mkv, bk, &buffer)
-			testservicetianjia(mkv, bk, &buffer)
-			testservicexiugai(mkv, bk, &buffer)
-			testservicechaxun(bk, &buffer)
-			testserviceshanchu(bk, &buffer)
-			testservicechaxunquanbu(bk, &buffer)
+			yewustestimport(mkv, bk, &buffer)
+			testyewustianjia(mkv, bk, &buffer)
+			testyewusxiugai(mkv, bk, &buffer)
+			testyewuschaxun(bk, &buffer)
+			testyewusshanchu(bk, &buffer)
+			testyewuschaxunquanbu(bk, &buffer)
 			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Yewus(true) + zfzhi.Zhi.Xhx() +
 				zf.Zfs.Test(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)

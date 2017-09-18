@@ -177,9 +177,9 @@ func yewuxiugai(mokuai string, bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(reterr)
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy())
 
-	// xxxfind := Chaxunxxx(xxx.Id)
+	// xxxfind := Chaxunyigeyewus(xxx.Id)
 	findstr := zfzhi.Zhi.Hhf() + bmx + zf.Zfs.Find(true) + zfzhi.Zhi.Mh() +
-		zfzhi.Zhi.Dyh() + zf.Zfs.Chaxun(false) + bmx +
+		zfzhi.Zhi.Dyh() + zf.Zfs.Chaxunyige(false) + zf.Zfs.Yewus(true) +
 		zfzhi.Zhi.Xkhz() + bmx + zfzhi.Zhi.Dh() + zf.Zfs.Id(false) +
 		zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(findstr)
@@ -269,7 +269,7 @@ func yewutianjia(bianma string, buffer *bytes.Buffer) {
 func yewuchaxun(bianma string, buffer *bytes.Buffer) {
 	bmx := strings.ToLower(bianma)
 
-	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Chaxun(false) + bmx +
+	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Chaxunyige(false) + zf.Zfs.Yewus(true) +
 		zfzhi.Zhi.Xkhz() + zf.Zfs.Id(true) + zfzhi.Zhi.Kgf() +
 		zf.Zfs.Int(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Xh() +
 		zf.Zfs.Moxings(true) + zfzhi.Zhi.Dh() + bianma

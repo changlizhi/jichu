@@ -143,11 +143,14 @@ func kongzhiqiget(bianma string, buffer *bytes.Buffer) {
 
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 
-	//zfzhi.Zhi.Xxx := Xxxyewus.Chaxunzfzhi.Zhi.Xx()x(id)
-	objret := bmx + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() + zf.Zfs.Zd(true) + bmx + zf.Zfs.Yewus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Chaxun(false) + bmx + zfzhi.Zhi.Xkhz() + zf.Zfs.Id(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	//xxx := zdXxxyewus.Chaxunyigeyewus(id)
+	objret := bmx + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
+		zf.Zfs.Zd(true) + bmx + zf.Zfs.Yewus(true) +
+		zfzhi.Zhi.Dh() + zf.Zfs.Chaxunyige(false) + zf.Zfs.Yewus(true) +
+		zfzhi.Zhi.Xkhz() + zf.Zfs.Id(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(objret)
 
-	//c.Data[zf.Zfs.Json(true)]=zfzhi.Zhi.Xx()x
+	//c.Data[zf.Zfs.Json(true)]=xxx
 	serobj := zf.Zfs.C(true) + zfzhi.Zhi.Dh() + zf.Zfs.Data(false) +
 		zfzhi.Zhi.Zkhz() + zf.Zfs.Zf(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zfs(false) + zfzhi.Zhi.Dh() +
 		zf.Zfs.Json(false) + zfzhi.Zhi.Xkhz() + zf.Zfs.True(true) +
@@ -174,20 +177,23 @@ func patchpost(fangfaming string, bianma string, buffer *bytes.Buffer) {
 	objstr := bmx + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() + zf.Zfs.Moxings(true) + zfzhi.Zhi.Dh() + bianma + zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(objstr)
 
-	//json.Unmarshal(c.Ctx.Input.RequestBody,&zfzhi.Zhi.Xx()x)
+	//json.Unmarshal(c.Ctx.Input.RequestBody,&xxx)
 	jstr := zf.Zfs.Json(true) + zfzhi.Zhi.Dh() + zf.Zfs.Unmarshal(false) + zfzhi.Zhi.Xkhz() + zf.Zfs.C(true) + zfzhi.Zhi.Dh() + zf.Zfs.Ctx(false) + zfzhi.Zhi.Dh() + zf.Zfs.Input(false) + zfzhi.Zhi.Dh() + zf.Zfs.RequestBody(false) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Qh() + bmx + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(jstr)
 
-	postpatch := ""
+	postpatch := zfzhi.Zhi.Kzf()
 	if fangfaming == zf.Zfs.Post(false) {
-		postpatch = zf.Zfs.Tianjia(false)
+		postpatch = zf.Zfs.Tianjiayige(false) + zf.Zfs.Yewus(true)
 	}
 	if fangfaming == zf.Zfs.Patch(false) {
-		postpatch = zf.Zfs.Xiugai(false)
+		postpatch = zf.Zfs.Xiugaiyige(false) + zf.Zfs.Yewus(true)
 	}
 
-	//serviceret := Xxxyewus.Tianjiazfzhi.Zhi.Xx()x(&zfzhi.Zhi.Xx()x)
-	sretstr := zf.Zfs.Service(true) + zf.Zfs.Ret(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() + zf.Zfs.Zd(true) + bmx + zf.Zfs.Yewus(true) + zfzhi.Zhi.Dh() + postpatch + bmx + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Qh() + bmx + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	//serviceret := zdxxxyewus.Tianjiayigeyewus(&xxx)
+	sretstr := zf.Zfs.Service(true) + zf.Zfs.Ret(true) + zfzhi.Zhi.Mh() +
+		zfzhi.Zhi.Dyh() + zf.Zfs.Zd(true) + bmx + zf.Zfs.Yewus(true) +
+		zfzhi.Zhi.Dh() + postpatch + zfzhi.Zhi.Xkhz() +
+		zfzhi.Zhi.Qh() + bmx + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(sretstr)
 
 	//tishi:=chushihuas.Tishis[serviceret].Zhi
@@ -328,10 +334,10 @@ func kongzhiqidelete(bianma string, buffer *bytes.Buffer) {
 
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 
-	//serviceret := zdzfzhi.Zhi.Xx()xyewus.Shanchuzfzhi.Zhi.Xx()x(id)
+	//serviceret := zdxxxyewus.Shanchuyigeyewus(id)
 	sretstr := zf.Zfs.Service(true) + zf.Zfs.Ret(true) + zfzhi.Zhi.Mh() +
 		zfzhi.Zhi.Dyh() + zf.Zfs.Zd(true) + bmx + zf.Zfs.Yewus(true) +
-		zfzhi.Zhi.Dh() + zf.Zfs.Shanchu(false) + bmx + zfzhi.Zhi.Xkhz() +
+		zfzhi.Zhi.Dh() + zf.Zfs.Shanchuyige(false) + zf.Zfs.Yewus(true) + zfzhi.Zhi.Xkhz() +
 		zf.Zfs.Id(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(sretstr)
 	//tishi:=chushihuas.Tishis[serviceret].Zhi
@@ -397,10 +403,10 @@ func kongzhiqiliebiaopost(bianma string, buffer *bytes.Buffer) {
 		zfzhi.Zhi.Kgf() + zf.Zfs.Post(false) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(fustr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-	//ret := zdjueseyewus.Chaxunquanbujuese()
+	//ret := zdxxxyewus.Chaxunquanbuyewus()
 	restr := zf.Zfs.Ret(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
 		zf.Zfs.Zd(true) + bmx + zf.Zfs.Yewus(true) + zfzhi.Zhi.Dh() +
-		zf.Zfs.Chaxunquanbu(false) + bmx + zfzhi.Zhi.Xkhz() +
+		zf.Zfs.Chaxunquanbu(false) + zf.Zfs.Yewus(true) + zfzhi.Zhi.Xkhz() +
 		zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(restr)
 	//c.Data[zf.Zfs.Json(true)] = ret
