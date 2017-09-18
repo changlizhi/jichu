@@ -22,6 +22,14 @@ func importskongzhiqitest(main bool, mokuai string, buffer *bytes.Buffer) {
 		//"xxx/moxings"
 		mxstr := zfzhi.Zhi.Syh() + mokuai + zfzhi.Zhi.Xx() + zf.Zfs.Moxings(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 		buffer.WriteString(mxstr)
+		//"xxx/fortests"
+		ftstr := zfzhi.Zhi.Syh() + mokuai + zfzhi.Zhi.Xx() + zf.Zfs.Fortests(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+		buffer.WriteString(ftstr)
+
+		// "changliang/fanshe"
+		fsstr := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() +
+			zf.Zfs.Fanshe(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+		buffer.WriteString(fsstr)
 
 	}
 
@@ -29,12 +37,12 @@ func importskongzhiqitest(main bool, mokuai string, buffer *bytes.Buffer) {
 	gjstr := zfzhi.Zhi.Syh() + zf.Zfs.Gongju(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(gjstr)
 
-	//"xxx/zf"
+	//"changliang/zf"
 	zfstr := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() +
 		zf.Zfs.Zf(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(zfstr)
 
-	// "xxx/zfzhi"
+	// "changliang/zfzhi"
 	zfzhistr := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() +
 		zf.Zfs.Zfzhi(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(zfzhistr)
@@ -77,12 +85,25 @@ func postpatchkongzhiqitest(fangfa string, bianma string, buffer *bytes.Buffer) 
 		zfzhi.Zhi.Dh() + zf.Zfs.Controller(false) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(gkcs)
 
-	// reqjson := zfzhi.Fangfajuesezhi()
+	// reqjson := fortests.Zuzhuangdtziyuanyigestring
 	jsonstr := zf.Zfs.Req(true) + zf.Zfs.Json(true) + zfzhi.Zhi.Mh() +
-		zfzhi.Zhi.Dyh() + zf.Zfs.Zfzhi(true) + zfzhi.Zhi.Dh() +
-		zf.Zfs.Zhi(false) + zfzhi.Zhi.Dh() + fangfa + bmx +
-		zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+		zfzhi.Zhi.Dyh() + zf.Zfs.Fortests(true) + zfzhi.Zhi.Dh() +
+		zf.Zfs.Zuzhuang(false) + bmx + zf.Zfs.Yige(true) + zf.Zfs.String(true)
 	buffer.WriteString(jsonstr)
+
+	buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
+
+	//zf.Zfs.Test(true),
+	ztstr := zh.Zhs.Zfszhtrue(zf.Zfs.Test(false)) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(ztstr)
+	//fanshe.Fangfaming(false),
+	fsstr := zf.Zfs.Fanshe(true) + zfzhi.Zhi.Dh() + zf.Zfs.Fangfaming(false) +
+		zfzhi.Zhi.Xkhz() + zf.Zfs.False(true) + zfzhi.Zhi.Xkhy() +
+		zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(fsstr)
+
+	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
+
 
 	// c.Ctx.Input.RequestBody = []byte(reqjson)
 	cinstr := zf.Zfs.C(true) + zfzhi.Zhi.Dh() + zf.Zfs.Ctx(false) +
