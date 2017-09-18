@@ -46,9 +46,11 @@ func zzcs(houzhui string, bmx string, buffer *bytes.Buffer) {
 	//zf.Zfs.Test(true),
 	cs1 := zh.Zhs.Zfszhtrue(zf.Zfs.Test(false)) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(cs1)
-	//zfzhi.Zhi.Shuzi4(),
-	cs2 := zh.Zhs.Zhiszh(zf.Zfs.Shuzi4(false)) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
-	buffer.WriteString(cs2)
+	if houzhui == zfzhi.Zhi.Kzf() {
+		//zfzhi.Zhi.Shuzi4(),
+		cs2 := zh.Zhs.Zhiszh(zf.Zfs.Shuzi4(false)) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+		buffer.WriteString(cs2)
+	}
 	//fanshe.Fangfaming(false),
 	ffstr := zf.Zfs.Fanshe(true) + zfzhi.Zhi.Dh() + zf.Zfs.Fangfaming(false) +
 		zfzhi.Zhi.Xkhz() + zf.Zfs.False(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
@@ -70,7 +72,7 @@ func testzuzhuangjiegou(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(csstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 	zzcs(zfzhi.Zhi.Kzf(), bmx, buffer)
-	zzcs(zf.Zfs.String(true), bmx, buffer)
+	zzcs(zf.Zfs.Yige(true) + zf.Zfs.String(true), bmx, buffer)
 
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 

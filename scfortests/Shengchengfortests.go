@@ -46,30 +46,31 @@ func importsfortests(mkv string, bk string, buffer *bytes.Buffer) {
 
 func zuzhuangjiegoutistr(bianma string, buffer *bytes.Buffer) {
 	bmx := strings.ToLower(bianma)
-	//func Zuzhuangxxxstring
-	fstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Zuzhuang(false) + bmx + zf.Zfs.String(true)
+	//func Zuzhuangyigexxxstring
+	fstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Zuzhuang(false) + bmx + zf.Zfs.Yige(true) + zf.Zfs.String(true)
 	buffer.WriteString(fstr)
 
-	//(leixing string, jige int, fangfa string)
+	//(leixing string, fangfa string)
 	csstr := zfzhi.Zhi.Xkhz() + zf.Zfs.Leixing(true) + zfzhi.Zhi.Kgf() +
-		zf.Zfs.String(true) + zfzhi.Zhi.Dou() + zf.Zfs.Jige(true) +
-		zfzhi.Zhi.Kgf() + zf.Zfs.Int(true) + zfzhi.Zhi.Dou() +
-		zf.Zfs.Fangfa(true) + zfzhi.Zhi.Kgf() + zf.Zfs.String(true) + zfzhi.Zhi.Xkhy()
+		zf.Zfs.String(true) + zfzhi.Zhi.Dou() + zf.Zfs.Fangfa(true) +
+		zfzhi.Zhi.Kgf() + zf.Zfs.String(true) + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(csstr)
 	buffer.WriteString(zf.Zfs.String(true))
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 
-	//ret := Zuzhuangdtziyuan(leixing, jige, fangfa)
+	//ret := Zuzhuangdtziyuan(leixing, zfzhi.Zhi.Shuzi1(), fangfa)
 	rstr := zf.Zfs.Ret(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
 		zf.Zfs.Zuzhuang(false) + bmx + zfzhi.Zhi.Xkhz() +
-		zf.Zfs.Leixing(true) + zfzhi.Zhi.Dou() + zf.Zfs.Jige(true) +
+		zf.Zfs.Leixing(true) + zfzhi.Zhi.Dou() + zh.Zhs.Zhiszh(zf.Zfs.Shuzi1(false)) +
 		zfzhi.Zhi.Dou() + zf.Zfs.Fangfa(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(rstr)
 
-	//jstring, _ := json.Marshal(ret)
+	//jstring, _ := json.Marshal(ret[zfzhi.Zhi.Shuzi0()])
 	jmstr := zf.Zfs.J(true) + zf.Zfs.String(true) + zfzhi.Zhi.Dou() +
-		zfzhi.Zhi.Xhx() + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() + zf.Zfs.Json(true) + zfzhi.Zhi.Dh() +
-		zf.Zfs.Marshal(false) + zfzhi.Zhi.Xkhz() + zf.Zfs.Ret(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+		zfzhi.Zhi.Xhx() + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
+		zf.Zfs.Json(true) + zfzhi.Zhi.Dh() + zf.Zfs.Marshal(false) +
+		zfzhi.Zhi.Xkhz() + zf.Zfs.Ret(true) + zfzhi.Zhi.Zkhz() +
+		zh.Zhs.Zhiszh(zf.Zfs.Shuzi0(false)) + zfzhi.Zhi.Zkhy() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(jmstr)
 	//return string(jstring)
 	rrstr := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zf.Zfs.String(true) +
