@@ -57,8 +57,7 @@ func Shengchengjsshiti() {
 		buffer.WriteString(zfzhi.Zhi.Dkhy())
 
 		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv +
-			zfzhi.Zhi.Xx() + zf.Zfs.Static(true) + zfzhi.Zhi.Xx() +
-			zf.Zfs.Common(true) + zfzhi.Zhi.Xx() + zf.Zfs.Js(true)
+			zfzhi.Zhi.Xx() + zf.Zfs.Zd(true) + zf.Zfs.Js(true)
 		path := dir + zfzhi.Zhi.Xx() + zf.Zfs.Lie(true) + zfzhi.Zhi.Dh() + zf.Zfs.Js(true)
 
 		os.MkdirAll(dir, os.ModePerm)
