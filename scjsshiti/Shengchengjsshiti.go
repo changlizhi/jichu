@@ -2,10 +2,11 @@ package scjsshiti
 
 import (
 	"gongju"
-	"log"
 	"bytes"
 	"changliang/zf"
 	"changliang/zfzhi"
+	"os"
+	"io/ioutil"
 )
 
 func Shengchengjsshiti() {
@@ -53,8 +54,15 @@ func Shengchengjsshiti() {
 		restr := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Shiti(true) +
 			zfzhi.Zhi.Zkhz() + zf.Zfs.Bianma(true) + zfzhi.Zhi.Zkhy() + zfzhi.Zhi.Hhf()
 		buffer.WriteString(restr)
-		buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
-		log.Println(buffer.String())
+		buffer.WriteString(zfzhi.Zhi.Dkhy())
+
+		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv +
+			zfzhi.Zhi.Xx() + zf.Zfs.Static(true) + zfzhi.Zhi.Xx() +
+			zf.Zfs.Common(true) + zfzhi.Zhi.Xx() + zf.Zfs.Js(true)
+		path := dir + zfzhi.Zhi.Xx() + zf.Zfs.Lie(true) + zfzhi.Zhi.Dh() + zf.Zfs.Js(true)
+
+		os.MkdirAll(dir, os.ModePerm)
+		ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
 	}
 
 }
