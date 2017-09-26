@@ -140,6 +140,59 @@ func zuzhuangjiegouti(mokuai string, bianma string, buffer *bytes.Buffer) {
 
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
+func zuzhuangbianmajiegoutistring(bianma string, buffer *bytes.Buffer) {
+	// func Zuzhuangbianmastring
+	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Zuzhuang(false) + zf.Zfs.Bianma(true) + zf.Zfs.String(true)
+	buffer.WriteString(funstr)
+	// (bianma string) string
+	funcsstr := zfzhi.Zhi.Xkhz() + zf.Zfs.Bianma(true) + zfzhi.Zhi.Kgf() + zf.Zfs.String(true) +
+		zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Kgf() + zf.Zfs.String(true)
+	buffer.WriteString(funcsstr)
+	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+	//ret := Zuzhuangbianma(bianma)
+	rstr := zf.Zfs.Ret(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
+		zf.Zfs.Zuzhuang(false) + zf.Zfs.Bianma(true) + zfzhi.Zhi.Xkhz() +
+		zf.Zfs.Bianma(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(rstr)
+	//jstring, _ := json.Marshal(ret)
+	jmstr := zf.Zfs.J(true) + zf.Zfs.String(true) + zfzhi.Zhi.Dou() +
+		zfzhi.Zhi.Xhx() + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
+		zf.Zfs.Json(true) + zfzhi.Zhi.Dh() + zf.Zfs.Marshal(false) + zfzhi.Zhi.Xkhz() +
+		zf.Zfs.Ret(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(jmstr)
+	//return string(jstring)
+	rrstr := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zf.Zfs.String(true) +
+		zfzhi.Zhi.Xkhz() + zf.Zfs.J(true) + zf.Zfs.String(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(rrstr)
+	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+}
+func zuzhuangbianmajiegou(bianma string, buffer *bytes.Buffer) {
+	//func Zuzhuangbianma
+	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Zuzhuang(false) + zf.Zfs.Bianma(true)
+	buffer.WriteString(funstr)
+	//(bianma string) *moxings.Dtziyuan
+	funcsstr := zfzhi.Zhi.Xkhz() + zf.Zfs.Bianma(true) + zfzhi.Zhi.Kgf() +
+		zf.Zfs.String(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Kgf() +
+		zfzhi.Zhi.Xh() + zf.Zfs.Moxings(true) + zfzhi.Zhi.Dh() + bianma
+	buffer.WriteString(funcsstr)
+	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+
+	//ret := &moxings.Dtziyuan
+	rstr := zf.Zfs.Ret(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
+		zfzhi.Zhi.Qh() + zf.Zfs.Moxings(true) + zfzhi.Zhi.Dh() + bianma
+	buffer.WriteString(rstr)
+	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+	//Bianma:bianma,
+	bbstr := zf.Zfs.Bianma(false) + zfzhi.Zhi.Mh() + zf.Zfs.Bianma(true) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(bbstr)
+	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+
+	//return ret
+	rrstr := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Ret(true)
+	buffer.WriteString(rrstr)
+	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+}
+
 func Shengchengfortests() {
 	mkarr := gongju.Mokuaimingsarr
 	mks := gongju.Mokuaimings
@@ -153,6 +206,8 @@ func Shengchengfortests() {
 			importsfortests(mkv, bk, buffer)
 			zuzhuangjiegouti(mkv, bk, buffer)
 			zuzhuangjiegoutistr(bk, buffer)
+			zuzhuangbianmajiegou(bk, buffer)
+			zuzhuangbianmajiegoutistring(bk, buffer)
 
 			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Fortests(true)
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Fortests(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
