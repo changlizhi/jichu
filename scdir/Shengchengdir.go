@@ -1,13 +1,13 @@
 package scdir
 
 import (
-	"gongju"
-	"changliang/zfzhi"
+	"bytes"
 	"changliang/zf"
+	"changliang/zfzhi"
+	"gongju"
+	"io/ioutil"
 	"os"
 	"strings"
-	"io/ioutil"
-	"bytes"
 )
 
 func Shengchengdir() {

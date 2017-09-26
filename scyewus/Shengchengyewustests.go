@@ -92,7 +92,6 @@ func testyewuschaxunquanbu(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(tstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 
-
 	//dtziyuan := fortests.Zuzhuangdtziyuan
 	ostr := bmx + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() + zf.Zfs.Fortests(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zuzhuang(false) + bmx
 	buffer.WriteString(ostr)

@@ -1,8 +1,8 @@
 package tests
 
 import (
-	"testing"
 	"jichu/scdir"
+	"testing"
 )
 
 func TestShengchengdir(t *testing.T) {

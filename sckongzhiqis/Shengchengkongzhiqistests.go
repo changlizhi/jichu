@@ -104,7 +104,6 @@ func postpatchkongzhiqitest(fangfa string, bianma string, buffer *bytes.Buffer) 
 
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
 
-
 	// c.Ctx.Input.RequestBody = []byte(reqjson)
 	cinstr := zf.Zfs.C(true) + zfzhi.Zhi.Dh() + zf.Zfs.Ctx(false) +
 		zfzhi.Zhi.Dh() + zf.Zfs.Input(false) + zfzhi.Zhi.Dh() +
