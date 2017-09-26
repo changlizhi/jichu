@@ -216,6 +216,37 @@ func testtianjiaduoge(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 
 }
+func testshanchutiaojian(bianma string, buffer *bytes.Buffer) {
+	bmx := strings.ToLower(bianma)
+	//func TestShanchutiaojiankus(t *testing.T)
+	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Test(false) +
+		zf.Zfs.Shanchu(false) + zf.Zfs.Tiaojian(true) + zf.Zfs.Kus(true)
+	buffer.WriteString(funstr)
+	// (t *testing.T){\n
+	csstr := zfzhi.Zhi.Xkhz() + zf.Zfs.T(true) + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xh() +
+		zf.Zfs.Testing(true) + zfzhi.Zhi.Dh() + zf.Zfs.T(false) + zfzhi.Zhi.Xkhy()
+	buffer.WriteString(csstr)
+	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+	//dtziyuan := fortests.Zuzhuangbianma
+	dfz := bmx + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
+		zf.Zfs.Fortests(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zuzhuang(false) +
+		zf.Zfs.Bianma(true)
+	buffer.WriteString(dfz)
+	// (zf.Zfs.Kus(false) + zf.Zfs.Bianma(false) + "TestTianjiayigeDtziyuankus1")
+	dfzcs := zfzhi.Zhi.Xkhz() + zh.Zhs.Zfszhfalse(zf.Zfs.Kus(false)) + zfzhi.Zhi.Jia() +
+		zh.Zhs.Zfszhfalse(zf.Zfs.Bianma(false)) + zfzhi.Zhi.Jia() +zfzhi.Zhi.Hhf()+
+		zh.Zhs.Zfszhfalse(zf.Zfs.TestTianjiayigeDtziyuankus(false)) + zfzhi.Zhi.Jia() +
+		zh.Zhs.Zhiszh(zf.Zfs.Shuzi1w(false)) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(dfzcs)
+	//zdxxxkus.Shanchutiaojiankus(dtziyuan)
+	zs := zf.Zfs.Zd(true) + bmx + zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() +
+		zf.Zfs.Shanchu(false) + zf.Zfs.Tiaojian(true) + zf.Zfs.Kus(true) +
+		zfzhi.Zhi.Xkhz() + bmx + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(zs)
+
+	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+
+}
 func Shengchengkustests() {
 	mkarr := gongju.Mokuaimingsarr
 	mks := gongju.Mokuaimings
@@ -231,6 +262,7 @@ func Shengchengkustests() {
 			testchaxunyige(bk, &buffer)
 			testshanchuyige(bk, &buffer)
 			testchaxunquanbu(bk, &buffer)
+			testshanchutiaojian(bk, &buffer)
 			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Ku(true) + zfzhi.Zhi.Xhx() +
 				zf.Zfs.Test(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
