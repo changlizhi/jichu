@@ -57,7 +57,7 @@ func tianjiaxiugai(fangfa string, bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(ostr)
 	buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
 	//zf.Zfs.Yewus(false),
-	kstr := zh.Zhs.Zfszhfalse(zf.Zfs.Kus(false)) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+	kstr := zh.Zhs.Zfszhfalse(zf.Zfs.Yewus(false)) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(kstr)
 	//zfzhi.Zhi.Shuzi1(),
 	szstr := zh.Zhs.Zhiszh(zf.Zfs.Shuzi1(false)) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
