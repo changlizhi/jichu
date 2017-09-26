@@ -390,6 +390,59 @@ func chaxunquanbu(mokuai string, biao string, buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
 
+func shanchutiaojiankus(bianma string, buffer *bytes.Buffer) {
+	bmx := strings.ToLower(bianma)
+	//func Shanchutiaojiankus
+	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Shanchu(false) +
+		zf.Zfs.Tiaojian(true) + zf.Zfs.Kus(true)
+	buffer.WriteString(funstr)
+	//(dtziyuan *moxings.Dtziyuan) string
+	funcs := zfzhi.Zhi.Xkhz() + bmx + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xh() +
+		zf.Zfs.Moxings(true) + zfzhi.Zhi.Dh() + bianma +
+		zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Kgf() + zf.Zfs.String(true)
+	buffer.WriteString(funcs)
+	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+	//dtziyuans := Chaxunquanbukus(dtziyuan)
+	dcs := bmx + zf.Zfs.S(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
+		zf.Zfs.Chaxunquanbu(false) + zf.Zfs.Kus(true) + zfzhi.Zhi.Xkhz() +
+		bmx + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(dcs)
+	//_, err := chushihuas.Defaultormer().Delete(dtziyuans[zfzhi.Zhi.Shuzi0()])
+	ecd := zfzhi.Zhi.Xhx() + zfzhi.Zhi.Dou() + zf.Zfs.Err(true) +
+		zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() + zf.Zfs.Chushihuas(true) +
+		zfzhi.Zhi.Dh() + zf.Zfs.Defaultormer(false) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Dh() +
+		zf.Zfs.Delete(false) + zfzhi.Zhi.Xkhz() + bmx + zf.Zfs.S(true) + zfzhi.Zhi.Zkhz() +
+		zh.Zhs.Zhiszh(zf.Zfs.Shuzi0(false)) + zfzhi.Zhi.Zkhy() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(ecd)
+
+	//if err != nil
+	ien := zf.Zfs.If(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Err(true) + zfzhi.Zhi.Gth() + zfzhi.Zhi.Dyh() + zf.Zfs.Nil(true)
+	buffer.WriteString(ien)
+	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+
+	//log.Println(err)
+	lpe := zf.Zfs.Log(true) + zfzhi.Zhi.Dh() + zf.Zfs.Println(false) +
+		zfzhi.Zhi.Xkhz() + zf.Zfs.Err(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(lpe)
+	//return chushihuas.Tishis[zf.Zfs.Tishi08(false)].Bianma
+	rct8 := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Chushihuas(true) +
+		zfzhi.Zhi.Dh() + zf.Zfs.Tishis(false) + zfzhi.Zhi.Zkhz() +
+		zh.Zhs.Zfszhfalse(zf.Zfs.Tishi08(false)) + zfzhi.Zhi.Zkhy() +
+		zfzhi.Zhi.Dh() + zf.Zfs.Bianma(false)
+	buffer.WriteString(rct8)
+
+	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+
+	//return chushihuas.Tishis[zf.Zfs.Tishi07(false)].Bianma
+	rct7 := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Chushihuas(true) +
+		zfzhi.Zhi.Dh() + zf.Zfs.Tishis(false) + zfzhi.Zhi.Zkhz() +
+		zh.Zhs.Zfszhfalse(zf.Zfs.Tishi07(false)) + zfzhi.Zhi.Zkhy() +
+		zfzhi.Zhi.Dh() + zf.Zfs.Bianma(false)
+	buffer.WriteString(rct7)
+
+	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+}
+
 func Shengchengkus() {
 	mkarr := gongju.Mokuaimingsarr
 	mks := gongju.Mokuaimings
@@ -410,6 +463,7 @@ func Shengchengkus() {
 			xiugaiyige(biao, &buffer)        // Xiugaiyige
 			shanchuyige(&buffer)             // Shanchuyige
 			chaxunquanbu(mkv, biao, &buffer) // Shanchuyige
+			shanchutiaojiankus(biao, &buffer) // Shanchuyige
 
 			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() +
 				mkv + zfzhi.Zhi.Xx() + lujing
