@@ -140,7 +140,7 @@ func zuzhuangjiegouti(mokuai string, bianma string, buffer *bytes.Buffer) {
 
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
-func zuzhuangbianmajiegoutistring(bianma string, buffer *bytes.Buffer) {
+func zuzhuangbianmajiegoutistring(buffer *bytes.Buffer) {
 	// func Zuzhuangbianmastring
 	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Zuzhuang(false) + zf.Zfs.Bianma(true) + zf.Zfs.String(true)
 	buffer.WriteString(funstr)
