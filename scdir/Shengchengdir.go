@@ -25,10 +25,11 @@ func Shengchengdir() {
 		"Dtliuyan",
 		"Dtcaiji",
 	}
-
+	rbu := bytes.Buffer{}
+	d := gongju.Getgopath() + zfzhi.Zhi.Xx() + zf.Zfs.Mulu(true) + zfzhi.Zhi.Xx()
 	for _, dir := range dirs {
 		dirx := strings.ToLower(dir)
-		buffer := &bytes.Buffer{}
+		buffer := bytes.Buffer{}
 		//<template>
 		tzstr := zfzhi.Zhi.Xy() + zf.Zfs.Template(true) + zfzhi.Zhi.Dy() + zfzhi.Zhi.Hhf()
 		buffer.WriteString(tzstr)
@@ -37,6 +38,10 @@ func Shengchengdir() {
 		dzstr := zfzhi.Zhi.Xy() + zf.Zfs.Div(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Class(true) +
 			zfzhi.Zhi.Dyh() + zfzhi.Zhi.Dyhe() + dirx + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dy() + zfzhi.Zhi.Hhf()
 		buffer.WriteString(dzstr)
+		buffer.WriteString(dirx)
+		buffer.WriteString(dirx)
+		buffer.WriteString(dirx)
+
 		//</div>
 		dystr := zfzhi.Zhi.Xy() + zfzhi.Zhi.Xx() + zf.Zfs.Div(true) + zfzhi.Zhi.Dy() + zfzhi.Zhi.Hhf()
 		buffer.WriteString(dystr)
@@ -63,11 +68,49 @@ func Shengchengdir() {
 		//</style>
 		yystr := zfzhi.Zhi.Xy() + zfzhi.Zhi.Xx() + zf.Zfs.Style(true) + zfzhi.Zhi.Dy() + zfzhi.Zhi.Hhf()
 		buffer.WriteString(yystr)
+		pathd := d + dirx + zfzhi.Zhi.Xx() + dir + zfzhi.Zhi.Dh() + zf.Zfs.Vue(true)
 
-		d :=  gongju.Getgopath() + zfzhi.Zhi.Xx() + zf.Zfs.Mulu(true) + zfzhi.Zhi.Xx() + dirx
-		path := d + zfzhi.Zhi.Xx() + dir + zfzhi.Zhi.Dh() + zf.Zfs.Vue(true)
-		os.MkdirAll(d, os.ModePerm)
-		ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
+		os.MkdirAll(pathd, os.ModePerm)
+		ioutil.WriteFile(pathd, buffer.Bytes(), os.ModePerm)
+		//{
+		rbu.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+		//path: '/dtyonghu',
+		pastr := zf.Zfs.Path(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Xx() +
+			dirx + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+		rbu.WriteString(pastr)
+		//name: 'dtyonghu',
+		ndstr := zf.Zfs.Name(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyhe() + dirx +
+			zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+		rbu.WriteString(ndstr)
+		//component: Dtyonghu,
+		cdstr := zf.Zfs.Component(true) + zfzhi.Zhi.Mh() + dir + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+		rbu.WriteString(cdstr)
+		//children: [{
+		clstr := zf.Zfs.Children(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Zkhz() + zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf()
+		rbu.WriteString(clstr)
+		//path: 'biaodan',
+		pbstr := zf.Zfs.Path(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyhe() + zf.Zfs.Biaodan(true) +
+			zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+		rbu.WriteString(pbstr)
+		//component: Biaodan
+		cbstr := zf.Zfs.Component(true) + zfzhi.Zhi.Mh() + zf.Zfs.Biaodan(false) + zfzhi.Zhi.Hhf()
+		rbu.WriteString(cbstr)
+		//}, {
+		khstr := zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf()
+		rbu.WriteString(khstr)
+		//path: 'quanbu',
+		pqstr := zf.Zfs.Path(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyhe() + zf.Zfs.Quanbu(true) +
+			zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+		rbu.WriteString(pqstr)
+		//component: Quanbu
+		cqstr := zf.Zfs.Component(true) + zfzhi.Zhi.Mh() + zf.Zfs.Quanbu(false) + zfzhi.Zhi.Hhf()
+		rbu.WriteString(cqstr)
+		//}]
+		rbu.WriteString(zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Zkhy())
+		//},
+		rbu.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Dou())
 	}
+	rpath := d + zf.Zfs.Router(true) + zfzhi.Zhi.Dh() + zf.Zfs.Js(true)
+	ioutil.WriteFile(rpath, rbu.Bytes(), os.ModePerm)
 
 }
