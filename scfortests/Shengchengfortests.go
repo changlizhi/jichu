@@ -207,7 +207,7 @@ func Shengchengfortests() {
 			zuzhuangjiegouti(mkv, bk, buffer)
 			zuzhuangjiegoutistr(bk, buffer)
 			zuzhuangbianmajiegou(bk, buffer)
-			zuzhuangbianmajiegoutistring(bk, buffer)
+			zuzhuangbianmajiegoutistring(buffer)
 
 			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Fortests(true)
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Fortests(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
