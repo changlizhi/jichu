@@ -316,6 +316,26 @@ func yewushanchu(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Hhf())
 }
 
+func yewutiaojian(bianma string, buffer *bytes.Buffer) {
+	bmx := strings.ToLower(bianma)
+	//func Shanchutiaojianyewus
+	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Shanchu(false) + zf.Zfs.Tiaojian(true) + zf.Zfs.Yewus(true)
+	buffer.WriteString(funstr)
+	// (dtziyuan *moxings.Dtziyuan) string
+	funcs := zfzhi.Zhi.Xkhz() + bmx + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xh() + zf.Zfs.Moxings(true) +
+		zfzhi.Zhi.Dh() + bianma + zfzhi.Zhi.Xkhy() + zf.Zfs.String(true)
+	buffer.WriteString(funcs)
+	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+	//return zddtziyuankus.Shanchutiaojiankus(dtziyuan)
+	rrstr := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Zd(true) +
+		bmx + zf.Zfs.Kus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Shanchu(false) +
+		zf.Zfs.Tiaojian(true) + zf.Zfs.Kus(true) + zfzhi.Zhi.Xkhz() +
+		bmx + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(rrstr)
+
+	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+
+}
 func Shengchengyewu() {
 	mkarr := gongju.Mokuaimingsarr
 	mks := gongju.Mokuaimings
@@ -336,6 +356,7 @@ func Shengchengyewu() {
 			yewushanchu(bk, &buffer)
 			yewuchaxun(bk, &buffer)
 			yewuquanbu(bk, &buffer)
+			yewutiaojian(bk, &buffer)
 			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + bm
 			os.MkdirAll(dir, os.ModePerm)
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Yewus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
