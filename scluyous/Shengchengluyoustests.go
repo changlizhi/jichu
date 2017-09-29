@@ -48,8 +48,7 @@ func getdelete(m string, bk string, buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
 
-func postpatch(liebiao string, url string, m string, bk string, buffer *bytes.Buffer) {
-	bmx := strings.ToLower(bk)
+func postpatch(canshu string, liebiao string, url string, m string, bk string, buffer *bytes.Buffer) {
 	//func TestBkm
 	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Test(false) + bk + liebiao + strings.ToLower(m)
 	buffer.WriteString(funstr)
@@ -58,21 +57,7 @@ func postpatch(liebiao string, url string, m string, bk string, buffer *bytes.Bu
 	buffer.WriteString(csstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 
-	//canshu := fortests.Zuzhuangdtziyuanyigestring
-	fzstr := zf.Zfs.Canshu(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
-		zf.Zfs.Fortests(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zuzhuang(false) +
-		bmx + zf.Zfs.Yige(true) + zf.Zfs.String(true)
-	buffer.WriteString(fzstr)
-	buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
-	//	zf.Zfs.Test(true),
-	tstr := zh.Zhs.Zfszhtrue(zf.Zfs.Test(false)) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
-	buffer.WriteString(tstr)
-	//	fanshe.Fangfaming(false),
-	ffstr := zf.Zfs.Fanshe(true) + zfzhi.Zhi.Dh() + zf.Zfs.Fangfaming(false) +
-		zfzhi.Zhi.Xkhz() + zf.Zfs.False(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
-	buffer.WriteString(ffstr)
-
-	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
+	buffer.WriteString(canshu)
 
 	//r, _ := http.NewRequest
 	hnr := zf.Zfs.R(true) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Xhx() + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() + zf.Zfs.Http(true) + zfzhi.Zhi.Dh() + zf.Zfs.NewRequest(false)
@@ -158,7 +143,7 @@ func Shengchengluyoustests() {
 	for _, mkvo := range mkarr {
 		mkv := mks[mkvo].Zhi
 		_, biaos, _ := gongju.Biaolies(mkv)
-		for bk, _ := range biaos {
+		for bk, bv := range biaos {
 			buffer := &bytes.Buffer{}
 			buffer.WriteString(zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Tests(true) + zfzhi.Zhi.Hhf())
 			importstr(mkv, buffer)
@@ -166,15 +151,37 @@ func Shengchengluyoustests() {
 			getdelete(zf.Zfs.Get(false), bk, buffer)
 			getdelete(zf.Zfs.Delete(false), bk, buffer)
 			url := zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() + zh.Zhs.Zfszhtrue(bk)
+			//canshu := fortests.Zuzhuangdtziyuanyigestring
+			fzstr := zf.Zfs.Canshu(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
+				zf.Zfs.Fortests(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zuzhuang(false) +
+				bv + zf.Zfs.Yige(true) + zf.Zfs.String(true) + zfzhi.Zhi.Xkhz() +
+				zfzhi.Zhi.Hhf() + zh.Zhs.Zfszhtrue(zf.Zfs.Test(false)) + zfzhi.Zhi.Dou() +
+				zfzhi.Zhi.Hhf() + zf.Zfs.Fanshe(true) + zfzhi.Zhi.Dh() + zf.Zfs.Fangfaming(false) +
+				zfzhi.Zhi.Xkhz() + zf.Zfs.False(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Dou() +
+				zfzhi.Zhi.Hhf() + zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 
-			postpatch(zfzhi.Zhi.Kzf(), url, zf.Zfs.Post(false), bk, buffer)
-			postpatch(zfzhi.Zhi.Kzf(), url, zf.Zfs.Patch(false), bk, buffer)
+			postpatch(fzstr, zfzhi.Zhi.Kzf(), url, zf.Zfs.Post(false), bk, buffer)
+			postpatch(fzstr, zfzhi.Zhi.Kzf(), url, zf.Zfs.Patch(false), bk, buffer)
 			//列表的post查询
 			urllie := zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() +
 				zh.Zhs.Zfszhtrue(bk) + zfzhi.Zhi.Jia() +
 				zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() +
 				zh.Zhs.Zfszhtrue(zf.Zfs.Quanbu(false))
-			postpatch(zf.Zfs.Liebiao(true), urllie, zf.Zfs.Post(false), bk, buffer)
+			postpatch(fzstr, zf.Zfs.Liebiao(true), urllie, zf.Zfs.Post(false), bk, buffer)
+
+			//canshu := fortests.Zuzhuangbianmastring(zf.Zfs.Test(true) + zf.Zfs.Bianma(false) + zf.Zfs.TestDtziyuanpost(false) + zfzhi.Zhi.Shuzi1w())
+			cstiaojian := zf.Zfs.Canshu(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
+				zf.Zfs.Fortests(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zuzhuang(false) +
+				zf.Zfs.Bianma(true) + zf.Zfs.String(true) + zfzhi.Zhi.Xkhz() +
+				zh.Zhs.Zfszhtrue(zf.Zfs.Test(false)) + zfzhi.Zhi.Jia() +
+				zh.Zhs.Zfszhfalse(zf.Zfs.Bianma(false)) + zfzhi.Zhi.Jia() +
+				zh.Zhs.Zfszhfalse(zf.Zfs.TestDtziyuanpost(false)) + zfzhi.Zhi.Jia() +
+				zh.Zhs.Zhiszh(zf.Zfs.Shuzi1w(false)) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+			urltiaojian := zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() +
+				zh.Zhs.Zfszhtrue(bk) + zfzhi.Zhi.Jia() +
+				zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() +
+				zh.Zhs.Zfszhtrue(zf.Zfs.Bianma(false))
+			postpatch(cstiaojian, zf.Zfs.Tiaojian(true), urltiaojian, zf.Zfs.Post(false), bk, buffer)
 
 			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Luyou(true) + zfzhi.Zhi.Xhx() + zf.Zfs.Test(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
