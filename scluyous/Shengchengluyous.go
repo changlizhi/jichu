@@ -18,10 +18,12 @@ func routersimports(mokuai string, buffer *bytes.Buffer) {
 	buffer.WriteString(zh.Zhs.Beegobao())
 
 	//"changliang/zf"
-	zfstr := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() + zf.Zfs.Zf(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+	zfstr := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() +
+		zf.Zfs.Zf(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(zfstr)
 	//"changliang/zfzhi"
-	zfzstr := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() + zf.Zfs.Zfzhi(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+	zfzstr := zfzhi.Zhi.Syh() + zf.Zfs.Changliang(true) + zfzhi.Zhi.Xx() +
+		zf.Zfs.Zfzhi(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(zfzstr)
 
 	//"xxx/zdkongzhiqis"
@@ -54,7 +56,8 @@ func routersinit(bianma string, buffer *bytes.Buffer) {
 		zf.Zfs.Zf(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zfs(false) +
 		zfzhi.Zhi.Dh() + bianma + zfzhi.Zhi.Xkhz() +
 		zf.Zfs.True(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Jia() +
-		zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() + zh.Zhs.Zhiszh(zf.Zfs.Mh(false)) + zfzhi.Zhi.Jia() + zh.Zhs.Zfszhfalse(zf.Zfs.Id(false)) +
+		zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() +
+		zh.Zhs.Zhiszh(zf.Zfs.Mh(false)) + zfzhi.Zhi.Jia() + zh.Zhs.Zfszhfalse(zf.Zfs.Id(false)) +
 		zfzhi.Zhi.Dou() + zfzhi.Zhi.Qh() + zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true) + zfzhi.Zhi.Dh() +
 		bianma + zf.Zfs.Kongzhiqi(true) + zfzhi.Zhi.Dkhz() +
 		zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
@@ -70,6 +73,18 @@ func routersinit(bianma string, buffer *bytes.Buffer) {
 		zf.Zfs.Kongzhiqi(true) + zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Dkhy() +
 		zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(qbstr)
+	// beego.Router(zfzhi.Zhi.Xx() + zf.Zfs.Dtziyuan(true) + zfzhi.Zhi.Xx() +
+	// zf.Zfs.Bianma(true), &zdkongzhiqis.Dtziyuantiaojiankongzhiqi{})
+	brzb := zf.Zfs.Beego(true) + zfzhi.Zhi.Dh() + zf.Zfs.Router(false) + zfzhi.Zhi.Xkhz() +
+		zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() +
+		zh.Zhs.Zfszhtrue(bianma) + zfzhi.Zhi.Jia() +
+		zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() +
+		zh.Zhs.Zfszhtrue(zf.Zfs.Bianma(false)) + zfzhi.Zhi.Dou() +
+		zfzhi.Zhi.Qh() + zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true) +
+		zfzhi.Zhi.Dh() + bianma + zf.Zfs.Tiaojian(true) +
+		zf.Zfs.Kongzhiqi(true) + zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	buffer.WriteString(brzb)
+
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 
 }
