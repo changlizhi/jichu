@@ -31,3 +31,6 @@ func (sjkmhsydata *Sjkmhsydata) DtziyuanXiugairiqi(xiaoxie bool) string {
 func (sjkmhsydata *Sjkmhsydata) DtziyuanBiaoji(xiaoxie bool) string {
 	return biaolie.Bls.Dtziyuan(xiaoxie) + biaolie.Bls.Biaoji(xiaoxie)
 }
+func (sjkmhsydata *Sjkmhsydata) DtziyuanLeixing(xiaoxie bool) string {
+	return biaolie.Bls.Dtziyuan(xiaoxie) + biaolie.Bls.Leixing(xiaoxie)
+}
