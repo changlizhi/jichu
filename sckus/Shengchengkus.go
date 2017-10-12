@@ -456,13 +456,13 @@ func Shengchengkus() {
 			lujing := zf.Zfs.Zd(true) + strings.ToLower(biao) + zf.Zfs.Kus(true)
 			buffer.WriteString(lujing) // zdjuesedaos
 
-			imports(mkv, &buffer)            //import all
-			chaxunyige(biao, &buffer)        // Chaxunyige
-			tianjiayige(biao, &buffer)       // Tianjiayige
-			tianjiaduoge(biao, &buffer)      // Tianjiaduoge
-			xiugaiyige(biao, &buffer)        // Xiugaiyige
-			shanchuyige(&buffer)             // Shanchuyige
-			chaxunquanbu(mkv, biao, &buffer) // Shanchuyige
+			imports(mkv, &buffer)             //import all
+			chaxunyige(biao, &buffer)         // Chaxunyige
+			tianjiayige(biao, &buffer)        // Tianjiayige
+			tianjiaduoge(biao, &buffer)       // Tianjiaduoge
+			xiugaiyige(biao, &buffer)         // Xiugaiyige
+			shanchuyige(&buffer)              // Shanchuyige
+			chaxunquanbu(mkv, biao, &buffer)  // Shanchuyige
 			shanchutiaojiankus(biao, &buffer) // Shanchuyige
 
 			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() +

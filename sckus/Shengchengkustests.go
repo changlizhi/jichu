@@ -234,7 +234,7 @@ func testshanchutiaojian(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(dfz)
 	// (zf.Zfs.Kus(false) + zf.Zfs.Bianma(false) + "TestTianjiayigeDtziyuankus1")
 	dfzcs := zfzhi.Zhi.Xkhz() + zh.Zhs.Zfszhfalse(zf.Zfs.Kus(false)) + zfzhi.Zhi.Jia() +
-		zh.Zhs.Zfszhfalse(zf.Zfs.Bianma(false)) + zfzhi.Zhi.Jia() +zfzhi.Zhi.Hhf()+
+		zh.Zhs.Zfszhfalse(zf.Zfs.Bianma(false)) + zfzhi.Zhi.Jia() + zfzhi.Zhi.Hhf() +
 		zh.Zhs.Zfszhfalse(zf.Zfs.TestTianjiayigeDtziyuankus(false)) + zfzhi.Zhi.Jia() +
 		zh.Zhs.Zhiszh(zf.Zfs.Shuzi1w(false)) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(dfzcs)
