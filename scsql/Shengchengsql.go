@@ -11,9 +11,10 @@ func Shengchengsql() {
 	mks := gongju.Mokuaimings
 	for _, mkvo := range mkarr {
 		mkv := mks[mkvo].Zhi
-		_, biaos, lies := gongju.Biaolies(mkv)
+		_, biaos, _ := gongju.Biaolies(mkv)
 		for b, _ := range biaos {
-			for l, _ := range lies {
+			lies := gongju.Biao(mkv, b)
+			for _, l := range lies {
 				cd := gongju.Liechangdu(l)
 				lx := gongju.Lieleixing(l)
 				log.Println(b + "------------" + l + "----------" + strconv.Itoa(cd) + "---------" + lx)
