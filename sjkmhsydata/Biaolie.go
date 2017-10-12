@@ -956,71 +956,71 @@ func (sjkmhsydata *Sjkmhsydata) XiangmushujuCaozuoren(xiaoxie bool) string {
 }
 
 //2017/10/11 22:49:22
-func (sjkmhsydata *Sjkmhsydata) ChujinfanganZhi(xiaoxie bool) string {
+func (sjkmhsydata *Sjkmhsydata) CujinfanganZhi(xiaoxie bool) string {
 
-	return zf.Zfs.Chujinfangan(xiaoxie) + zf.Zfs.Zhi(xiaoxie)
-
-}
-func (sjkmhsydata *Sjkmhsydata) ChujinfanganShijianbianma(xiaoxie bool) string {
-
-	return zf.Zfs.Chujinfangan(xiaoxie) + zf.Zfs.Shijianbianma(xiaoxie)
+	return zf.Zfs.Cujinfangan(xiaoxie) + zf.Zfs.Zhi(xiaoxie)
 
 }
-func (sjkmhsydata *Sjkmhsydata) ChujinfanganXiangmubianma(xiaoxie bool) string {
+func (sjkmhsydata *Sjkmhsydata) CujinfanganShijianbianma(xiaoxie bool) string {
 
-	return zf.Zfs.Chujinfangan(xiaoxie) + zf.Zfs.Xiangmubianma(xiaoxie)
-
-}
-func (sjkmhsydata *Sjkmhsydata) ChujinfanganWeiyibianma(xiaoxie bool) string {
-
-	return zf.Zfs.Chujinfangan(xiaoxie) + zf.Zfs.Weiyibianma(xiaoxie)
+	return zf.Zfs.Cujinfangan(xiaoxie) + zf.Zfs.Shijianbianma(xiaoxie)
 
 }
-func (sjkmhsydata *Sjkmhsydata) ChujinfanganId(xiaoxie bool) string {
+func (sjkmhsydata *Sjkmhsydata) CujinfanganXiangmubianma(xiaoxie bool) string {
 
-	return zf.Zfs.Chujinfangan(xiaoxie) + zf.Zfs.Id(xiaoxie)
+	return zf.Zfs.Cujinfangan(xiaoxie) + zf.Zfs.Xiangmubianma(xiaoxie)
 
 }
+func (sjkmhsydata *Sjkmhsydata) CujinfanganWeiyibianma(xiaoxie bool) string {
 
-func (sjkmhsydata *Sjkmhsydata) ChujinfanganBianma(xiaoxie bool) string {
+	return zf.Zfs.Cujinfangan(xiaoxie) + zf.Zfs.Weiyibianma(xiaoxie)
 
-	return zf.Zfs.Chujinfangan(xiaoxie) + zf.Zfs.Bianma(xiaoxie)
+}
+func (sjkmhsydata *Sjkmhsydata) CujinfanganId(xiaoxie bool) string {
+
+	return zf.Zfs.Cujinfangan(xiaoxie) + zf.Zfs.Id(xiaoxie)
 
 }
 
-func (sjkmhsydata *Sjkmhsydata) ChujinfanganPaixu(xiaoxie bool) string {
+func (sjkmhsydata *Sjkmhsydata) CujinfanganBianma(xiaoxie bool) string {
 
-	return zf.Zfs.Chujinfangan(xiaoxie) + zf.Zfs.Paixu(xiaoxie)
-
-}
-
-func (sjkmhsydata *Sjkmhsydata) ChujinfanganBiaoji(xiaoxie bool) string {
-
-	return zf.Zfs.Chujinfangan(xiaoxie) + zf.Zfs.Biaoji(xiaoxie)
+	return zf.Zfs.Cujinfangan(xiaoxie) + zf.Zfs.Bianma(xiaoxie)
 
 }
 
-func (sjkmhsydata *Sjkmhsydata) ChujinfanganChuangjianriqi(xiaoxie bool) string {
+func (sjkmhsydata *Sjkmhsydata) CujinfanganPaixu(xiaoxie bool) string {
 
-	return zf.Zfs.Chujinfangan(xiaoxie) + zf.Zfs.Chuangjianriqi(xiaoxie)
-
-}
-
-func (sjkmhsydata *Sjkmhsydata) ChujinfanganCaozuoriqi(xiaoxie bool) string {
-
-	return zf.Zfs.Chujinfangan(xiaoxie) + zf.Zfs.Caozuoriqi(xiaoxie)
+	return zf.Zfs.Cujinfangan(xiaoxie) + zf.Zfs.Paixu(xiaoxie)
 
 }
 
-func (sjkmhsydata *Sjkmhsydata) ChujinfanganYouxiaoxing(xiaoxie bool) string {
+func (sjkmhsydata *Sjkmhsydata) CujinfanganBiaoji(xiaoxie bool) string {
 
-	return zf.Zfs.Chujinfangan(xiaoxie) + zf.Zfs.Youxiaoxing(xiaoxie)
+	return zf.Zfs.Cujinfangan(xiaoxie) + zf.Zfs.Biaoji(xiaoxie)
 
 }
 
-func (sjkmhsydata *Sjkmhsydata) ChujinfanganCaozuoren(xiaoxie bool) string {
+func (sjkmhsydata *Sjkmhsydata) CujinfanganChuangjianriqi(xiaoxie bool) string {
 
-	return zf.Zfs.Chujinfangan(xiaoxie) + zf.Zfs.Caozuoren(xiaoxie)
+	return zf.Zfs.Cujinfangan(xiaoxie) + zf.Zfs.Chuangjianriqi(xiaoxie)
+
+}
+
+func (sjkmhsydata *Sjkmhsydata) CujinfanganCaozuoriqi(xiaoxie bool) string {
+
+	return zf.Zfs.Cujinfangan(xiaoxie) + zf.Zfs.Caozuoriqi(xiaoxie)
+
+}
+
+func (sjkmhsydata *Sjkmhsydata) CujinfanganYouxiaoxing(xiaoxie bool) string {
+
+	return zf.Zfs.Cujinfangan(xiaoxie) + zf.Zfs.Youxiaoxing(xiaoxie)
+
+}
+
+func (sjkmhsydata *Sjkmhsydata) CujinfanganCaozuoren(xiaoxie bool) string {
+
+	return zf.Zfs.Cujinfangan(xiaoxie) + zf.Zfs.Caozuoren(xiaoxie)
 
 }
 
