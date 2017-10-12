@@ -1157,3 +1157,131 @@ func (sjkmhsydata *Sjkmhsydata) YinpinCaozuoren(xiaoxie bool) string {
 
 }
 
+
+//2017/10/12 11:55:03
+func (sjkmhsydata *Sjkmhsydata)YinpinbofangYinpinbianma(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinbofang(xiaoxie) + zf.Zfs.Bofangshijian(xiaoxie)
+
+}
+func (sjkmhsydata *Sjkmhsydata)YinpinbofangWeiyibianma(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinbofang(xiaoxie) + zf.Zfs.Bofangshijian(xiaoxie)
+
+}
+func (sjkmhsydata *Sjkmhsydata)YinpinbofangBofangshijian(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinbofang(xiaoxie) + zf.Zfs.Bofangshijian(xiaoxie)
+
+}
+func (sjkmhsydata *Sjkmhsydata)YinpinbofangId(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinbofang(xiaoxie) + zf.Zfs.Id(xiaoxie)
+
+}
+
+func (sjkmhsydata *Sjkmhsydata)YinpinbofangBianma(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinbofang(xiaoxie) + zf.Zfs.Bianma(xiaoxie)
+
+}
+
+func (sjkmhsydata *Sjkmhsydata)YinpinbofangPaixu(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinbofang(xiaoxie) + zf.Zfs.Paixu(xiaoxie)
+
+}
+
+func (sjkmhsydata *Sjkmhsydata)YinpinbofangBiaoji(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinbofang(xiaoxie) + zf.Zfs.Biaoji(xiaoxie)
+
+}
+
+func (sjkmhsydata *Sjkmhsydata)YinpinbofangChuangjianriqi(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinbofang(xiaoxie) + zf.Zfs.Chuangjianriqi(xiaoxie)
+
+}
+
+func (sjkmhsydata *Sjkmhsydata)YinpinbofangCaozuoriqi(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinbofang(xiaoxie) + zf.Zfs.Caozuoriqi(xiaoxie)
+
+}
+
+func (sjkmhsydata *Sjkmhsydata)YinpinbofangYouxiaoxing(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinbofang(xiaoxie) + zf.Zfs.Youxiaoxing(xiaoxie)
+
+}
+
+func (sjkmhsydata *Sjkmhsydata)YinpinbofangCaozuoren(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinbofang(xiaoxie) + zf.Zfs.Caozuoren(xiaoxie)
+
+}
+
+//2017/10/12 11:55:03
+func (sjkmhsydata *Sjkmhsydata)YinpinxiazaiJinzhixiazai(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinxiazai(xiaoxie) + zf.Zfs.Id(xiaoxie)
+
+}
+func (sjkmhsydata *Sjkmhsydata)YinpinxiazaiYinpinbianma(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinxiazai(xiaoxie) + zf.Zfs.Id(xiaoxie)
+
+}
+func (sjkmhsydata *Sjkmhsydata)YinpinxiazaiWeiyibianma(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinxiazai(xiaoxie) + zf.Zfs.Id(xiaoxie)
+
+}
+func (sjkmhsydata *Sjkmhsydata)YinpinxiazaiId(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinxiazai(xiaoxie) + zf.Zfs.Id(xiaoxie)
+
+}
+
+func (sjkmhsydata *Sjkmhsydata)YinpinxiazaiBianma(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinxiazai(xiaoxie) + zf.Zfs.Bianma(xiaoxie)
+
+}
+
+func (sjkmhsydata *Sjkmhsydata)YinpinxiazaiPaixu(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinxiazai(xiaoxie) + zf.Zfs.Paixu(xiaoxie)
+
+}
+
+func (sjkmhsydata *Sjkmhsydata)YinpinxiazaiBiaoji(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinxiazai(xiaoxie) + zf.Zfs.Biaoji(xiaoxie)
+
+}
+
+func (sjkmhsydata *Sjkmhsydata)YinpinxiazaiChuangjianriqi(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinxiazai(xiaoxie) + zf.Zfs.Chuangjianriqi(xiaoxie)
+
+}
+
+func (sjkmhsydata *Sjkmhsydata)YinpinxiazaiCaozuoriqi(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinxiazai(xiaoxie) + zf.Zfs.Caozuoriqi(xiaoxie)
+
+}
+
+func (sjkmhsydata *Sjkmhsydata)YinpinxiazaiYouxiaoxing(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinxiazai(xiaoxie) + zf.Zfs.Youxiaoxing(xiaoxie)
+
+}
+
+func (sjkmhsydata *Sjkmhsydata)YinpinxiazaiCaozuoren(xiaoxie bool) string {
+
+	return zf.Zfs.Yinpinxiazai(xiaoxie) + zf.Zfs.Caozuoren(xiaoxie)
+
+}
