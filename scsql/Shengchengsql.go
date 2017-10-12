@@ -15,8 +15,8 @@ func Shengchengsql() {
 	for _, mkvo := range mkarr {
 		mkv := mks[mkvo].Zhi
 		_, biaos, _ := gongju.Biaolies(mkv)
+		buffer := &bytes.Buffer{}
 		for b, _ := range biaos {
-			buffer := &bytes.Buffer{}
 			//CREATE TABLE Shijian (
 			crestr := zf.Zfs.Create(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Table(true) + zfzhi.Zhi.Kgf() + b
 			buffer.WriteString(crestr)
@@ -96,7 +96,7 @@ func Shengchengsql() {
 				zfzhi.Zhi.Dyh() + zfzhi.Zhi.Shuzi2w() + zfzhi.Zhi.Shuzi0w() +
 				zfzhi.Zhi.Shuzi0w() + zfzhi.Zhi.Fh() + zfzhi.Zhi.Hhf()
 			buffer.WriteString(ai)
-			log.Println(buffer.String())
 		}
+		log.Println(buffer.String())
 	}
 }
