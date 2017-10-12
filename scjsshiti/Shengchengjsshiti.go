@@ -16,7 +16,7 @@ func Shengchengjsshiti() {
 		mkv := mks[mkvo].Zhi
 		mkk := mks[mkvo].Bianma
 		bjg := gongju.Suoyoubiaojiegou(mkv)
-		zwmkk := gongju.Liezhongwen(mkk)
+		zwmkk := gongju.Zhongwen(mkk)
 
 		buffer := &bytes.Buffer{}
 		//export function lieming (bianma) {
@@ -40,11 +40,11 @@ func Shengchengjsshiti() {
 		buffer.WriteString(mkstr)
 
 		for b, ls := range bjg {
-			zwb := gongju.Liezhongwen(b)
+			zwb := gongju.Zhongwen(b)
 			zwbstr := zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf() + b + zfzhi.Zhi.Mh() + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Dyhe() + zwb + zfzhi.Zhi.Dyhe()
 			buffer.WriteString(zwbstr)
 			for _, l := range ls {
-				zwl := gongju.Liezhongwen(l)
+				zwl := gongju.Zhongwen(l)
 				zwlstr := zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf() + l + zfzhi.Zhi.Mh() + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Dyhe() + zwl + zfzhi.Zhi.Dyhe()
 				buffer.WriteString(zwlstr)
 			}
