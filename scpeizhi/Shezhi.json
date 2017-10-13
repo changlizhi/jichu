@@ -60,7 +60,7 @@
       "Guilei": "Shujuku",
       "Bianma": "Ip",
       "Mingcheng": "数据库ip",
-      "Zhi": "127.0.0.1"
+      "Zhi": "10.0.0.126"
     },
     {
       "Guilei": "Shujuku",
@@ -78,13 +78,13 @@
       "Guilei": "Shujuku",
       "Bianma": "Yonghu",
       "Mingcheng": "数据库用户",
-      "Zhi": "root"
+      "Zhi": "mhsy_mysql"
     },
     {
       "Guilei": "Shujuku",
       "Bianma": "Mima",
       "Mingcheng": "数据库密码",
-      "Zhi": "root"
+      "Zhi": "mhsymysql"
     }
   ]
 }
