@@ -11,72 +11,6 @@ import (
 	"strings"
 )
 
-func bufferwritepath(mokuai string, buffer *bytes.Buffer, jsonlies map[string]gongju.Tongyong) {
-	for jl, _ := range jsonlies {
-		//func Shezhipath()string
-		funpath := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + jl +
-			zf.Zfs.Path(true) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zf.Zfs.String(true)
-		buffer.WriteString(funpath)
-		buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-
-		//return gongju.Getwenjianmulu
-		retstr := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Gongju(true) + zfzhi.Zhi.Dh() + zf.Zfs.Getwenjianmulu(false)
-		buffer.WriteString(retstr)
-		buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
-
-		//zf.Zfs.Mokuai(true),
-		mkstr := zh.Zhs.Zfszhtrue(mokuai) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
-		buffer.WriteString(mkstr)
-		//zf.Zfs.Peizhi(true),
-		pzstr := zh.Zhs.Zfszhtrue(zf.Zfs.Peizhi(false)) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
-		buffer.WriteString(pzstr)
-
-		if gongju.Jsonliezhiding(jl) == zf.Zfs.Xitong(false) {
-			// zf.Zfs.Shezhi(false),
-			szstr := zh.Zhs.Zfszhfalse(jl) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
-			buffer.WriteString(szstr)
-		}
-		if gongju.Jsonliezhiding(jl) == zf.Zfs.Yuyan(false) {
-			//Chushihuas[zf.Zfs.Yuyan(false)].Zhi,
-			cshstr := zf.Zfs.Chushihuas(false) + zfzhi.Zhi.Zkhz() + zh.Zhs.Zfszhfalse(gongju.Jsonliezhiding(jl)) +
-				zfzhi.Zhi.Zkhy() + zfzhi.Zhi.Dh() + zf.Zfs.Zhi(false) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
-			buffer.WriteString(cshstr)
-		}
-		//zf.Zfs.Json(true),
-		jsstr := zh.Zhs.Zfszhtrue(zf.Zfs.Json(false)) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
-		buffer.WriteString(jsstr)
-		buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
-		buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
-
-		//func Xxxjson()*Xxx
-		funjsonstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + jl + zf.Zfs.Json(true) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Xh() + jl
-		buffer.WriteString(funjsonstr)
-		buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-
-		jlx := strings.ToLower(jl)
-		//xxx := Xxx{}
-		jlo := jlx + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() + jl + zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf()
-		buffer.WriteString(jlo)
-		//ret := gongju.Jiexi
-		ostr := zf.Zfs.Ret(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
-			zf.Zfs.Gongju(true) + zfzhi.Zhi.Dh() + zf.Zfs.Jiexi(false)
-		buffer.WriteString(ostr)
-
-		buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
-		// Shezhipath(),
-		pstr := jl + zf.Zfs.Path(true) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
-		buffer.WriteString(pstr)
-		// &shezhi,
-		jstr := zfzhi.Zhi.Qh() + jlx + zfzhi.Zhi.Dou()
-		buffer.WriteString(jstr)
-		buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
-		//return ret.(*Xxx)
-		restr := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Ret(true) + zfzhi.Zhi.Dh() + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xh() + jl + zfzhi.Zhi.Xkhy()
-		buffer.WriteString(restr)
-		buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
-	}
-}
-
 func Shengchengduqujson() {
 	mkarr := gongju.Mokuaimingsarr
 	mks := gongju.Mokuaimings
@@ -103,8 +37,71 @@ func Shengchengduqujson() {
 		//\n)\n
 		buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
 
-		bufferwritepath(mkk, buffer, gongju.Jsonlies0)
-		bufferwritepath(mkk, buffer, gongju.Jsonlies1)
+		for _, jl := range gongju.Jsonliesarr {
+			jlko := gongju.Jsonlies[jl]
+			jlk := jlko.Bianma
+			//func Shezhipath()string
+			funpath := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + jlk +
+				zf.Zfs.Path(true) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zf.Zfs.String(true)
+			buffer.WriteString(funpath)
+			buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+
+			//return gongju.Getwenjianmulu
+			retstr := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Gongju(true) + zfzhi.Zhi.Dh() + zf.Zfs.Getwenjianmulu(false)
+			buffer.WriteString(retstr)
+			buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
+
+			//zf.Zfs.Mokuai(true),
+			mkstr := zh.Zhs.Zfszhtrue(mkk) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+			buffer.WriteString(mkstr)
+			//zf.Zfs.Peizhi(true),
+			pzstr := zh.Zhs.Zfszhtrue(zf.Zfs.Peizhi(false)) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+			buffer.WriteString(pzstr)
+
+			if gongju.Jsonliezhiding(jlk) == zf.Zfs.Xitong(false) {
+				// zf.Zfs.Shezhi(false),
+				szstr := zh.Zhs.Zfszhfalse(jlk) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+				buffer.WriteString(szstr)
+			}
+			if gongju.Jsonliezhiding(jlk) == zf.Zfs.Yuyan(false) {
+				//Chushihuas[zf.Zfs.Yuyan(false)].Zhi,
+				cshstr := zf.Zfs.Chushihuas(false) + zfzhi.Zhi.Zkhz() + zh.Zhs.Zfszhfalse(gongju.Jsonliezhiding(jlk)) +
+					zfzhi.Zhi.Zkhy() + zfzhi.Zhi.Dh() + zf.Zfs.Zhi(false) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+				buffer.WriteString(cshstr)
+			}
+			//zf.Zfs.Json(true),
+			jsstr := zh.Zhs.Zfszhtrue(zf.Zfs.Json(false)) + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+			buffer.WriteString(jsstr)
+			buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
+			buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+
+			//func Xxxjson()*Xxx
+			funjsonstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + jlk + zf.Zfs.Json(true) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Xh() + jlk
+			buffer.WriteString(funjsonstr)
+			buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+
+			jlx := strings.ToLower(jlk)
+			//xxx := Xxx{}
+			jlo := jlx + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() + jlk + zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf()
+			buffer.WriteString(jlo)
+			//ret := gongju.Jiexi
+			ostr := zf.Zfs.Ret(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
+				zf.Zfs.Gongju(true) + zfzhi.Zhi.Dh() + zf.Zfs.Jiexi(false)
+			buffer.WriteString(ostr)
+
+			buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
+			// Shezhipath(),
+			pstr := jlk + zf.Zfs.Path(true) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+			buffer.WriteString(pstr)
+			// &shezhi,
+			jstr := zfzhi.Zhi.Qh() + jlx + zfzhi.Zhi.Dou()
+			buffer.WriteString(jstr)
+			buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
+			//return ret.(*Xxx)
+			restr := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Ret(true) + zfzhi.Zhi.Dh() + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xh() + jlk + zfzhi.Zhi.Xkhy()
+			buffer.WriteString(restr)
+			buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+		}
 
 		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() +
 			mkv + zfzhi.Zhi.Xx() + zf.Zfs.Chushihuas(true)
