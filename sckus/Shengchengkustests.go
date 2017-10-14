@@ -218,19 +218,19 @@ func testtianjiaduoge(bianma string, buffer *bytes.Buffer) {
 }
 func testshanchutiaojian(bianma string, buffer *bytes.Buffer) {
 	bmx := strings.ToLower(bianma)
-	//func TestShanchutiaojiankus(t *testing.T)
+	//func TestShanchutiaojianxxxkus(t *testing.T)
 	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Test(false) +
-		zf.Zfs.Shanchu(false) + zf.Zfs.Tiaojian(true) + zf.Zfs.Kus(true)
+		zf.Zfs.Shanchu(false) + zf.Zfs.Tiaojian(true) + bianma + zf.Zfs.Kus(true)
 	buffer.WriteString(funstr)
 	// (t *testing.T){\n
 	csstr := zfzhi.Zhi.Xkhz() + zf.Zfs.T(true) + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xh() +
 		zf.Zfs.Testing(true) + zfzhi.Zhi.Dh() + zf.Zfs.T(false) + zfzhi.Zhi.Xkhy()
 	buffer.WriteString(csstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-	//dtziyuan := fortests.Zuzhuangbianma
+	//dtziyuan := fortests.Zuzhuangxxxbianma
 	dfz := bmx + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
 		zf.Zfs.Fortests(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zuzhuang(false) +
-		zf.Zfs.Bianma(true)
+		bianma + zf.Zfs.Bianma(true)
 	buffer.WriteString(dfz)
 	// (zf.Zfs.Kus(false) + zf.Zfs.Bianma(false) + "TestTianjiayigeDtziyuankus1")
 	dfzcs := zfzhi.Zhi.Xkhz() + zh.Zhs.Zfszhfalse(zf.Zfs.Kus(false)) + zfzhi.Zhi.Jia() +

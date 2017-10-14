@@ -169,9 +169,9 @@ func Shengchengluyoustests() {
 				zh.Zhs.Zfszhtrue(zf.Zfs.Quanbu(false))
 			postpatch(fzstr, zf.Zfs.Liebiao(true), urllie, zf.Zfs.Post(false), bk, buffer)
 
-			//canshu := fortests.Zuzhuangbianmastring(zf.Zfs.Test(true) + zf.Zfs.Bianma(false) + zf.Zfs.TestDtziyuanpost(false) + zfzhi.Zhi.Shuzi1w())
+			//canshu := fortests.Zuzhuangxxxbianmastring(zf.Zfs.Test(true) + zf.Zfs.Bianma(false) + zf.Zfs.TestDtziyuanpost(false) + zfzhi.Zhi.Shuzi1w())
 			cstiaojian := zf.Zfs.Canshu(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
-				zf.Zfs.Fortests(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zuzhuang(false) +
+				zf.Zfs.Fortests(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zuzhuang(false) + bk +
 				zf.Zfs.Bianma(true) + zf.Zfs.String(true) + zfzhi.Zhi.Xkhz() +
 				zh.Zhs.Zfszhtrue(zf.Zfs.Test(false)) + zfzhi.Zhi.Jia() +
 				zh.Zhs.Zfszhfalse(zf.Zfs.Bianma(false)) + zfzhi.Zhi.Jia() +

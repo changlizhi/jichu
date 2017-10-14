@@ -59,7 +59,7 @@ func zzcs(houzhui string, bmx string, buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
 
 	//log.Println(jiegouti)
-	lj := zh.Zhs.Logszh(zf.Zfs.Jiegouti(true)+houzhui) + zfzhi.Zhi.Hhf()
+	lj := zh.Zhs.Logszh(zf.Zfs.Jiegouti(true) + houzhui) + zfzhi.Zhi.Hhf()
 	buffer.WriteString(lj)
 }
 func testzuzhuangjiegou(bianma string, buffer *bytes.Buffer) {
@@ -73,16 +73,16 @@ func testzuzhuangjiegou(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(csstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 	zzcs(zfzhi.Zhi.Kzf(), bmx, buffer)
-	zzcs(zf.Zfs.Yige(true)+zf.Zfs.String(true), bmx, buffer)
+	zzcs(zf.Zfs.Yige(true) + zf.Zfs.String(true), bmx, buffer)
 
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 
 }
 
-func testzuzhuangbianmacs(houzhui string, buffer *bytes.Buffer) {
+func testzuzhuangbianmacs(houzhui string, bianma string, buffer *bytes.Buffer) {
 	//func TestZuzhuangbianma+houzhui
 	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Test(false) +
-		zf.Zfs.Zuzhuang(false) + zf.Zfs.Bianma(true) + houzhui
+		zf.Zfs.Zuzhuang(false) + bianma + zf.Zfs.Bianma(true) + houzhui
 	buffer.WriteString(funstr)
 	//(t *testing.T)
 	csstr := zfzhi.Zhi.Xkhz() + zf.Zfs.T(true) + zfzhi.Zhi.Kgf() +
@@ -90,9 +90,10 @@ func testzuzhuangbianmacs(houzhui string, buffer *bytes.Buffer) {
 	buffer.WriteString(csstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 
-	//jiegouti := fortests.Zuzhuangbianma+houzhui
+	//jiegouti := fortests.Zuzhuangxxxbianma+houzhui
 	jgt := zf.Zfs.Jiegouti(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
-		zf.Zfs.Fortests(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zuzhuang(false) + zf.Zfs.Bianma(true) + houzhui
+		zf.Zfs.Fortests(true) + zfzhi.Zhi.Dh() + zf.Zfs.Zuzhuang(false) +
+		bianma + zf.Zfs.Bianma(true) + houzhui
 	buffer.WriteString(jgt)
 	// (zf.Zfs.Kus(false) + zf.Zfs.Bianma(false) + fanshe.Fangfaming(false))
 	jgtcs := zfzhi.Zhi.Xkhz() + zh.Zhs.Zfszhfalse(zf.Zfs.Kus(false)) + zfzhi.Zhi.Jia() +
@@ -121,8 +122,8 @@ func Shengchengforteststest() {
 			buffer.WriteString(pac)
 			importforteststest(mkv, buffer)
 			testzuzhuangjiegou(bk, buffer)
-			testzuzhuangbianmacs(zfzhi.Zhi.Kzf(), buffer)
-			testzuzhuangbianmacs(zf.Zfs.String(true), buffer)
+			testzuzhuangbianmacs(zfzhi.Zhi.Kzf(), bk, buffer)
+			testzuzhuangbianmacs(zf.Zfs.String(true), bk, buffer)
 
 			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Tests(true)
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Fortests(true) +
