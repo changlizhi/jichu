@@ -1,0 +1,32 @@
+package zdpeizhi
+
+import (
+"changliang/zf"
+"changliang/zfzhi"
+)
+
+func (csh *Csh)Yuyan() string {
+return zf.Zfs.Zhongwen(false)
+}
+func (csh *Csh)Mingcheng() string {
+return zf.Zfs.Mhsydata(true)
+}
+func (csh *Csh)Yu() string {
+return zf.Zfs.Localhost(true)
+}
+func (csh *Csh)Duankou() string {
+ret := zfzhi.Zhi.Shuzi8w() + zfzhi.Zhi.Shuzi8w() + zfzhi.Zhi.Shuzi8w() + zfzhi.Zhi.Shuzi8w()
+return ret
+}
+func (csh *Csh)Jwtmima() string {
+return zf.Zfs.Jwtmima(false)
+}
+func (csh *Csh)Jwtyan() string {
+return zf.Zfs.Jwtyan(false)
+}
+func (csh *Csh)Tiaoshu() string {
+return zfzhi.Zhi.Shuzi10w()
+}
+func (csh *Csh)Ormdebug() string {
+return zf.Zfs.True(true)
+}

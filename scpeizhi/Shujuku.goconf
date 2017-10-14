@@ -1,0 +1,28 @@
+package zdpeizhi
+
+import (
+"changliang/zf"
+"changliang/zfzhi"
+)
+
+func (sjk *Sjk)Mingcheng() string {
+return zf.Zfs.Mhsy(true) + zfzhi.Zhi.Xhx() + zf.Zfs.Data(true)
+}
+func (sjk *Sjk)Ip() string {
+return zfzhi.Zhi.Shuzi10w() + zfzhi.Zhi.Dh() +
+zfzhi.Zhi.Shuzi0w() + zfzhi.Zhi.Dh() +
+zfzhi.Zhi.Shuzi0w() + zfzhi.Zhi.Dh() +
+zfzhi.Zhi.Shuzi1w() + zfzhi.Zhi.Shuzi2w() + zfzhi.Zhi.Shuzi6w()
+}
+func (sjk *Sjk)Qudong() string {
+return zf.Zfs.Mysql(true)
+}
+func (sjk *Sjk)Duankou() string {
+return zfzhi.Zhi.Shuzi3w() + zfzhi.Zhi.Shuzi3w() + zfzhi.Zhi.Shuzi0w() + zfzhi.Zhi.Shuzi6w()
+}
+func (sjk *Sjk)Yonghu() string {
+return zf.Zfs.Mhsy(true) + zfzhi.Zhi.Xhx() + zf.Zfs.Mysql(true)
+}
+func (sjk *Sjk)Mima() string {
+return zf.Zfs.Mhsy(true) + zf.Zfs.Mysql(true)
+}

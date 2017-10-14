@@ -1,0 +1,9 @@
+package zdpeizhi
+
+type Csh struct{}
+
+var Cshs = &Csh{}
+
+type Sjk struct{}
+
+var Sjks = &Sjk{}
