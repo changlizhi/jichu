@@ -22,8 +22,8 @@ func Shengchengconf() {
 
 		//httpport = 8080
 		hstr := zf.Zfs.Httpport(true) + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Dyh() + zfzhi.Zhi.Kgf() +
-			zfzhi.Zhi.Shuzi8w() + zfzhi.Zhi.Shuzi0w() +
-			zfzhi.Zhi.Shuzi8w() + zfzhi.Zhi.Shuzi0w() + zfzhi.Zhi.Hhf()
+			zfzhi.Zhi.Shuzi8w() + zfzhi.Zhi.Shuzi8w() +
+			zfzhi.Zhi.Shuzi8w() + zfzhi.Zhi.Shuzi8w() + zfzhi.Zhi.Hhf()
 		buffer.WriteString(hstr)
 
 		//runmode = dev
