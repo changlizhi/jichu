@@ -1,9 +1,14 @@
 package zdpeizhi
 
-type Csh struct{}
+type Chushihua struct{}
 
-var Cshs = &Csh{}
+var Cshs = &Chushihua{}
 
-type Sjk struct{}
+type Shujuku struct{}
 
-var Sjks = &Sjk{}
+var Sjks = &Shujuku{}
+
+type Pz struct {
+Cshpz *Chushihua
+Sjkpz *Shujuku
+}
