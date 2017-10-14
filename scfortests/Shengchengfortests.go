@@ -140,18 +140,19 @@ func zuzhuangjiegouti(mokuai string, bianma string, buffer *bytes.Buffer) {
 
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 }
-func zuzhuangbianmajiegoutistring(buffer *bytes.Buffer) {
-	// func Zuzhuangbianmastring
-	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Zuzhuang(false) + zf.Zfs.Bianma(true) + zf.Zfs.String(true)
+func zuzhuangbianmajiegoutistring(bianma string, buffer *bytes.Buffer) {
+	// func Zuzhuangxxxbianmastring
+	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Zuzhuang(false) +
+		bianma + zf.Zfs.Bianma(true) + zf.Zfs.String(true)
 	buffer.WriteString(funstr)
 	// (bianma string) string
 	funcsstr := zfzhi.Zhi.Xkhz() + zf.Zfs.Bianma(true) + zfzhi.Zhi.Kgf() + zf.Zfs.String(true) +
 		zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Kgf() + zf.Zfs.String(true)
 	buffer.WriteString(funcsstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-	//ret := Zuzhuangbianma(bianma)
+	//ret := Zuzhuangxxxbianma(bianma)
 	rstr := zf.Zfs.Ret(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
-		zf.Zfs.Zuzhuang(false) + zf.Zfs.Bianma(true) + zfzhi.Zhi.Xkhz() +
+		zf.Zfs.Zuzhuang(false) + bianma + zf.Zfs.Bianma(true) + zfzhi.Zhi.Xkhz() +
 		zf.Zfs.Bianma(true) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(rstr)
 	//jstring, _ := json.Marshal(ret)
@@ -168,7 +169,7 @@ func zuzhuangbianmajiegoutistring(buffer *bytes.Buffer) {
 }
 func zuzhuangbianmajiegou(bianma string, buffer *bytes.Buffer) {
 	//func Zuzhuangbianma
-	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Zuzhuang(false) + zf.Zfs.Bianma(true)
+	funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Zuzhuang(false) + bianma + zf.Zfs.Bianma(true)
 	buffer.WriteString(funstr)
 	//(bianma string) *moxings.Dtziyuan
 	funcsstr := zfzhi.Zhi.Xkhz() + zf.Zfs.Bianma(true) + zfzhi.Zhi.Kgf() +
@@ -207,7 +208,7 @@ func Shengchengfortests() {
 			zuzhuangjiegouti(mkv, bk, buffer)
 			zuzhuangjiegoutistr(bk, buffer)
 			zuzhuangbianmajiegou(bk, buffer)
-			zuzhuangbianmajiegoutistring(buffer)
+			zuzhuangbianmajiegoutistring(bk, buffer)
 
 			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Fortests(true)
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Fortests(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
