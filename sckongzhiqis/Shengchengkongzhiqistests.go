@@ -286,7 +286,7 @@ func posttiaojiankongzhiqitest(bianma string, buffer *bytes.Buffer) {
 	//reqjson := fortests.Zuzhuangbianmastring
 	rfz := zf.Zfs.Req(true) + zf.Zfs.Json(true) + zfzhi.Zhi.Mh() +
 		zfzhi.Zhi.Dyh() + zf.Zfs.Fortests(true) + zfzhi.Zhi.Dh() +
-		zf.Zfs.Zuzhuang(false) + zf.Zfs.Bianma(true) + zf.Zfs.String(true)
+		zf.Zfs.Zuzhuang(false) + bianma + zf.Zfs.Bianma(true) + zf.Zfs.String(true)
 	buffer.WriteString(rfz)
 	// (zf.Zfs.Test(true) + zf.Zfs.Bianma(false) +
 	// zf.Zfs.TestPostdtziyuan(false) + zfzhi.Zhi.Shuzi1w())
