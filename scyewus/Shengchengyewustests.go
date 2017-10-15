@@ -177,7 +177,7 @@ func testyewustiaojianshanchu(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 	//dtziyuan := fortests.Zuzhuangxxxbianma
 	cs := bmx + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() + zf.Zfs.Fortests(true) +
-		zfzhi.Zhi.Dh() + zf.Zfs.Zuzhuang(false)+bianma + zf.Zfs.Bianma(true)
+		zfzhi.Zhi.Dh() + zf.Zfs.Zuzhuang(false) + bianma + zf.Zfs.Bianma(true)
 	buffer.WriteString(cs)
 	// (zf.Zfs.Yewus(false) + zf.Zfs.Bianma(false) +
 	// zf.Zfs.TestTianjiayigeyewus(false) + zfzhi.Zhi.Shuzi1w())

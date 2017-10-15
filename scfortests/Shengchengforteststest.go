@@ -59,7 +59,7 @@ func zzcs(houzhui string, bmx string, buffer *bytes.Buffer) {
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
 
 	//log.Println(jiegouti)
-	lj := zh.Zhs.Logszh(zf.Zfs.Jiegouti(true) + houzhui) + zfzhi.Zhi.Hhf()
+	lj := zh.Zhs.Logszh(zf.Zfs.Jiegouti(true)+houzhui) + zfzhi.Zhi.Hhf()
 	buffer.WriteString(lj)
 }
 func testzuzhuangjiegou(bianma string, buffer *bytes.Buffer) {
@@ -73,7 +73,7 @@ func testzuzhuangjiegou(bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(csstr)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 	zzcs(zfzhi.Zhi.Kzf(), bmx, buffer)
-	zzcs(zf.Zfs.Yige(true) + zf.Zfs.String(true), bmx, buffer)
+	zzcs(zf.Zfs.Yige(true)+zf.Zfs.String(true), bmx, buffer)
 
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 
