@@ -1,4 +1,4 @@
-package scpeizhi
+package scshezhi
 
 import (
 	"changliang/zf"
@@ -39,17 +39,17 @@ func Shengchenggoconfpeizhi() {
 	for _, mkvo := range mkarr {
 		mkv := mks[mkvo].Zhi
 		szpath := gongju.Getjichupath() + zfzhi.Zhi.Xx() + zf.Zfs.Sc(true) +
-			zf.Zfs.Peizhi(true) + zfzhi.Zhi.Xx() + zf.Zfs.A(false) + zfzhi.Zhi.Dh() + zf.Zfs.Goconf(true)
+			zf.Zfs.Shezhi(true) + zfzhi.Zhi.Xx() + zf.Zfs.A(false) + zfzhi.Zhi.Dh() + zf.Zfs.Goconf(true)
 		ywpath := gongju.Getjichupath() + zfzhi.Zhi.Xx() + zf.Zfs.Sc(true) +
-			zf.Zfs.Peizhi(true) + zfzhi.Zhi.Xx() + zf.Zfs.Chushihua(false) + zfzhi.Zhi.Dh() + zf.Zfs.Goconf(true)
+			zf.Zfs.Shezhi(true) + zfzhi.Zhi.Xx() + zf.Zfs.Chushihua(false) + zfzhi.Zhi.Dh() + zf.Zfs.Goconf(true)
 		zwpath := gongju.Getjichupath() + zfzhi.Zhi.Xx() + zf.Zfs.Sc(true) +
-			zf.Zfs.Peizhi(true) + zfzhi.Zhi.Xx() + zf.Zfs.Shujuku(false) + zfzhi.Zhi.Dh() + zf.Zfs.Goconf(true)
+			zf.Zfs.Shezhi(true) + zfzhi.Zhi.Xx() + zf.Zfs.Shujuku(false) + zfzhi.Zhi.Dh() + zf.Zfs.Goconf(true)
 		szbs, _ := ioutil.ReadFile(szpath)
 		ywbs, _ := ioutil.ReadFile(ywpath)
 		zwbs, _ := ioutil.ReadFile(zwpath)
 
 		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv +
-			zfzhi.Zhi.Xx() + zf.Zfs.Zd(true) + zf.Zfs.Peizhi(true)
+			zfzhi.Zhi.Xx() + zf.Zfs.Zd(true) + zf.Zfs.Shezhi(true)
 		scszpath := dir + zfzhi.Zhi.Xx() + zf.Zfs.A(false) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
 		scywpath := dir + zfzhi.Zhi.Xx() + zf.Zfs.Chushihua(false) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
 		sczwpath := dir + zfzhi.Zhi.Xx() + zf.Zfs.Shujuku(false) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
