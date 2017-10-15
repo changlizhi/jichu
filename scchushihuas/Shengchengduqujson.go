@@ -32,9 +32,9 @@ func Shengchengduqujson() {
 		mzgstr := zfzhi.Zhi.Syh() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Zd(true) +
 			zf.Zfs.Guojihua(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 		buffer.WriteString(mzgstr)
-		//"mhsydata/zdpeizhi"
+		//"mhsydata/zdshezhi"
 		mzpstr := zfzhi.Zhi.Syh() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Zd(true) +
-			zf.Zfs.Peizhi(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
+			zf.Zfs.Shezhi(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 		buffer.WriteString(mzpstr)
 
 		//\n)\n
