@@ -10,19 +10,6 @@ import (
 	"strings"
 )
 
-func bufferwriteinit(jsonlies map[string]gongju.Tongyong, buffer *bytes.Buffer) {
-	for jlk, _ := range jsonlies {
-		// Shezhilie()\n
-		// Guojihualie()
-		dystr := jlk + zf.Zfs.Lie(true) + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
-		buffer.WriteString(dystr)
-	}
-}
-
-func bufferwritelie(jsonlies map[string]gongju.Tongyong, bufferfun *bytes.Buffer, buffer *bytes.Buffer) {
-
-}
-
 func Shengchengchushihuajsonlie() {
 	mkarr := gongju.Mokuaimingsarr
 	mks := gongju.Mokuaimings
