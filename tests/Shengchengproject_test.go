@@ -10,7 +10,7 @@ import (
 	"jichu/scluyous"
 	"jichu/scmain"
 	"jichu/scmoxing"
-	"jichu/scpeizhi"
+	"jichu/scshezhi"
 	"jichu/scyewus"
 	"testing"
 	"jichu/scguojihua"
@@ -28,7 +28,7 @@ func TestShengchengproj(t *testing.T) {
 
 
 	//var _ = gauge.Step("生成goconfPeizhi", func() {
-	scpeizhi.Shengchenggoconfpeizhi()
+	scshezhi.Shengchenggoconfpeizhi()
 	//})
 	//var _ = gauge.Step("生成Guojihua", func() {
 	scguojihua.Shengchengguojihua()

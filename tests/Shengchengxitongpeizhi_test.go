@@ -1,10 +1,10 @@
 package tests
 
 import (
-	"jichu/scpeizhi"
+	"jichu/scshezhi"
 	"testing"
 )
 
 func TestShengchenggoconfpeizhi(t *testing.T) {
-	scpeizhi.Shengchenggoconfpeizhi()
+	scshezhi.Shengchenggoconfpeizhi()
 }
