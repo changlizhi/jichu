@@ -1,0 +1,51 @@
+package zdguojihua
+
+import (
+"changliang/zf"
+)
+
+func (cw *Cuowu) Error01() string {
+switch yuyan {
+case zf.Zfs.Yingwen(false):
+return "The system occurs an error,please call administrator!"
+case zf.Zfs.Zhongwen(false):
+return "系统异常，请联系管理员！"
+}
+return zf.Zfs.Error01(false)
+}
+func (cw *Cuowu) Error02() string {
+switch yuyan {
+case zf.Zfs.Yingwen(false):
+return "json parse error!"
+case zf.Zfs.Zhongwen(false):
+return "json解析错误！"
+}
+return zf.Zfs.Error02(false)
+}
+func (cw *Cuowu) Error03() string {
+switch yuyan {
+case zf.Zfs.Yingwen(false):
+return "filed type error!"
+case zf.Zfs.Zhongwen(false):
+return "字段类型错误！"
+}
+return zf.Zfs.Error03(false)
+}
+func (cw *Cuowu) Error04() string {
+switch yuyan {
+case zf.Zfs.Yingwen(false):
+return "is not exists!"
+case zf.Zfs.Zhongwen(false):
+return "不存在！"
+}
+return zf.Zfs.Error04(false)
+}
+func (cw *Cuowu) Error05() string {
+switch yuyan {
+case zf.Zfs.Yingwen(false):
+return "id is not int!"
+case zf.Zfs.Zhongwen(false):
+return "Id 不是int类型！"
+}
+return zf.Zfs.Error05(false)
+}

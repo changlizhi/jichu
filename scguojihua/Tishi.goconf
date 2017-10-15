@@ -1,0 +1,85 @@
+package zdguojihua
+
+import "changliang/zf"
+
+func (ts *Tishi) Tishi01() string {
+switch yuyan {
+case zf.Zfs.Yingwen(false):
+return "email format err!"
+case zf.Zfs.Zhongwen(false):
+return "邮箱格式错误！"
+}
+return zf.Zfs.Tishi01(false)
+}
+func (ts *Tishi) Tishi02() string {
+switch yuyan {
+case zf.Zfs.Yingwen(false):
+return "password is so easy to guess!"
+case zf.Zfs.Zhongwen(false):
+return "密码太简单！"
+}
+return zf.Zfs.Tishi02(false)
+}
+func (ts *Tishi) Tishi03() string {
+switch yuyan {
+case zf.Zfs.Yingwen(false):
+return "Save suecceed!"
+case zf.Zfs.Zhongwen(false):
+return "保存成功！"
+}
+return zf.Zfs.Tishi03(false)
+}
+func (ts *Tishi) Tishi04() string {
+switch yuyan {
+case zf.Zfs.Yingwen(false):
+return "Save failed!"
+case zf.Zfs.Zhongwen(false):
+return "保存失败！"
+}
+return zf.Zfs.Tishi04(false)
+}
+func (ts *Tishi) Tishi05() string {
+switch yuyan {
+case zf.Zfs.Yingwen(false):
+return "Update succeed!"
+case zf.Zfs.Zhongwen(false):
+return "修改成功！"
+}
+return zf.Zfs.Tishi05(false)
+}
+func (ts *Tishi) Tishi06() string {
+switch yuyan {
+case zf.Zfs.Yingwen(false):
+return "Update failed!"
+case zf.Zfs.Zhongwen(false):
+return "修改失败！"
+}
+return zf.Zfs.Tishi06(false)
+}
+func (ts *Tishi) Tishi07() string {
+switch yuyan {
+case zf.Zfs.Yingwen(false):
+return "Delete successfully!"
+case zf.Zfs.Zhongwen(false):
+return "删除成功！"
+}
+return zf.Zfs.Tishi07(false)
+}
+func (ts *Tishi) Tishi08() string {
+switch yuyan {
+case zf.Zfs.Yingwen(false):
+return "Delete failed!"
+case zf.Zfs.Zhongwen(false):
+return "删除失败！"
+}
+return zf.Zfs.Tishi08(false)
+}
+func (ts *Tishi) Tishi09() string {
+switch yuyan {
+case zf.Zfs.Yingwen(false):
+return "Validate failed!"
+case zf.Zfs.Zhongwen(false):
+return "验证失败!"
+}
+return zf.Zfs.Tishi09(false)
+}

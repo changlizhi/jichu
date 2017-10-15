@@ -1,0 +1,21 @@
+package zdguojihua
+
+import (
+"mhsydata/zdpeizhi"
+)
+
+type Tishi struct{}
+
+var Tss = &Tishi{}
+
+type Cuowu struct{}
+
+var Cws = &Cuowu{}
+
+var yuyan = zdpeizhi.Cshs.Yuyan()
+
+type Gjh struct {
+Tsgjh *Tishi
+Cwgjh *Cuowu
+}
+
