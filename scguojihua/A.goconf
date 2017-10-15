@@ -14,7 +14,7 @@ var Cws = &Cuowu{}
 
 var yuyan = zdpeizhi.Cshs.Yuyan()
 
-type Gjh struct {
+type Guojihua struct {
 Tsgjh *Tishi
 Cwgjh *Cuowu
 }

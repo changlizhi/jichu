@@ -8,7 +8,7 @@ type Shujuku struct{}
 
 var Sjks = &Shujuku{}
 
-type Pz struct {
+type Peizhi struct {
 Cshpz *Chushihua
 Sjkpz *Shujuku
 }
