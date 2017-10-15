@@ -10,7 +10,6 @@ import (
 	"jichu/scluyous"
 	"jichu/scmain"
 	"jichu/scmoxing"
-	"jichu/scpeizhi"
 	"jichu/scyewus"
 	"testing"
 )
