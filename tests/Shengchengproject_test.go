@@ -25,10 +25,6 @@ func TestShengchengproj(t *testing.T) {
 	scconf.Shengchengconf()
 	//})
 
-	//var _ = gauge.Step("生成Peizhi", func() {
-	scpeizhi.Shengchengxitongpeizhi()
-	//})
-
 	//var _ = gauge.Step("生成Cuowu", func() {
 	sccuowus.Shengchengziduancuowu()
 	//})
