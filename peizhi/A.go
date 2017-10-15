@@ -19,6 +19,9 @@ type Jsonmoji struct{}
 
 var Jms = &Jsonmoji{}
 
-type Jsonlie struct{}
+type Jsonlie struct {
+	Sz  Shezhi
+	Gjh Guojihua
+}
 
 var Jls = &Jsonlie{}
