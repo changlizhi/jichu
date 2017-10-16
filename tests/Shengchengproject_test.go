@@ -14,6 +14,7 @@ import (
 	"jichu/scyewus"
 	"testing"
 	"jichu/scguojihua"
+	"jichu/scsql"
 )
 
 func TestShengchengproj(t *testing.T) {
@@ -110,5 +111,8 @@ func TestShengchengproj(t *testing.T) {
 
 	//var _ = gauge.Step("生成Main", func() {
 	scmain.Shengchengmain()
+	//})
+	//var _ = gauge.Step("生成sql", func() {
+	scsql.Shengchengsql()
 	//})
 }
