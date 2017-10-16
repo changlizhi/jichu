@@ -10,6 +10,26 @@ import (
 	"strconv"
 )
 
+func shenginsertsql() {
+	mkarr := gongju.Mokuaimingsarr
+	mks := gongju.Mokuaimings
+	for _, mkvo := range mkarr {
+		mkv := mks[mkvo].Zhi
+		zwpath := gongju.Getjichupath() + zfzhi.Zhi.Xx() + zf.Zfs.Sc(true) +
+			zf.Zfs.Sql(true) + zfzhi.Zhi.Xx() + zf.Zfs.Insert(false) +
+			zf.Zfs.Ziyuan(true) + zfzhi.Zhi.Dh() + zf.Zfs.Goconf(true)
+		zwbs, _ := ioutil.ReadFile(zwpath)
+
+		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv +
+			zfzhi.Zhi.Xx() + zf.Zfs.Zd(true) + zf.Zfs.Sql(true)
+		sczwpath := dir + zfzhi.Zhi.Xx() + zf.Zfs.Insert(false) +
+			zf.Zfs.Ziyuan(true) + zfzhi.Zhi.Dh() + zf.Zfs.Sql(true)
+
+		os.MkdirAll(dir, os.ModePerm)
+		ioutil.WriteFile(sczwpath, zwbs, os.ModePerm)
+	}
+}
+
 func Shengchengsql() {
 	mkarr := gongju.Mokuaimingsarr
 	mks := gongju.Mokuaimings
@@ -104,4 +124,5 @@ func Shengchengsql() {
 		os.MkdirAll(dir, os.ModePerm)
 		ioutil.WriteFile(scpath, buffer.Bytes(), os.ModePerm)
 	}
+	shenginsertsql()
 }
