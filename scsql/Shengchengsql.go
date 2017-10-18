@@ -8,7 +8,6 @@ import (
 	"io/ioutil"
 	"os"
 	"strconv"
-	"log"
 )
 
 func shenginsertsql() {
