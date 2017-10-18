@@ -48,16 +48,16 @@ func Shengchengsql() {
 				cd := gongju.Liechangdu(l)
 				cdzw := strconv.Itoa(cd)
 				lx := gongju.Lieleixing(l)
-				if l == zf.Zfs.Id(true) {
+				if l == zf.Zfs.Id(false) {
 					//Id int(10) auto_increment comment '主键',
 					vc := zfzhi.Zhi.Yzb() + l + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Kgf() + zf.Zfs.Int(true) +
-						zfzhi.Zhi.Xkhz() + cdzw + zfzhi.Zhi.Xkhy() +
+						zfzhi.Zhi.Xkhz() + cdzw + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Kgf() +
 						zf.Zfs.Auto(true) + zfzhi.Zhi.Xhx() + zf.Zfs.Increment(true) +
 						zfzhi.Zhi.Kgf() + zf.Zfs.Comment(true) + zfzhi.Zhi.Kgf() +
 						zfzhi.Zhi.Dyhe() + gongju.Zhongwen(l) + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
 					buffer.WriteString(vc)
 				}
-				if l != zf.Zfs.Id(true) && lx == zf.Zfs.Int(true) {
+				if l != zf.Zfs.Id(false) && lx == zf.Zfs.Int(true) {
 					//paixu int(10) comment '排序',
 					vc := zfzhi.Zhi.Yzb() + l + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Kgf() + zf.Zfs.Int(true) +
 						zfzhi.Zhi.Xkhz() + cdzw + zfzhi.Zhi.Xkhy() +
