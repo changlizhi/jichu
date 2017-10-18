@@ -8,6 +8,7 @@ import (
 	"io/ioutil"
 	"os"
 	"strconv"
+	"log"
 )
 
 func shenginsertsql() {
@@ -43,7 +44,7 @@ func Shengchengsql() {
 				zfzhi.Zhi.Kgf() + zfzhi.Zhi.Yzb() + b + zfzhi.Zhi.Yzb()
 			buffer.WriteString(crestr)
 			buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
-			lies := gongju.Biao(mkv, b)
+			lies := gongju.Fanshebiao(mkv, b)
 			for _, l := range lies {
 				cd := gongju.Liechangdu(l)
 				cdzw := strconv.Itoa(cd)
