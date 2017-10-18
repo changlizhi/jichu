@@ -19,7 +19,7 @@ func importsfortests(mkv string, bk string, buffer *bytes.Buffer) {
 	mstr := zfzhi.Zhi.Syh() + mkv + zfzhi.Zhi.Xx() + zf.Zfs.Moxings(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(mstr)
 
-	for _, lk := range gongju.Biao(mkv, bk) {
+	for _, lk := range gongju.Fanshebiao(mkv, bk) {
 		if gongju.Lieleixing(lk) == zf.Zfs.Time(true) {
 			// "time" \n
 			timebao := zfzhi.Zhi.Syh() + zf.Zfs.Time(true) + zfzhi.Zhi.Syh() + zfzhi.Zhi.Hhf()

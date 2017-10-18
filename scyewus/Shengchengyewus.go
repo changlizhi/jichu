@@ -68,7 +68,7 @@ func yanzhengchangdu(mokuai string, bianma string, buffer *bytes.Buffer) {
 		zf.Zfs.Bytes(true) + zfzhi.Zhi.Dh() + zf.Zfs.Buffer(false) +
 		zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(bf)
-	for _, lk := range gongju.Biao(mokuai, bianma) {
+	for _, lk := range gongju.Fanshebiao(mokuai, bianma) {
 		lv := strings.ToLower(lk)
 		if gongju.Lieleixing(lk) == zf.Zfs.String(true) {
 			buffer.WriteString(zfzhi.Zhi.Hhf())
@@ -190,7 +190,7 @@ func yewuxiugai(mokuai string, bianma string, buffer *bytes.Buffer) {
 	buffer.WriteString(iffind)
 	buffer.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
 
-	for _, lk := range gongju.Biao(mokuai, bianma) {
+	for _, lk := range gongju.Fanshebiao(mokuai, bianma) {
 		if gongju.Lieleixing(lk) == zf.Zfs.String(true) {
 			buffer.WriteString(zfzhi.Zhi.Hhf())
 			iflie := zf.Zfs.If(true) + zfzhi.Zhi.Kgf() + bmx + zfzhi.Zhi.Dh() +

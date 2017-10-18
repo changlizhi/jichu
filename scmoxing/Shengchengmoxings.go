@@ -17,7 +17,7 @@ func Shengchengmoxings() {
 		_, biaos, _ := gongju.Biaolies(mkv)
 		tmf := false
 		for bk, _ := range biaos {
-			for _, lk := range gongju.Biao(mkv, bk) {
+			for _, lk := range gongju.Fanshebiao(mkv, bk) {
 				if gongju.Lieleixing(lk) == zf.Zfs.Time(true) {
 					tmf = true
 					break
@@ -45,7 +45,7 @@ func Shengchengmoxings() {
 				zf.Zfs.Struct(true) + zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf()
 			buffer.WriteString(typestr)
 
-			for _, lk := range gongju.Biao(mkv, bk) {
+			for _, lk := range gongju.Fanshebiao(mkv, bk) {
 				leixing := gongju.Lieleixing(lk)
 				field := lk + zfzhi.Zhi.Kgf() + gongju.Lieleixing(lk) + zfzhi.Zhi.Hhf()
 				if leixing == zf.Zfs.Time(true) {

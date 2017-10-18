@@ -350,7 +350,7 @@ func chaxunquanbu(mokuai string, biao string, buffer *bytes.Buffer) {
 		zh.Zhs.Zfszhtrue(zf.Zfs.Exact(false)) + zfzhi.Zhi.Hhf()
 	buffer.WriteString(hzstr)
 
-	for _, lk := range gongju.Biao(mokuai, biao) {
+	for _, lk := range gongju.Fanshebiao(mokuai, biao) {
 		if gongju.Lieleixing(lk) == zf.Zfs.String(true) {
 			//if dtziyuan.lk != zfzhi.Zhi.Kzf()
 			ifstr := zf.Zfs.If(true) + zfzhi.Zhi.Kgf() + bmx + zfzhi.Zhi.Dh() + lk + zfzhi.Zhi.Gth() + zfzhi.Zhi.Dyh() + zh.Zhs.Zhiszh(zf.Zfs.Kzf(false))
