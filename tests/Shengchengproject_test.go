@@ -5,16 +5,16 @@ import (
 	"jichu/scconf"
 	"jichu/sccuowus"
 	"jichu/scfortests"
+	"jichu/scguojihua"
 	"jichu/sckongzhiqis"
 	"jichu/sckus"
 	"jichu/scluyous"
 	"jichu/scmain"
 	"jichu/scmoxing"
 	"jichu/scshezhi"
+	"jichu/scsql"
 	"jichu/scyewus"
 	"testing"
-	"jichu/scguojihua"
-	"jichu/scsql"
 )
 
 func TestShengchengproj(t *testing.T) {
@@ -26,7 +26,6 @@ func TestShengchengproj(t *testing.T) {
 	//var _ = gauge.Step("生成Conf", func() {
 	scconf.Shengchengconf()
 	//})
-
 
 	//var _ = gauge.Step("生成goconfPeizhi", func() {
 	scshezhi.Shengchenggoconfpeizhi()
