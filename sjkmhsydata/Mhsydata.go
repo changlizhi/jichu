@@ -21,13 +21,14 @@ type Mhsydata struct {
 	Dtjibing           *Jibing
 	Dtzhanghaoshijian  *Zhanghaoshijian
 	Dtfuwufankui       *Fuwufankui
-	Dtchujinfangan     *Chujinfangan
+	Dtchujinfangan     *Cujinfangan
 	Dtyinpinbofang     *Yinpinbofang
 	Dtshebei           *Shebei
 	Dtzhanghao         *Zhanghao
 	Dtshijian          *Shijian
 	Dtxiangmu          *Xiangmu
 	Dtjueseziyuan      *Jueseziyuan
+	Dtjuese            *Juese
 	Dtyinpin           *Yinpin
 	Dtziyuan           *Ziyuan
 	Dtliuyan           *Liuyan
