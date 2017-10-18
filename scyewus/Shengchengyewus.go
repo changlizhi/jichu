@@ -341,7 +341,7 @@ func Shengchengyewu() {
 	mks := gongju.Mokuaimings
 	for _, mkvo := range mkarr {
 		mkv := mks[mkvo].Zhi
-		_, biaos, _ := gongju.Biaolies(mkv)
+		_, biaos, _ := gongju.Fanshebiaolies(mkv)
 		for bk, bv := range biaos {
 			buffer := bytes.Buffer{}
 			//package zdxxxyewus \n

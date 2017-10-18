@@ -93,7 +93,7 @@ func Shengchengluyous() {
 	mks := gongju.Mokuaimings
 	for _, mkvo := range mkarr {
 		mkv := mks[mkvo].Zhi
-		_, biaos, _ := gongju.Biaolies(mkv)
+		_, biaos, _ := gongju.Fanshebiaolies(mkv)
 		for bk, _ := range biaos {
 			buffer := bytes.Buffer{}
 			pacstr := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Luyous(true) + zfzhi.Zhi.Hhf()

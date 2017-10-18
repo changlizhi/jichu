@@ -14,7 +14,7 @@ func Shengchengmoxings() {
 	mks := gongju.Mokuaimings
 	for _, mkvo := range mkarr {
 		mkv := mks[mkvo].Zhi
-		_, biaos, _ := gongju.Biaolies(mkv)
+		_, biaos, _ := gongju.Fanshebiaolies(mkv)
 		tmf := false
 		for bk, _ := range biaos {
 			for _, lk := range gongju.Fanshebiao(mkv, bk) {

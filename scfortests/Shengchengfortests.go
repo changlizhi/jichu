@@ -199,7 +199,7 @@ func Shengchengfortests() {
 	mks := gongju.Mokuaimings
 	for _, mkvo := range mkarr {
 		mkv := mks[mkvo].Zhi
-		_, biaos, _ := gongju.Biaolies(mkv)
+		_, biaos, _ := gongju.Fanshebiaolies(mkv)
 		for bk, _ := range biaos {
 			buffer := &bytes.Buffer{}
 			pac := zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Fortests(true) + zfzhi.Zhi.Hhf()

@@ -15,7 +15,7 @@ func Shengchengjsshiti() {
 	for _, mkvo := range mkarr {
 		mkv := mks[mkvo].Zhi
 		mkk := mks[mkvo].Bianma
-		bjg := gongju.Suoyoubiaojiegou(mkv)
+		bjg := gongju.Fanshebiaojiegou(mkv)
 		zwmkk := gongju.Zhongwen(mkk)
 
 		buffer := &bytes.Buffer{}

@@ -521,7 +521,7 @@ func Shengchengkongzhiqis() {
 	mks := gongju.Mokuaimings
 	for _, mkvo := range mkarr {
 		mkv := mks[mkvo].Zhi
-		_, biaos, _ := gongju.Biaolies(mkv)
+		_, biaos, _ := gongju.Fanshebiaolies(mkv)
 		for bk, _ := range biaos {
 			buffer := bytes.Buffer{}
 			buffer.WriteString(zf.Zfs.Package(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true) + zfzhi.Zhi.Hhf())

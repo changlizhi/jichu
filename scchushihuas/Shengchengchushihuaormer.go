@@ -125,7 +125,7 @@ func scormermoxing(moxing string, buffer *bytes.Buffer) {
 	regstr := zf.Zfs.Orm(true) + zfzhi.Zhi.Dh() + zf.Zfs.RegisterModel(false)
 	buffer.WriteString(regstr)
 	buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
-	_, biaos, _ := gongju.Biaolies(moxing)
+	_, biaos, _ := gongju.Fanshebiaolies(moxing)
 	for biao, _ := range biaos {
 		newstr := zf.Zfs.New(true) + zfzhi.Zhi.Xkhz() + zf.Zfs.Moxings(true) +
 			zfzhi.Zhi.Dh() + biao + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()

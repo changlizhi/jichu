@@ -35,7 +35,7 @@ func Shengchengsql() {
 	mks := gongju.Mokuaimings
 	for _, mkvo := range mkarr {
 		mkv := mks[mkvo].Zhi
-		_, biaos, _ := gongju.Biaolies(mkv)
+		_, biaos, _ := gongju.Fanshebiaolies(mkv)
 		buffer := &bytes.Buffer{}
 		for b, _ := range biaos {
 			//CREATE TABLE Shijian (
