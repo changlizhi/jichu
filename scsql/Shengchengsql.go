@@ -8,27 +8,8 @@ import (
 	"io/ioutil"
 	"os"
 	"strconv"
+	"strings"
 )
-
-func shenginsertsql() {
-	mkarr := gongju.Mokuaimingsarr
-	mks := gongju.Mokuaimings
-	for _, mkvo := range mkarr {
-		mkv := mks[mkvo].Zhi
-		zwpath := gongju.Getjichupath() + zfzhi.Zhi.Xx() + zf.Zfs.Sc(true) +
-			zf.Zfs.Sql(true) + zfzhi.Zhi.Xx() + zf.Zfs.Insert(false) +
-			zf.Zfs.Ziyuan(true) + zfzhi.Zhi.Dh() + zf.Zfs.Goconf(true)
-		zwbs, _ := ioutil.ReadFile(zwpath)
-
-		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv +
-			zfzhi.Zhi.Xx() + zf.Zfs.Zd(true) + zf.Zfs.Sql(true)
-		sczwpath := dir + zfzhi.Zhi.Xx() + zf.Zfs.Insert(false) +
-			zf.Zfs.Ziyuan(true) + zfzhi.Zhi.Dh() + zf.Zfs.Sql(true)
-
-		os.MkdirAll(dir, os.ModePerm)
-		ioutil.WriteFile(sczwpath, zwbs, os.ModePerm)
-	}
-}
 
 func Shengchengsql() {
 	mkarr := gongju.Mokuaimingsarr
@@ -117,5 +98,62 @@ func Shengchengsql() {
 		os.MkdirAll(dir, os.ModePerm)
 		ioutil.WriteFile(scpath, buffer.Bytes(), os.ModePerm)
 	}
-	shenginsertsql()
+	Shengchenginsertsql()
+}
+func Shengchenginsertsql() {
+	mkarr := gongju.Mokuaimingsarr
+	mks := gongju.Mokuaimings
+	for _, mkvo := range mkarr {
+		mkv := mks[mkvo].Zhi
+		bjg := gongju.Fanshebiaojiegou(mkv)
+		for b, _ := range bjg {
+			buffer := &bytes.Buffer{}
+			ls := gongju.Fanshejichulie()//所有的表只会自动插入标准字段的数据
+
+			for i := zfzhi.Zhi.Shuzi2() * zfzhi.Zhi.Shuzi10() * zfzhi.Zhi.Shuzi10() + zfzhi.Zhi.Shuzi1();
+				i < zfzhi.Zhi.Shuzi4() * zfzhi.Zhi.Shuzi10() * zfzhi.Zhi.Shuzi10() + zfzhi.Zhi.Shuzi1(); i++ {
+				bufferb := &bytes.Buffer{}
+				bufferv := &bytes.Buffer{}
+				//INSERT INTO `b`
+				iib := zf.Zfs.Insert(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Into(true) +
+					zfzhi.Zhi.Kgf() + zfzhi.Zhi.Yzb() + b + zfzhi.Zhi.Yzb()
+				buffer.WriteString(iib)
+				buffer.WriteString(zfzhi.Zhi.Xkhz())
+				for _, l := range ls {
+					//`caozuoren`,
+					lstr := zfzhi.Zhi.Yzb() + l + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Dou()
+					bufferb.WriteString(lstr)
+					bj := gongju.Biaojishuoming(l)
+					if bj == zf.Zfs.Zhujian(false) {
+						bufferv.WriteString(strconv.Itoa(i) + zfzhi.Zhi.Dou())
+					} else if bj == zf.Zfs.Sql(false) + zf.Zfs.Bianma(false) {
+						//'DT_i',
+						val := zfzhi.Zhi.Dyhe() + zf.Zfs.DT(false) + zfzhi.Zhi.Xhx() +
+							strconv.Itoa(i) + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou()
+						bufferv.WriteString(val)
+					} else {
+						//'1',
+						val := zfzhi.Zhi.Dyhe() + bj + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou()
+						bufferv.WriteString(val)
+					}
+				}
+				bbstr := bufferb.String()[zfzhi.Zhi.Shuzi0():len(bufferb.String()) - zfzhi.Zhi.Shuzi1()]
+				bvstr := bufferv.String()[zfzhi.Zhi.Shuzi0():len(bufferv.String()) - zfzhi.Zhi.Shuzi1()]
+				buffer.WriteString(bbstr)
+				buffer.WriteString(zfzhi.Zhi.Xkhy() + zf.Zfs.Values(true))
+				buffer.WriteString(zfzhi.Zhi.Xkhz())
+
+				buffer.WriteString(bvstr)
+
+				buffer.WriteString(zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Fh())
+			}
+			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv +
+				zfzhi.Zhi.Xx() + zf.Zfs.Zd(true) + zf.Zfs.Sql(true)
+			scpath := dir + zfzhi.Zhi.Xx() + zf.Zfs.Insert(false) +
+				strings.ToLower(b) + zfzhi.Zhi.Dh() + zf.Zfs.Sql(true)
+
+			os.MkdirAll(dir, os.ModePerm)
+			ioutil.WriteFile(scpath, buffer.Bytes(), os.ModePerm)
+		}
+	}
 }
