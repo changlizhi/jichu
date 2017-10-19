@@ -11,17 +11,42 @@ import (
 	"strings"
 )
 
-func Shengchengsql() {
+func shenginsertsql() {
 	mkarr := gongju.Mokuaimingsarr
 	mks := gongju.Mokuaimings
 	for _, mkvo := range mkarr {
 		mkv := mks[mkvo].Zhi
-		_, biaos, _ := gongju.Fanshebiaolies(mkv)
+		zwpath := gongju.Getjichupath() + zfzhi.Zhi.Xx() + zf.Zfs.Sc(true) +
+			zf.Zfs.Sql(true) + zfzhi.Zhi.Xx() + zf.Zfs.Insert(false) +
+			zf.Zfs.Ziyuan(true) + zfzhi.Zhi.Dh() + zf.Zfs.Goconf(true)
+		zwbs, _ := ioutil.ReadFile(zwpath)
+
+		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv +
+			zfzhi.Zhi.Xx() + zf.Zfs.Zd(true) + zf.Zfs.Sql(true)
+		sczwpath := dir + zfzhi.Zhi.Xx() + zf.Zfs.Insert(false) +
+			zf.Zfs.Ziyuan(true) + zfzhi.Zhi.Dh() + zf.Zfs.Sql(true)
+
+		os.MkdirAll(dir, os.ModePerm)
+		ioutil.WriteFile(sczwpath, zwbs, os.ModePerm)
+	}
+}
+
+func Shengchengsql() {
+	mkarr := gongju.Mokuaimingsarr
+	mks := gongju.Mokuaimings
+	for _, mkvo := range mkarr {
 		buffer := &bytes.Buffer{}
+		mkv := mks[mkvo].Zhi
+		//craete database `mkv`;
+		cdm := zf.Zfs.Create(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Database(true) +
+			zfzhi.Zhi.Kgf() + zfzhi.Zhi.Yzb() + mkv + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Fh() + zfzhi.Zhi.Hhf()
+		buffer.WriteString(cdm)
+		_, biaos, _ := gongju.Fanshebiaolies(mkv)
 		for b, _ := range biaos {
-			//CREATE TABLE Shijian (
+			//CREATE TABLE `mkv`.`b` (
 			crestr := zf.Zfs.Create(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Table(true) +
-				zfzhi.Zhi.Kgf() + zfzhi.Zhi.Yzb() + b + zfzhi.Zhi.Yzb()
+				zfzhi.Zhi.Kgf() + zfzhi.Zhi.Yzb() + mkv + zfzhi.Zhi.Yzb() +
+				zfzhi.Zhi.Dh() + zfzhi.Zhi.Yzb() + b + zfzhi.Zhi.Yzb()
 			buffer.WriteString(crestr)
 			buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
 			lies := gongju.Fanshebiao(mkv, b)
@@ -67,11 +92,6 @@ func Shengchengsql() {
 				zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Yzb() + zf.Zfs.Id(false) + zfzhi.Zhi.Yzb() +
 				zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
 			buffer.WriteString(pkstr)
-			//	UNIQUE INDEX `Paixu` (`Paixu`),
-			uip := zf.Zfs.Unique(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Index(true) +
-				zfzhi.Zhi.Kgf() + zfzhi.Zhi.Yzb() + zf.Zfs.Paixu(false) + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Yzb() +
-				zf.Zfs.Paixu(false) + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
-			buffer.WriteString(uip)
 			//	UNIQUE INDEX `Bianma` (`Bianma`)
 			uib := zf.Zfs.Unique(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Index(true) +
 				zfzhi.Zhi.Kgf() + zfzhi.Zhi.Yzb() + zf.Zfs.Bianma(false) + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Yzb() +
@@ -99,6 +119,8 @@ func Shengchengsql() {
 		ioutil.WriteFile(scpath, buffer.Bytes(), os.ModePerm)
 	}
 	Shengchenginsertsql()
+	Shengchengdropsql()
+
 }
 func Shengchenginsertsql() {
 	mkarr := gongju.Mokuaimingsarr
@@ -114,9 +136,10 @@ func Shengchenginsertsql() {
 				i < zfzhi.Zhi.Shuzi4() * zfzhi.Zhi.Shuzi10() * zfzhi.Zhi.Shuzi10() + zfzhi.Zhi.Shuzi1(); i++ {
 				bufferb := &bytes.Buffer{}
 				bufferv := &bytes.Buffer{}
-				//INSERT INTO `b`
+				//INSERT INTO `mkv`.`b`
 				iib := zf.Zfs.Insert(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Into(true) +
-					zfzhi.Zhi.Kgf() + zfzhi.Zhi.Yzb() + b + zfzhi.Zhi.Yzb()
+					zfzhi.Zhi.Kgf() + zfzhi.Zhi.Yzb() + mkv + zfzhi.Zhi.Yzb() +
+					zfzhi.Zhi.Dh() + zfzhi.Zhi.Yzb() + b + zfzhi.Zhi.Yzb()
 				buffer.WriteString(iib)
 				buffer.WriteString(zfzhi.Zhi.Xkhz())
 				for _, l := range ls {
@@ -155,5 +178,29 @@ func Shengchenginsertsql() {
 			os.MkdirAll(dir, os.ModePerm)
 			ioutil.WriteFile(scpath, buffer.Bytes(), os.ModePerm)
 		}
+	}
+}
+func Shengchengdropsql() {
+	mkarr := gongju.Mokuaimingsarr
+	mks := gongju.Mokuaimings
+	for _, mkvo := range mkarr {
+		mkv := mks[mkvo].Zhi
+		bjg := gongju.Fanshebiaojiegou(mkv)
+		buffer := &bytes.Buffer{}
+		for b, _ := range bjg {
+			//drop table `b`;
+			dtstr := zf.Zfs.Drop(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Table(true) +
+				zfzhi.Zhi.Kgf() + zfzhi.Zhi.Yzb() + mkv + zfzhi.Zhi.Yzb() +
+				zfzhi.Zhi.Dh() + zfzhi.Zhi.Yzb() + b + zfzhi.Zhi.Yzb() +
+				zfzhi.Zhi.Fh() + zfzhi.Zhi.Hhf()
+			buffer.WriteString(dtstr)
+		}
+		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv +
+			zfzhi.Zhi.Xx() + zf.Zfs.Zd(true) + zf.Zfs.Sql(true)
+		scpath := dir + zfzhi.Zhi.Xx() + zf.Zfs.Drop(false) +
+			zf.Zfs.Tables(true) + zfzhi.Zhi.Dh() + zf.Zfs.Sql(true)
+
+		os.MkdirAll(dir, os.ModePerm)
+		ioutil.WriteFile(scpath, buffer.Bytes(), os.ModePerm)
 	}
 }

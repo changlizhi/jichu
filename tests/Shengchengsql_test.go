@@ -11,3 +11,7 @@ func TestShengchengsql(t *testing.T) {
 func TestShengchenginsertsql(t *testing.T) {
 	scsql.Shengchenginsertsql()
 }
+
+func TestShengchengdropsql(t *testing.T) {
+	scsql.Shengchengdropsql()
+}
