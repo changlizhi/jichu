@@ -114,7 +114,7 @@ func Shengchenginsertsql() {
 			ls := gongju.Fanshejichulie()//所有的表只会自动插入标准字段的数据
 
 			for i := zfzhi.Zhi.Shuzi2() * zfzhi.Zhi.Shuzi10() * zfzhi.Zhi.Shuzi10() + zfzhi.Zhi.Shuzi1();
-				i < zfzhi.Zhi.Shuzi4() * zfzhi.Zhi.Shuzi10() * zfzhi.Zhi.Shuzi10() + zfzhi.Zhi.Shuzi1(); i++ {
+				i < zfzhi.Zhi.Shuzi3() * zfzhi.Zhi.Shuzi10() * zfzhi.Zhi.Shuzi10() + zfzhi.Zhi.Shuzi1(); i++ {
 				bufferb := &bytes.Buffer{}
 				bufferv := &bytes.Buffer{}
 				//INSERT INTO `mkv`.`b`
