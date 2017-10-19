@@ -8,7 +8,6 @@ import (
 	"io/ioutil"
 	"os"
 	"strconv"
-	"strings"
 )
 
 func Shengchengsql() {
@@ -17,9 +16,11 @@ func Shengchengsql() {
 	for _, mkvo := range mkarr {
 		buffer := &bytes.Buffer{}
 		mkv := mks[mkvo].Zhi
-		//craete database `mkv`;
-		cdm := zf.Zfs.Create(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Database(true) +
-			zfzhi.Zhi.Kgf() + zfzhi.Zhi.Yzb() + mkv + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Fh() + zfzhi.Zhi.Hhf()
+		//craete database if not exists `mkv`;
+		cdm := zf.Zfs.Create(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Database(true) + zfzhi.Zhi.Kgf() +
+			zf.Zfs.If(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Not(true) + zfzhi.Zhi.Kgf() +
+			zf.Zfs.Exists(true) + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Yzb() +
+			mkv + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Fh() + zfzhi.Zhi.Hhf()
 		buffer.WriteString(cdm)
 		_, biaos, _ := gongju.Fanshebiaolies(mkv)
 		for b, _ := range biaos {
@@ -108,8 +109,8 @@ func Shengchenginsertsql() {
 	for _, mkvo := range mkarr {
 		mkv := mks[mkvo].Zhi
 		bjg := gongju.Fanshebiaojiegou(mkv)
+		buffer := &bytes.Buffer{}
 		for b, _ := range bjg {
-			buffer := &bytes.Buffer{}
 			ls := gongju.Fanshejichulie()//所有的表只会自动插入标准字段的数据
 
 			for i := zfzhi.Zhi.Shuzi2() * zfzhi.Zhi.Shuzi10() * zfzhi.Zhi.Shuzi10() + zfzhi.Zhi.Shuzi1();
@@ -150,14 +151,14 @@ func Shengchenginsertsql() {
 
 				buffer.WriteString(zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Fh())
 			}
-			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv +
-				zfzhi.Zhi.Xx() + zf.Zfs.Zd(true) + zf.Zfs.Sql(true)
-			scpath := dir + zfzhi.Zhi.Xx() + zf.Zfs.Insert(false) +
-				strings.ToLower(b) + zfzhi.Zhi.Dh() + zf.Zfs.Sql(true)
-
-			os.MkdirAll(dir, os.ModePerm)
-			ioutil.WriteFile(scpath, buffer.Bytes(), os.ModePerm)
 		}
+		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv +
+			zfzhi.Zhi.Xx() + zf.Zfs.Zd(true) + zf.Zfs.Sql(true)
+		scpath := dir + zfzhi.Zhi.Xx() + zf.Zfs.Insert(false) +
+			zf.Zfs.Tables(true) + zfzhi.Zhi.Dh() + zf.Zfs.Sql(true)
+
+		os.MkdirAll(dir, os.ModePerm)
+		ioutil.WriteFile(scpath, buffer.Bytes(), os.ModePerm)
 	}
 }
 func Shengchengdropsql() {
