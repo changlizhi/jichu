@@ -337,10 +337,10 @@ func chaxunquanbu(mokuai string, biao string, buffer *bytes.Buffer) {
 		zfzhi.Zhi.Dh() + zf.Zfs.Limit(false) + zfzhi.Zhi.Xkhz() +
 		zh.Zhs.Zhiszh(zf.Zfs.Shuzifu1(false)) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(listr)
-	//queryseter = queryseter.OrderBy(zf.Zfs.Paixu(true))
+	//queryseter = queryseter.OrderBy(zf.Zfs.Id(true))
 	obstr := zf.Zfs.QuerySeter(true) + zfzhi.Zhi.Dyh() + zf.Zfs.QuerySeter(true) +
 		zfzhi.Zhi.Dh() + zf.Zfs.OrderBy(false) + zfzhi.Zhi.Xkhz() +
-		zh.Zhs.Zfszhtrue(zf.Zfs.Paixu(false)) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+		zh.Zhs.Zfszhtrue(zf.Zfs.Id(false)) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(obstr)
 	//houzhui := zfzhi.Zhi.Xhx() + zfzhi.Zhi.Xhx() + zf.Zfs.I(true) + zf.Zfs.Exact(true)
 	hzstr := zf.Zfs.Houzhui(true) + zfzhi.Zhi.Mh() + zfzhi.Zhi.Dyh() +
