@@ -149,7 +149,7 @@ func Shengchenginsertsql() {
 
 				buffer.WriteString(bvstr)
 
-				buffer.WriteString(zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Fh())
+				buffer.WriteString(zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Fh() + zfzhi.Zhi.Hhf())
 			}
 		}
 		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv +
