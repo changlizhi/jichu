@@ -2,8 +2,7 @@ package sjkmhsydata
 
 import "changliang/zf"
 
-type Juese struct {}
-
+type Juese struct{}
 
 func (js *Juese) Miaoshu() string {
 	return zf.Zfs.Miaoshu(false)
