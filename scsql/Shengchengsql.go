@@ -127,7 +127,7 @@ func Shengchenginsertsql() {
 					//`caozuoren`,
 					lstr := zfzhi.Zhi.Yzb() + l + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Dou()
 					bufferb.WriteString(lstr)
-					bj := gongju.Biaojishuoming(l)
+					bj := gongju.Biaojiziduan(l)
 					if bj == zf.Zfs.Zhujian(false) {
 						bufferv.WriteString(strconv.Itoa(i) + zfzhi.Zhi.Dou())
 					} else if bj == zf.Zfs.Sql(false) + zf.Zfs.Bianma(false) {
