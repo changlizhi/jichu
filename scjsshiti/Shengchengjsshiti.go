@@ -7,17 +7,15 @@ import (
 	"gongju"
 	"io/ioutil"
 	"os"
+	"changliang/zw"
+	"reflect"
 )
 
 func Shengchengjsshiti() {
-	mkarr := gongju.Mokuaimingsarr
-	mks := gongju.Mokuaimings
-	for _, mkvo := range mkarr {
-		mkv := mks[mkvo].Zhi
-		mkk := mks[mkvo].Bianma
-		bjg := gongju.Fanshebiaojiegou(mkv)
-		zwmkk := gongju.Zhongwen(mkk)
-
+	for _, mkv := range gongju.Mokuaimingsarr {
+		zw := &zw.Zw{}
+		zwrv := reflect.ValueOf(zw)
+		zwrt := reflect.TypeOf(zw)
 		buffer := &bytes.Buffer{}
 		//export function lieming (bianma) {
 		funstr := zf.Zfs.Export(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Function(true) +
@@ -35,19 +33,13 @@ func Shengchengjsshiti() {
 			zfzhi.Zhi.Dyhe() + zf.Zfs.A(false) + zfzhi.Zhi.Dyhe()
 		buffer.WriteString(astr)
 
-		//,\nzwmkk:'zwmkk'
-		mkstr := zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf() + mkk + zfzhi.Zhi.Mh() + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Dyhe() + zwmkk + zfzhi.Zhi.Dyhe()
-		buffer.WriteString(mkstr)
-
-		for b, ls := range bjg {
-			zwb := gongju.Zhongwen(b)
-			zwbstr := zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf() + b + zfzhi.Zhi.Mh() + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Dyhe() + zwb + zfzhi.Zhi.Dyhe()
-			buffer.WriteString(zwbstr)
-			for _, l := range ls {
-				zwl := gongju.Zhongwen(l)
-				zwlstr := zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf() + l + zfzhi.Zhi.Mh() + zfzhi.Zhi.Kgf() + zfzhi.Zhi.Dyhe() + zwl + zfzhi.Zhi.Dyhe()
-				buffer.WriteString(zwlstr)
-			}
+		for i := zfzhi.Zhi.Shuzi0(); i < zwrt.NumMethod(); i++ {
+			mn := zwrt.Method(i).Name
+			m := zwrv.MethodByName(mn)
+			val := m.Call(nil)[zfzhi.Zhi.Shuzi0()].String()
+			zfff := zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf() + mn + zfzhi.Zhi.Mh() +
+				zfzhi.Zhi.Kgf() + zfzhi.Zhi.Dyhe() + val + zfzhi.Zhi.Dyhe()
+			buffer.WriteString(zfff)
 		}
 		buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 		//return shiti[bianma]
@@ -63,5 +55,4 @@ func Shengchengjsshiti() {
 		os.MkdirAll(dir, os.ModePerm)
 		ioutil.WriteFile(path, buffer.Bytes(), os.ModePerm)
 	}
-
 }
