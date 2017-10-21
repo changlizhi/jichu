@@ -43,24 +43,21 @@ func Shengchengsql() {
 						zfzhi.Zhi.Kgf() + zf.Zfs.Comment(true) + zfzhi.Zhi.Kgf() +
 						zfzhi.Zhi.Dyhe() + gongju.Zhongwen(l) + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
 					buffer.WriteString(vc)
-				}
-				if l != zf.Zfs.Id(false) && lx == zf.Zfs.Int(true) {
+				} else if l != zf.Zfs.Id(false) && lx == zf.Zfs.Int(true) {
 					//paixu int(10) comment '排序',
 					vc := zfzhi.Zhi.Yzb() + l + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Kgf() + zf.Zfs.Int(true) +
 						zfzhi.Zhi.Xkhz() + cdzw + zfzhi.Zhi.Xkhy() +
 						zfzhi.Zhi.Kgf() + zf.Zfs.Comment(true) + zfzhi.Zhi.Kgf() +
 						zfzhi.Zhi.Dyhe() + gongju.Zhongwen(l) + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
 					buffer.WriteString(vc)
-				}
-				if lx == zf.Zfs.String(true) {
+				} else if l != zf.Zfs.Id(false) &&  lx == zf.Zfs.String(true) {
 					//Mingcheng varchar(250) comment '名称',
 					vc := zfzhi.Zhi.Yzb() + l + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Kgf() + zf.Zfs.Varchar(true) +
 						zfzhi.Zhi.Xkhz() + cdzw + zfzhi.Zhi.Xkhy() +
 						zfzhi.Zhi.Kgf() + zf.Zfs.Comment(true) + zfzhi.Zhi.Kgf() +
 						zfzhi.Zhi.Dyhe() + gongju.Zhongwen(l) + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
 					buffer.WriteString(vc)
-				}
-				if lx == zf.Zfs.Time(true) {
+				} else if l != zf.Zfs.Id(false) &&  lx == zf.Zfs.Time(true) {
 					//Chuangjianriqi timestamp  comment '创建日期',
 					vc := zfzhi.Zhi.Yzb() + l + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Kgf() + zf.Zfs.Timestamp(true) +
 						zfzhi.Zhi.Kgf() + zf.Zfs.Comment(true) + zfzhi.Zhi.Kgf() +
