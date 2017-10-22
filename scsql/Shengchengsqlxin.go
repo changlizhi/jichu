@@ -26,13 +26,9 @@ func Shengchengchuangjian() {
 			mkv + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Fh() + zfzhi.Zhi.Hhf()
 		buffer.WriteString(cdm)
 		bjg := gongju.Fanshebiaos(mkv)
-		bf := &bytes.Buffer{}
+
 		for _, b := range bjg {
 			//type Cujinfangan struct{}
-			btstr := b
-			tcbf := zf.Zfs.Type(true) + zfzhi.Zhi.Kgf() + btstr + zfzhi.Zhi.Kgf() +
-				zf.Zfs.Struct(true) + zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf()
-			bf.WriteString(tcbf)
 
 			//CREATE TABLE `mkv`.`bshuju` (
 			crestr := zf.Zfs.Create(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Table(true) +
@@ -44,16 +40,6 @@ func Shengchengchuangjian() {
 			for _, sjzd := range gongju.Fanshejichushuju() {
 				cd := gongju.Liechangdu(sjzd)
 				cdzw := strconv.Itoa(cd)
-				//	func (yp *Yinpin) Lujing() string
-				funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Xkhz() + strings.ToLower(btstr) +
-					zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xh() + btstr + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Kgf() + sjzd +
-					zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Kgf() + zf.Zfs.String(true)
-				bf.WriteString(funstr)
-				bf.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
-				//return zf.Zfs.Lujing(false)
-				retstr := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zh.Zhs.Zfszhfalse(sjzd)
-				bf.WriteString(retstr)
-				bf.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 				if sjzd == zf.Zfs.Id(false) {
 					//Id int(10) auto_increment comment '主键',
 					vc := zfzhi.Zhi.Yzb() + sjzd + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Kgf() + zf.Zfs.Int(true) +
@@ -97,6 +83,11 @@ func Shengchengchuangjian() {
 			buffer.WriteString(crestrbiao)
 			buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
 
+			//type Xxxjiegou struct{}
+			btstrbiao := b + zf.Zfs.Jiegou(true)
+			tcbfbiao := zf.Zfs.Type(true) + zfzhi.Zhi.Kgf() + btstrbiao + zfzhi.Zhi.Kgf() +
+				zf.Zfs.Struct(true) + zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf()
+			bf.WriteString(tcbfbiao)
 			for _, sjzd := range gongju.Fanshejichubiao() {
 				cdbiao := gongju.Liechangdu(sjzd)
 				cdzwbiao := strconv.Itoa(cdbiao)
