@@ -4,12 +4,10 @@ import (
 	"bytes"
 	"changliang/zf"
 	"changliang/zfzhi"
-	"changliang/zh"
 	"gongju"
 	"io/ioutil"
 	"os"
 	"strconv"
-	"strings"
 )
 
 func Shengchengchuangjian() {
@@ -84,10 +82,6 @@ func Shengchengchuangjian() {
 			buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
 
 			//type Xxxjiegou struct{}
-			btstrbiao := b + zf.Zfs.Jiegou(true)
-			tcbfbiao := zf.Zfs.Type(true) + zfzhi.Zhi.Kgf() + btstrbiao + zfzhi.Zhi.Kgf() +
-				zf.Zfs.Struct(true) + zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf()
-			bf.WriteString(tcbfbiao)
 			for _, sjzd := range gongju.Fanshejichubiao() {
 				cdbiao := gongju.Liechangdu(sjzd)
 				cdzwbiao := strconv.Itoa(cdbiao)
