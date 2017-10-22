@@ -50,14 +50,14 @@ func Shengchengsql() {
 						zfzhi.Zhi.Kgf() + zf.Zfs.Comment(true) + zfzhi.Zhi.Kgf() +
 						zfzhi.Zhi.Dyhe() + gongju.Zhongwen(l) + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
 					buffer.WriteString(vc)
-				} else if l != zf.Zfs.Id(false) &&  lx == zf.Zfs.String(true) {
+				} else if l != zf.Zfs.Id(false) && lx == zf.Zfs.String(true) {
 					//Mingcheng varchar(250) comment '名称',
 					vc := zfzhi.Zhi.Yzb() + l + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Kgf() + zf.Zfs.Varchar(true) +
 						zfzhi.Zhi.Xkhz() + cdzw + zfzhi.Zhi.Xkhy() +
 						zfzhi.Zhi.Kgf() + zf.Zfs.Comment(true) + zfzhi.Zhi.Kgf() +
 						zfzhi.Zhi.Dyhe() + gongju.Zhongwen(l) + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
 					buffer.WriteString(vc)
-				} else if l != zf.Zfs.Id(false) &&  lx == zf.Zfs.Time(true) {
+				} else if l != zf.Zfs.Id(false) && lx == zf.Zfs.Time(true) {
 					//Chuangjianriqi timestamp  comment '创建日期',
 					vc := zfzhi.Zhi.Yzb() + l + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Kgf() + zf.Zfs.Timestamp(true) +
 						zfzhi.Zhi.Kgf() + zf.Zfs.Comment(true) + zfzhi.Zhi.Kgf() +
@@ -108,10 +108,9 @@ func Shengchenginsertsql() {
 		bjg := gongju.Fanshebiaojiegou(mkv)
 		buffer := &bytes.Buffer{}
 		for b, _ := range bjg {
-			ls := gongju.Fanshejichulie()//所有的表只会自动插入标准字段的数据
+			ls := gongju.Fanshejichulie() //所有的表只会自动插入标准字段的数据
 
-			for i := zfzhi.Zhi.Shuzi2() * zfzhi.Zhi.Shuzi10() * zfzhi.Zhi.Shuzi10() + zfzhi.Zhi.Shuzi1();
-				i < zfzhi.Zhi.Shuzi3() * zfzhi.Zhi.Shuzi10() * zfzhi.Zhi.Shuzi10() + zfzhi.Zhi.Shuzi1(); i++ {
+			for i := zfzhi.Zhi.Shuzi2()*zfzhi.Zhi.Shuzi10()*zfzhi.Zhi.Shuzi10() + zfzhi.Zhi.Shuzi1(); i < zfzhi.Zhi.Shuzi3()*zfzhi.Zhi.Shuzi10()*zfzhi.Zhi.Shuzi10()+zfzhi.Zhi.Shuzi1(); i++ {
 				bufferb := &bytes.Buffer{}
 				bufferv := &bytes.Buffer{}
 				//INSERT INTO `mkv`.`b`
@@ -127,7 +126,7 @@ func Shengchenginsertsql() {
 					bj := gongju.Biaojiziduan(l)
 					if bj == zf.Zfs.Zhujian(false) {
 						bufferv.WriteString(strconv.Itoa(i) + zfzhi.Zhi.Dou())
-					} else if bj == zf.Zfs.Sql(false) + zf.Zfs.Bianma(false) {
+					} else if bj == zf.Zfs.Sql(false)+zf.Zfs.Bianma(false) {
 						//'DT_i',
 						val := zfzhi.Zhi.Dyhe() + zf.Zfs.DT(false) + zfzhi.Zhi.Xhx() +
 							strconv.Itoa(i) + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou()
@@ -138,8 +137,8 @@ func Shengchenginsertsql() {
 						bufferv.WriteString(val)
 					}
 				}
-				bbstr := bufferb.String()[zfzhi.Zhi.Shuzi0():len(bufferb.String()) - zfzhi.Zhi.Shuzi1()]
-				bvstr := bufferv.String()[zfzhi.Zhi.Shuzi0():len(bufferv.String()) - zfzhi.Zhi.Shuzi1()]
+				bbstr := bufferb.String()[zfzhi.Zhi.Shuzi0() : len(bufferb.String())-zfzhi.Zhi.Shuzi1()]
+				bvstr := bufferv.String()[zfzhi.Zhi.Shuzi0() : len(bufferv.String())-zfzhi.Zhi.Shuzi1()]
 				buffer.WriteString(bbstr)
 				buffer.WriteString(zfzhi.Zhi.Xkhy() + zf.Zfs.Values(true))
 				buffer.WriteString(zfzhi.Zhi.Xkhz())

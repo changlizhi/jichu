@@ -1,8 +1,8 @@
 package tests
 
 import (
-	"testing"
 	"jichu/scsql"
+	"testing"
 )
 
 func TestShengchengchuangjian(t *testing.T) {

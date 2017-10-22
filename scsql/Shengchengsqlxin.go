@@ -1,15 +1,15 @@
 package scsql
 
 import (
-	"gongju"
 	"bytes"
 	"changliang/zf"
 	"changliang/zfzhi"
-	"strconv"
-	"os"
-	"io/ioutil"
-	"strings"
 	"changliang/zh"
+	"gongju"
+	"io/ioutil"
+	"os"
+	"strconv"
+	"strings"
 )
 
 func Shengchengchuangjian() {
@@ -88,7 +88,6 @@ func Shengchengchuangjian() {
 			ei := zf.Zfs.Engine(true) + zfzhi.Zhi.Dyh() + zf.Zfs.InnoDB(true) +
 				zfzhi.Zhi.Fh() + zfzhi.Zhi.Hhf() + zfzhi.Zhi.Hhf()
 			buffer.WriteString(ei)
-
 
 			//create table `mkv`.`bbiao` (
 			crestrbiao := zf.Zfs.Create(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Table(true) +
