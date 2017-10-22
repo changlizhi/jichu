@@ -532,7 +532,7 @@ func Shengchengkongzhiqis() {
 			kongzhiqipatch(bk, &buffer)
 			kongzhiqidelete(bk, &buffer)
 			kongzhiqiliebiaopost(bk, &buffer)
-			kongzhiqitiaojianpost(bk, &buffer)
+			//kongzhiqitiaojianpost(bk, &buffer)条件删除的方法暂时不提供
 			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv +
 				zfzhi.Zhi.Xx() + zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true)
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Kongzhiqi(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)

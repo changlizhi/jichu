@@ -73,17 +73,18 @@ func routersinit(bianma string, buffer *bytes.Buffer) {
 		zf.Zfs.Kongzhiqi(true) + zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Dkhy() +
 		zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(qbstr)
+	//条件删除暂不提供
 	// beego.Router(zfzhi.Zhi.Xx() + zf.Zfs.Dtziyuan(true) + zfzhi.Zhi.Xx() +
 	// zf.Zfs.Bianma(true), &zdkongzhiqis.Dtziyuantiaojiankongzhiqi{})
-	brzb := zf.Zfs.Beego(true) + zfzhi.Zhi.Dh() + zf.Zfs.Router(false) + zfzhi.Zhi.Xkhz() +
-		zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() +
-		zh.Zhs.Zfszhtrue(bianma) + zfzhi.Zhi.Jia() +
-		zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() +
-		zh.Zhs.Zfszhtrue(zf.Zfs.Bianma(false)) + zfzhi.Zhi.Dou() +
-		zfzhi.Zhi.Qh() + zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true) +
-		zfzhi.Zhi.Dh() + bianma + zf.Zfs.Tiaojian(true) +
-		zf.Zfs.Kongzhiqi(true) + zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
-	buffer.WriteString(brzb)
+	//brzb := zf.Zfs.Beego(true) + zfzhi.Zhi.Dh() + zf.Zfs.Router(false) + zfzhi.Zhi.Xkhz() +
+	//	zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() +
+	//	zh.Zhs.Zfszhtrue(bianma) + zfzhi.Zhi.Jia() +
+	//	zh.Zhs.Zhiszh(zf.Zfs.Xx(false)) + zfzhi.Zhi.Jia() +
+	//	zh.Zhs.Zfszhtrue(zf.Zfs.Bianma(false)) + zfzhi.Zhi.Dou() +
+	//	zfzhi.Zhi.Qh() + zf.Zfs.Zd(true) + zf.Zfs.Kongzhiqis(true) +
+	//	zfzhi.Zhi.Dh() + bianma + zf.Zfs.Tiaojian(true) +
+	//	zf.Zfs.Kongzhiqi(true) + zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	//buffer.WriteString(brzb)
 
 	buffer.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
 

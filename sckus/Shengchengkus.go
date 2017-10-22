@@ -470,7 +470,7 @@ func Shengchengkus() {
 			xiugaiyige(biao, &buffer)         // Xiugaiyige
 			shanchuyige(&buffer)              // Shanchuyige
 			chaxunquanbu(mkv, biao, &buffer)  // Shanchuyige
-			shanchutiaojiankus(biao, &buffer) // Shanchuyige
+			//shanchutiaojiankus(biao, &buffer) // Shanchuyige条件删除暂不提供
 
 			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() +
 				mkv + zfzhi.Zhi.Xx() + lujing

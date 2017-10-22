@@ -356,7 +356,7 @@ func Shengchengyewu() {
 			yewushanchu(bk, &buffer)
 			yewuchaxun(bk, &buffer)
 			yewuquanbu(bk, &buffer)
-			yewutiaojian(bk, &buffer)
+			//yewutiaojian(bk, &buffer)条件删除暂不提供
 			dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv + zfzhi.Zhi.Xx() + bm
 			os.MkdirAll(dir, os.ModePerm)
 			path := dir + zfzhi.Zhi.Xx() + bk + zf.Zfs.Yewus(true) + zfzhi.Zhi.Dh() + zf.Zfs.Go(true)
