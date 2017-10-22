@@ -29,7 +29,8 @@ func Shengchengchuangjian() {
 		bf := &bytes.Buffer{}
 		for _, b := range bjg {
 			//type Cujinfangan struct{}
-			tcbf := zf.Zfs.Type(true) + zfzhi.Zhi.Kgf() + b + zfzhi.Zhi.Kgf() +
+			btstr := b
+			tcbf := zf.Zfs.Type(true) + zfzhi.Zhi.Kgf() + btstr + zfzhi.Zhi.Kgf() +
 				zf.Zfs.Struct(true) + zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf()
 			bf.WriteString(tcbf)
 
@@ -44,8 +45,8 @@ func Shengchengchuangjian() {
 				cd := gongju.Liechangdu(sjzd)
 				cdzw := strconv.Itoa(cd)
 				//	func (yp *Yinpin) Lujing() string
-				funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Xkhz() + strings.ToLower(b) +
-					zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xh() + b + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Kgf() + sjzd +
+				funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Xkhz() + strings.ToLower(btstr) +
+					zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xh() + btstr + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Kgf() + sjzd +
 					zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Kgf() + zf.Zfs.String(true)
 				bf.WriteString(funstr)
 				bf.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
