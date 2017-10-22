@@ -112,6 +112,6 @@ func TestShengchengproj(t *testing.T) {
 	scmain.Shengchengmain()
 	//})
 	//var _ = gauge.Step("生成sql", func() {
-	scsql.Shengchengsql()
+	scsql.Shengchengchuangjian()
 	//})
 }
