@@ -8,6 +8,8 @@ import (
 	"strconv"
 	"os"
 	"io/ioutil"
+	"strings"
+	"changliang/zh"
 )
 
 func Shengchengchuangjian() {
@@ -24,7 +26,13 @@ func Shengchengchuangjian() {
 			mkv + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Fh() + zfzhi.Zhi.Hhf()
 		buffer.WriteString(cdm)
 		bjg := gongju.Fanshebiaos(mkv)
+		bf := &bytes.Buffer{}
 		for _, b := range bjg {
+			//type Cujinfangan struct{}
+			tcbf := zf.Zfs.Type(true) + zfzhi.Zhi.Kgf() + b + zfzhi.Zhi.Kgf() +
+				zf.Zfs.Struct(true) + zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf()
+			bf.WriteString(tcbf)
+
 			//CREATE TABLE `mkv`.`b` (
 			crestr := zf.Zfs.Create(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Table(true) +
 				zfzhi.Zhi.Kgf() + zfzhi.Zhi.Yzb() + mkv + zfzhi.Zhi.Yzb() +
@@ -32,23 +40,32 @@ func Shengchengchuangjian() {
 			buffer.WriteString(crestr)
 			buffer.WriteString(zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Hhf())
 
-			for _, sj := range gongju.Fanshejichushuju() {
-				cd := gongju.Liechangdu(sj)
+			for _, sjzd := range gongju.Fanshejichushuju() {
+				cd := gongju.Liechangdu(sjzd)
 				cdzw := strconv.Itoa(cd)
-				//
-				if sj == zf.Zfs.Id(false) {
+				//	func (yp *Yinpin) Lujing() string
+				funstr := zf.Zfs.Func(true) + zfzhi.Zhi.Xkhz() + strings.ToLower(b) +
+					zfzhi.Zhi.Kgf() + zfzhi.Zhi.Xh() + b + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Kgf() + sjzd +
+					zfzhi.Zhi.Xkhz() + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Kgf() + zf.Zfs.String(true)
+				bf.WriteString(funstr)
+				bf.WriteString(zfzhi.Zhi.Dkhz() + zfzhi.Zhi.Hhf())
+				//return zf.Zfs.Lujing(false)
+				retstr := zf.Zfs.Return(true) + zfzhi.Zhi.Kgf() + zh.Zhs.Zfszhfalse(sjzd)
+				bf.WriteString(retstr)
+				bf.WriteString(zfzhi.Zhi.Hhf() + zfzhi.Zhi.Dkhy() + zfzhi.Zhi.Hhf())
+				if sjzd == zf.Zfs.Id(false) {
 					//Id int(10) auto_increment comment '主键',
-					vc := zfzhi.Zhi.Yzb() + sj + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Kgf() + zf.Zfs.Int(true) +
+					vc := zfzhi.Zhi.Yzb() + sjzd + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Kgf() + zf.Zfs.Int(true) +
 						zfzhi.Zhi.Xkhz() + cdzw + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Kgf() +
 						zf.Zfs.Auto(true) + zfzhi.Zhi.Xhx() + zf.Zfs.Increment(true) +
 						zfzhi.Zhi.Kgf() + zf.Zfs.Comment(true) + zfzhi.Zhi.Kgf() +
-						zfzhi.Zhi.Dyhe() + gongju.Zhongwen(sj) + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+						zfzhi.Zhi.Dyhe() + gongju.Zhongwen(sjzd) + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
 					buffer.WriteString(vc)
 				} else {
-					vc := zfzhi.Zhi.Yzb() + sj + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Kgf() + zf.Zfs.Varchar(true) +
+					vc := zfzhi.Zhi.Yzb() + sjzd + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Kgf() + zf.Zfs.Varchar(true) +
 						zfzhi.Zhi.Xkhz() + cdzw + zfzhi.Zhi.Xkhy() +
 						zfzhi.Zhi.Kgf() + zf.Zfs.Comment(true) + zfzhi.Zhi.Kgf() +
-						zfzhi.Zhi.Dyhe() + gongju.Zhongwen(sj) + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
+						zfzhi.Zhi.Dyhe() + gongju.Zhongwen(sjzd) + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf()
 					buffer.WriteString(vc)
 				}
 			}
@@ -71,6 +88,7 @@ func Shengchengchuangjian() {
 			ei := zf.Zfs.Engine(true) + zfzhi.Zhi.Dyh() + zf.Zfs.InnoDB(true) + zfzhi.Zhi.Fh() + zfzhi.Zhi.Hhf()
 			buffer.WriteString(ei)
 		}
+		//log.Println(bf.String())
 		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv +
 			zfzhi.Zhi.Xx() + zf.Zfs.Zd(true) + zf.Zfs.Sql(true)
 		scpath := dir + zfzhi.Zhi.Xx() + zf.Zfs.Chuangjianbiao(false) + zf.Zfs.Xin(true) + zfzhi.Zhi.Dh() + zf.Zfs.Sql(true)
