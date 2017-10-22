@@ -2,11 +2,12 @@ package scsql
 
 import (
 	"gongju"
-	"log"
 	"bytes"
 	"changliang/zf"
 	"changliang/zfzhi"
 	"strconv"
+	"os"
+	"io/ioutil"
 )
 
 func Shengchengchuangjian() {
@@ -70,6 +71,10 @@ func Shengchengchuangjian() {
 			ei := zf.Zfs.Engine(true) + zfzhi.Zhi.Dyh() + zf.Zfs.InnoDB(true) + zfzhi.Zhi.Fh() + zfzhi.Zhi.Hhf()
 			buffer.WriteString(ei)
 		}
-		log.Println(buffer.String())
+		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv +
+			zfzhi.Zhi.Xx() + zf.Zfs.Zd(true) + zf.Zfs.Sql(true)
+		scpath := dir + zfzhi.Zhi.Xx() + zf.Zfs.Chuangjianbiao(false) + zf.Zfs.Xin(true) + zfzhi.Zhi.Dh() + zf.Zfs.Sql(true)
+		os.MkdirAll(dir, os.ModePerm)
+		ioutil.WriteFile(scpath, buffer.Bytes(), os.ModePerm)
 	}
 }
