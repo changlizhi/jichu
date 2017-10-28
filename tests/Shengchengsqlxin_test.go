@@ -8,3 +8,7 @@ import (
 func TestShengchengchuangjian(t *testing.T) {
 	scsql.Shengchengchuangjian()
 }
+
+func TestShengchengcharu(t *testing.T) {
+	scsql.Shengchengcharu()
+}
