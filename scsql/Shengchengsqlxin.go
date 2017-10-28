@@ -96,6 +96,7 @@ func Shengchengchuangjian() {
 		os.MkdirAll(dir, os.ModePerm)
 		ioutil.WriteFile(scpath, buffer.Bytes(), os.ModePerm)
 	}
+	Shengchengcharu()
 }
 
 func Shengchengcharu() {
