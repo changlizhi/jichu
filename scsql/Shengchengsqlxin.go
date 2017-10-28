@@ -9,6 +9,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"gongju/sjkmh"
 )
 
 func Shengchengchuangjian() {
@@ -97,3 +98,53 @@ func Shengchengchuangjian() {
 	}
 }
 
+func Shengchengcharu() {
+	mkarr := gongju.Mokuaimingsarr
+	mks := gongju.Mokuaimings
+	for _, mkvo := range mkarr {
+		buffer := &bytes.Buffer{}
+		mkv := mks[mkvo].Zhi
+		bjg := gongju.Fanshebiaos(mkv)
+		for _, b := range bjg {
+			if strings.Contains(b, zf.Zfs.Jiegou(true)) {
+
+				//insert into `mhsydata`.`juesejiegou`
+				instr := zf.Zfs.Insert(true) + zfzhi.Zhi.Kgf() + zf.Zfs.Into(true) + zfzhi.Zhi.Kgf() +
+					zfzhi.Zhi.Yzb() + mkv + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Dh() + zfzhi.Zhi.Yzb() + b + zfzhi.Zhi.Yzb()
+				buffer.WriteString(instr)
+
+				jczds := gongju.Fanshejichubiao()
+
+				buffer.WriteString(zfzhi.Zhi.Xkhz())
+				buffercol := &bytes.Buffer{}
+				for _, jczd := range jczds {
+					buffercol.WriteString(zfzhi.Zhi.Yzb() + jczd + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Dou())
+				}
+				buffercolstrneed := buffercol.String()[zfzhi.Zhi.Shuzi0():len(buffercol.String()) - zfzhi.Zhi.Shuzi1()]
+				buffer.WriteString(buffercolstrneed)
+				buffer.WriteString(zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
+
+				buffer.WriteString(zf.Zfs.Values(true) + zfzhi.Zhi.Hhf())
+				bufferval := &bytes.Buffer{}
+				for jcindex, jcval := range sjkmh.Biaozhunjiegous {
+					bufferval.WriteString(zfzhi.Zhi.Xkhz())
+					bufferval.WriteString(strconv.Itoa(jcindex + zfzhi.Zhi.Shuzi1()) + zfzhi.Zhi.Dou())
+					bufferval.WriteString(zfzhi.Zhi.Dyhe() + jcval + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou())
+					bufferval.WriteString(zfzhi.Zhi.Dyhe() + gongju.Lieleixing(jcval) + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou())
+					bufferval.WriteString(zfzhi.Zhi.Dyhe() + gongju.Zhongwen(jcval) + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou())
+					bufferval.WriteString(zfzhi.Zhi.Dyhe() + strconv.Itoa(gongju.Liechangdu(jcval)) + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou())
+					bufferval.WriteString(zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dyhe())
+					bufferval.WriteString(zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf())
+				}
+				buffervalstrneed := bufferval.String()[zfzhi.Zhi.Shuzi0():len(bufferval.String()) - zfzhi.Zhi.Shuzi2()]
+				buffer.WriteString(buffervalstrneed)
+				buffer.WriteString(zfzhi.Zhi.Fh() + zfzhi.Zhi.Hhf())
+			}
+		}
+		dir := gongju.Getgopath() + zfzhi.Zhi.Xx() + mkv +
+			zfzhi.Zhi.Xx() + zf.Zfs.Zd(true) + zf.Zfs.Sql(true)
+		scpath := dir + zfzhi.Zhi.Xx() + zf.Zfs.Charujiegou(false) + zfzhi.Zhi.Dh() + zf.Zfs.Sql(true)
+		os.MkdirAll(dir, os.ModePerm)
+		ioutil.WriteFile(scpath, buffer.Bytes(), os.ModePerm)
+	}
+}
