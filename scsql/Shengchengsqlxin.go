@@ -5,11 +5,11 @@ import (
 	"changliang/zf"
 	"changliang/zfzhi"
 	"gongju"
+	"gongju/sjkmh"
 	"io/ioutil"
 	"os"
 	"strconv"
 	"strings"
-	"gongju/sjkmh"
 )
 
 func Shengchengchuangjian() {
@@ -121,7 +121,7 @@ func Shengchengcharu() {
 				for _, jczd := range jczds {
 					buffercol.WriteString(zfzhi.Zhi.Yzb() + jczd + zfzhi.Zhi.Yzb() + zfzhi.Zhi.Dou())
 				}
-				buffercolstrneed := buffercol.String()[zfzhi.Zhi.Shuzi0():len(buffercol.String()) - zfzhi.Zhi.Shuzi1()]
+				buffercolstrneed := buffercol.String()[zfzhi.Zhi.Shuzi0() : len(buffercol.String())-zfzhi.Zhi.Shuzi1()]
 				buffer.WriteString(buffercolstrneed)
 				buffer.WriteString(zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf())
 
@@ -129,7 +129,7 @@ func Shengchengcharu() {
 				bufferval := &bytes.Buffer{}
 				for jcindex, jcval := range sjkmh.Biaozhunjiegous {
 					bufferval.WriteString(zfzhi.Zhi.Xkhz())
-					bufferval.WriteString(strconv.Itoa(jcindex + zfzhi.Zhi.Shuzi1()) + zfzhi.Zhi.Dou())
+					bufferval.WriteString(strconv.Itoa(jcindex+zfzhi.Zhi.Shuzi1()) + zfzhi.Zhi.Dou())
 					bufferval.WriteString(zfzhi.Zhi.Dyhe() + jcval + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou())
 					bufferval.WriteString(zfzhi.Zhi.Dyhe() + gongju.Lieleixing(jcval) + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou())
 					bufferval.WriteString(zfzhi.Zhi.Dyhe() + gongju.Zhongwen(jcval) + zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dou())
@@ -137,7 +137,7 @@ func Shengchengcharu() {
 					bufferval.WriteString(zfzhi.Zhi.Dyhe() + zfzhi.Zhi.Dyhe())
 					bufferval.WriteString(zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Dou() + zfzhi.Zhi.Hhf())
 				}
-				buffervalstrneed := bufferval.String()[zfzhi.Zhi.Shuzi0():len(bufferval.String()) - zfzhi.Zhi.Shuzi2()]
+				buffervalstrneed := bufferval.String()[zfzhi.Zhi.Shuzi0() : len(bufferval.String())-zfzhi.Zhi.Shuzi2()]
 				buffer.WriteString(buffervalstrneed)
 				buffer.WriteString(zfzhi.Zhi.Fh() + zfzhi.Zhi.Hhf())
 			}
