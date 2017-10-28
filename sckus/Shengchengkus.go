@@ -333,11 +333,11 @@ func chaxunquanbu(mokuai string, biao string, buffer *bytes.Buffer) {
 		zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
 	buffer.WriteString(qsstr)
 	//queryseter = queryseter.Filter(zf.Zfs.Youxiaoxing(true), zfzhi.Zhi.Shuzi1w())
-	qqfy := zf.Zfs.QuerySeter(true) + zfzhi.Zhi.Dyh() + zf.Zfs.QuerySeter(true) +
-		zfzhi.Zhi.Dh() + zf.Zfs.Filter(false) + zfzhi.Zhi.Xkhz() +
-		zh.Zhs.Zfszhtrue(zf.Zfs.Youxiaoxing(false)) + zfzhi.Zhi.Dou() +
-		zh.Zhs.Zhiszh(zf.Zfs.Shuzi1w(false)) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
-	buffer.WriteString(qqfy)
+	//qqfy := zf.Zfs.QuerySeter(true) + zfzhi.Zhi.Dyh() + zf.Zfs.QuerySeter(true) +
+	//	zfzhi.Zhi.Dh() + zf.Zfs.Filter(false) + zfzhi.Zhi.Xkhz() +
+	//	zh.Zhs.Zfszhtrue(zf.Zfs.Youxiaoxing(false)) + zfzhi.Zhi.Dou() +
+	//	zh.Zhs.Zhiszh(zf.Zfs.Shuzi1w(false)) + zfzhi.Zhi.Xkhy() + zfzhi.Zhi.Hhf()
+	//buffer.WriteString(qqfy)
 
 	// queryseter = queryseter.Limit(zfzhi.Zhi.Shuzifu1())
 	listr := zf.Zfs.QuerySeter(true) + zfzhi.Zhi.Dyh() + zf.Zfs.QuerySeter(true) +
