@@ -9,10 +9,10 @@ func (sjk *Shujuku) Mingcheng() string {
 return zf.Zfs.Mhsy(true) + zf.Zfs.Data(true)
 }
 func (sjk *Shujuku) Ip() string {
-return zfzhi.Zhi.Shuzi10w() + zfzhi.Zhi.Dh() +
+return zfzhi.Zhi.Shuzi1w() +zfzhi.Zhi.Shuzi2w() +zfzhi.Zhi.Shuzi7w() + zfzhi.Zhi.Dh() +
 zfzhi.Zhi.Shuzi0w() + zfzhi.Zhi.Dh() +
 zfzhi.Zhi.Shuzi0w() + zfzhi.Zhi.Dh() +
-zfzhi.Zhi.Shuzi1w() + zfzhi.Zhi.Shuzi2w() + zfzhi.Zhi.Shuzi6w()
+zfzhi.Zhi.Shuzi1w()
 }
 func (sjk *Shujuku) Qudong() string {
 return zf.Zfs.Mysql(true)
@@ -21,8 +21,8 @@ func (sjk *Shujuku) Duankou() string {
 return zfzhi.Zhi.Shuzi3w() + zfzhi.Zhi.Shuzi3w() + zfzhi.Zhi.Shuzi0w() + zfzhi.Zhi.Shuzi6w()
 }
 func (sjk *Shujuku) Yonghu() string {
-return zf.Zfs.Mhsy(true) + zfzhi.Zhi.Xhx() + zf.Zfs.Mysql(true)
+return zf.Zfs.Root(true)
 }
 func (sjk *Shujuku) Mima() string {
-return zf.Zfs.Mhsy(true) + zf.Zfs.Mysql(true)
+return zf.Zfs.Root(true)
 }
